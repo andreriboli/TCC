@@ -1,0 +1,15 @@
+-892024-08-25 15:01:41,468 - INFO - Iniciando coleta de dados às 2024-08-25 15:01:41.468400
+2024-08-25 15:01:41,854 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:01:41.854871
+2024-08-25 15:06:18,899 - INFO - Iniciando coleta de dados às 2024-08-25 15:06:18.899364
+2024-08-25 15:06:19,243 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:06:19.243168
+2024-08-25 15:22:21,515 - INFO - Iniciando coleta de dados às 2024-08-25 15:22:21.515577
+2024-08-25 15:22:21,866 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:22:21.866374
+2024-08-25 15:22:33,574 - INFO - Iniciando coleta de dados às 2024-08-25 15:22:33.574483
+2024-08-25 15:22:33,948 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:22:33.948262
+2024-08-25 16:20:31,382 - INFO - Iniciando coleta de dados às 2024-08-25 16:20:31.382657
+2024-08-25 16:20:31,744 - INFO - Coleta e armazenamento concluídos às 2024-08-25 16:20:31.744521
+2024-08-25 17:04:55,595 - INFO - Iniciando coleta de dados às 2024-08-25 17:04:55.595334
+2024-08-25 17:04:55,727 - INFO - 26 cursos coletados.
+2024-08-25 17:04:55,727 - ERROR - Erro durante a coleta de dados: 'category'
+2024-08-25 17:18:26,594 - INFO - Iniciando coleta de dados às 2024-08-25 17:18:26.594484
+2024-08-25 17:18:26,728 - INFO - Coleta e armazenamento concluídos às 2024-08-25 17:18:26.728872

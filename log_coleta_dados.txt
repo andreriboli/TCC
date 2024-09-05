@@ -1,0 +1,63 @@
+2024-08-22 21:11:23,111 - INFO - Iniciando coleta de dados às 2024-08-22 21:11:23.111914
+2024-08-22 21:11:23,220 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-22 21:11:38,326 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
+2024-08-22 21:11:38,326 - INFO - Consulta SQL de inserção de usuário: 
+        INSERT INTO usuarios (
+            moodle_id, username, nome
+        ) VALUES (
+            %s, %s, %s
+        )
+        ON CONFLICT (moodle_id) DO UPDATE
+        SET 
+            username = EXCLUDED.username,
+            nome = EXCLUDED.nome;
+        
+2024-08-22 21:11:39,886 - INFO - Coleta e armazenamento concluídos às 2024-08-22 21:11:39.886531
+2024-08-22 21:11:47,960 - INFO - Iniciando coleta de dados às 2024-08-22 21:11:47.959259
+2024-08-22 21:11:48,014 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-22 21:11:54,269 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
+2024-08-22 21:11:54,269 - INFO - Consulta SQL de inserção de usuário: 
+        INSERT INTO usuarios (
+            moodle_id, username, nome
+        ) VALUES (
+            %s, %s, %s
+        )
+        ON CONFLICT (moodle_id) DO UPDATE
+        SET 
+            username = EXCLUDED.username,
+            nome = EXCLUDED.nome;
+        
+2024-08-22 21:15:41,534 - INFO - Coleta e armazenamento concluídos às 2024-08-22 21:15:41.534673
+2024-08-22 21:23:02,272 - INFO - Iniciando coleta de dados às 2024-08-22 21:23:02.272901
+2024-08-22 21:23:02,373 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-22 21:23:10,981 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
+2024-08-22 21:23:10,982 - INFO - Consulta SQL de inserção de usuário: 
+        INSERT INTO usuarios (
+            moodle_id, username, nome
+        ) VALUES (
+            %s, %s, %s
+        )
+        ON CONFLICT (moodle_id) DO UPDATE
+        SET 
+            username = EXCLUDED.username,
+            nome = EXCLUDED.nome;
+        
+2024-08-22 21:45:47,115 - INFO - Iniciando coleta de dados às 2024-08-22 21:45:47.115447
+2024-08-22 21:45:47,497 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-23 20:03:14,504 - INFO - Iniciando coleta de dados às 2024-08-23 20:03:10.683769
+2024-08-23 20:03:50,635 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-23 20:06:01,553 - INFO - Coleta e armazenamento concluídos às 2024-08-23 20:06:01.553221
+2024-08-23 20:13:26,177 - INFO - Iniciando coleta de dados às 2024-08-23 20:13:23.055348
+2024-08-23 20:13:27,878 - INFO - Iniciando o processo de inserção de dados no banco.
+2024-08-23 20:17:28,467 - INFO - Iniciando coleta de dados às 2024-08-23 20:17:28.467498
+2024-08-23 20:19:56,061 - INFO - Iniciando coleta de dados às 2024-08-23 20:19:56.061893
+2024-08-25 15:27:48,417 - INFO - Iniciando coleta de dados às 2024-08-25 15:27:48.417425
+2024-08-25 15:32:34,548 - INFO - Iniciando coleta de dados às 2024-08-25 15:32:34.548319
+2024-08-25 15:39:05,613 - INFO - Iniciando coleta de dados às 2024-08-25 15:39:05.613004
+2024-08-25 15:39:30,181 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:39:30.181239
+2024-08-25 15:41:49,325 - INFO - Iniciando coleta de dados às 2024-08-25 15:41:49.325083
+2024-08-25 15:44:33,137 - INFO - Iniciando coleta de dados às 2024-08-25 15:44:33.137142
+2024-08-25 15:57:50,708 - INFO - Iniciando coleta de dados às 2024-08-25 15:57:50.708528
+2024-08-25 16:13:05,881 - INFO - Iniciando coleta de dados às 2024-08-25 16:13:05.881860
+2024-08-25 16:17:45,246 - INFO - Iniciando coleta de dados às 2024-08-25 16:17:45.246513
+2024-08-25 16:19:44,222 - INFO - Coleta e armazenamento concluídos às 2024-08-25 16:19:44.222124
