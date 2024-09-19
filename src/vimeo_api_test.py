@@ -13,7 +13,7 @@ headers = {
 }
 
 # Fazendo a requisição GET para a API do Vimeo
-response = requests.get(url, headers=headers)
+response = requests.get(url, headers=headers, verify=False)
 
 # Verificando o status da resposta
 if response.status_code == 200:

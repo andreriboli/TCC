@@ -6,10 +6,8 @@ from config import Config
 app = Flask(__name__)
 CORS(app)  # Permitir CORS para comunicação com o frontend
 
-# Inicializar a configuração
 config = Config()
 
-# Inicializar a conexão com o banco de dados usando as configurações
 db_config = config.get_db_config()
 db = DBUtil(
     dbname=db_config['dbname'],
@@ -20,7 +18,6 @@ db = DBUtil(
 )
 db.connect()
 
-# Endpoint para retornar dados da tabela example_table
 @app.route('/api/example-endpoint', methods=['GET'])
 def get_example_data():
     query = "SELECT id, nome, descricao FROM example_table;"

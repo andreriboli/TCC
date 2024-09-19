@@ -1,21 +1,22 @@
 class Config:
     def __init__(self):
-        # Configuração do banco de dados
         self.DB_NAME = "postgres"
         self.DB_USER = "postgres"
         self.DB_PASSWORD = "root"
         self.DB_HOST = "localhost"
         self.DB_PORT = "5432"
 
-        # Configuração da API do Moodle
         self.MOODLE_URL = "https://e-learning-cco.unoesc.edu.br/moodle/webservice/rest/server.php?"
         self.MOODLE_TOKEN = "3a8281cc9763e6c73e3082d817d2218c"
 
-        # Configuração da API do Vimeo
         self.VIMEO_API_URL = "https://api.vimeo.com"
         self.VIMEO_TOKEN = "a9a4ca8237856e61e2425e5846cad690"
 
-        # Verificações básicas para garantir que os valores essenciais estejam configurados
+        self.VIMEO_EMAIL = "vimeo.cco@unoesc.edu.br"
+        self.VIMEO_PASSWORD = "h1u2b2b5."
+
+        self.DOWNLOAD_DIR = "C:\Desenvolvimento"
+
         self._validate_config()
 
     def _validate_config(self):

@@ -1,63 +1,559 @@
-2024-08-22 21:11:23,111 - INFO - Iniciando coleta de dados às 2024-08-22 21:11:23.111914
-2024-08-22 21:11:23,220 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-22 21:11:38,326 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
-2024-08-22 21:11:38,326 - INFO - Consulta SQL de inserção de usuário: 
-        INSERT INTO usuarios (
-            moodle_id, username, nome
-        ) VALUES (
-            %s, %s, %s
-        )
-        ON CONFLICT (moodle_id) DO UPDATE
-        SET 
-            username = EXCLUDED.username,
-            nome = EXCLUDED.nome;
-        
-2024-08-22 21:11:39,886 - INFO - Coleta e armazenamento concluídos às 2024-08-22 21:11:39.886531
-2024-08-22 21:11:47,960 - INFO - Iniciando coleta de dados às 2024-08-22 21:11:47.959259
-2024-08-22 21:11:48,014 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-22 21:11:54,269 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
-2024-08-22 21:11:54,269 - INFO - Consulta SQL de inserção de usuário: 
-        INSERT INTO usuarios (
-            moodle_id, username, nome
-        ) VALUES (
-            %s, %s, %s
-        )
-        ON CONFLICT (moodle_id) DO UPDATE
-        SET 
-            username = EXCLUDED.username,
-            nome = EXCLUDED.nome;
-        
-2024-08-22 21:15:41,534 - INFO - Coleta e armazenamento concluídos às 2024-08-22 21:15:41.534673
-2024-08-22 21:23:02,272 - INFO - Iniciando coleta de dados às 2024-08-22 21:23:02.272901
-2024-08-22 21:23:02,373 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-22 21:23:10,981 - INFO - Parâmetros fornecidos para inserção de usuário: (274, '08148222908', 'Andre Luiggi Wojciechowski Riboli')
-2024-08-22 21:23:10,982 - INFO - Consulta SQL de inserção de usuário: 
-        INSERT INTO usuarios (
-            moodle_id, username, nome
-        ) VALUES (
-            %s, %s, %s
-        )
-        ON CONFLICT (moodle_id) DO UPDATE
-        SET 
-            username = EXCLUDED.username,
-            nome = EXCLUDED.nome;
-        
-2024-08-22 21:45:47,115 - INFO - Iniciando coleta de dados às 2024-08-22 21:45:47.115447
-2024-08-22 21:45:47,497 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-23 20:03:14,504 - INFO - Iniciando coleta de dados às 2024-08-23 20:03:10.683769
-2024-08-23 20:03:50,635 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-23 20:06:01,553 - INFO - Coleta e armazenamento concluídos às 2024-08-23 20:06:01.553221
-2024-08-23 20:13:26,177 - INFO - Iniciando coleta de dados às 2024-08-23 20:13:23.055348
-2024-08-23 20:13:27,878 - INFO - Iniciando o processo de inserção de dados no banco.
-2024-08-23 20:17:28,467 - INFO - Iniciando coleta de dados às 2024-08-23 20:17:28.467498
-2024-08-23 20:19:56,061 - INFO - Iniciando coleta de dados às 2024-08-23 20:19:56.061893
-2024-08-25 15:27:48,417 - INFO - Iniciando coleta de dados às 2024-08-25 15:27:48.417425
-2024-08-25 15:32:34,548 - INFO - Iniciando coleta de dados às 2024-08-25 15:32:34.548319
-2024-08-25 15:39:05,613 - INFO - Iniciando coleta de dados às 2024-08-25 15:39:05.613004
-2024-08-25 15:39:30,181 - INFO - Coleta e armazenamento concluídos às 2024-08-25 15:39:30.181239
-2024-08-25 15:41:49,325 - INFO - Iniciando coleta de dados às 2024-08-25 15:41:49.325083
-2024-08-25 15:44:33,137 - INFO - Iniciando coleta de dados às 2024-08-25 15:44:33.137142
-2024-08-25 15:57:50,708 - INFO - Iniciando coleta de dados às 2024-08-25 15:57:50.708528
-2024-08-25 16:13:05,881 - INFO - Iniciando coleta de dados às 2024-08-25 16:13:05.881860
-2024-08-25 16:17:45,246 - INFO - Iniciando coleta de dados às 2024-08-25 16:17:45.246513
-2024-08-25 16:19:44,222 - INFO - Coleta e armazenamento concluídos às 2024-08-25 16:19:44.222124
+2024-09-11 19:53:35,546 - INFO - Iniciando coleta de dados às 2024-09-11 19:53:35.546020
+2024-09-11 19:53:35,722 - INFO - Cursos coletados com sucesso.
+2024-09-11 19:53:35,722 - INFO - Iniciando inserção de categorias.
+2024-09-11 19:53:35,791 - ERROR - Categoria com ID 0 não encontrada na API.
+2024-09-11 19:53:35,793 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-11 19:53:35,794 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-11 19:53:35,794 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-11 19:53:35,795 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-11 19:53:35,795 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-11 19:53:35,796 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-11 19:53:35,796 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-11 19:53:35,797 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-11 19:53:35,797 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-11 19:53:35,799 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-11 19:53:35,799 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-11 19:53:35,800 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-11 19:53:35,800 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-11 19:53:35,801 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-11 19:53:35,801 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-11 19:53:35,802 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-11 19:53:35,803 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-11 19:53:35,804 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-11 19:53:35,805 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-11 19:53:35,805 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-11 19:53:35,806 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-11 19:53:35,807 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-11 19:53:35,808 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-11 19:53:35,808 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-11 19:53:35,809 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-11 19:53:35,809 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-11 19:53:35,810 - INFO - Inserção de categorias concluída.
+2024-09-11 19:53:35,810 - INFO - Iniciando inserção de cursos.
+2024-09-11 19:53:38,779 - INFO - Usuário Guest user   inserido para o curso E-Learning.
+2024-09-11 19:53:38,780 - ERROR - Erro ao inserir curso com ID 1: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:38,781 - INFO - Curso E-Learning inserido.
+2024-09-11 19:53:39,841 - INFO - Usuário Admin User inserido para o curso Análise Competitiva.
+2024-09-11 19:53:39,841 - ERROR - Erro ao inserir curso com ID 3: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:39,842 - INFO - Curso Análise Competitiva inserido.
+2024-09-11 19:53:39,987 - INFO - Usuário Admin User inserido para o curso Aprenda a fotografar com seu celular.
+2024-09-11 19:53:39,988 - ERROR - Erro ao inserir curso com ID 4: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:39,988 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-11 19:53:40,314 - INFO - Usuário Admin User inserido para o curso Regularização Fundiária Urbana #01.
+2024-09-11 19:53:40,314 - ERROR - Erro ao inserir curso com ID 5: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:40,314 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-11 19:53:40,478 - INFO - Usuário Admin User inserido para o curso Modelagem de Equações Estruturais com uso do SmartPLS3.
+2024-09-11 19:53:40,478 - ERROR - Erro ao inserir curso com ID 6: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:40,478 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-11 19:53:40,747 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Kubernetes #01.
+2024-09-11 19:53:40,748 - ERROR - Erro ao inserir curso com ID 7: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:40,749 - INFO - Curso Kubernetes #01 inserido.
+2024-09-11 19:53:41,068 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Implantação de Processos de Inovação.
+2024-09-11 19:53:41,068 - ERROR - Erro ao inserir curso com ID 8: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:41,068 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-11 19:53:41,234 - INFO - Usuário Admin User inserido para o curso IRPF 2022 na Prática.
+2024-09-11 19:53:41,235 - ERROR - Erro ao inserir curso com ID 9: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:41,235 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-11 19:53:41,465 - INFO - Usuário Carlos Carvalho inserido para o curso Valuation por Multiplos.
+2024-09-11 19:53:41,466 - ERROR - Erro ao inserir curso com ID 10: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:41,466 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-11 19:53:41,780 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Linux - Terminal no dia a dia.
+2024-09-11 19:53:41,780 - ERROR - Erro ao inserir curso com ID 11: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:41,781 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-11 19:53:42,275 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso  Capacitação para Pesquisa Ciêntifica.
+2024-09-11 19:53:42,275 - ERROR - Erro ao inserir curso com ID 12: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:42,276 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-11 19:53:42,455 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 1 (Ambiance).
+2024-09-11 19:53:42,455 - ERROR - Erro ao inserir curso com ID 13: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:42,456 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-11 19:53:42,850 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Gestão de Projetos #01.
+2024-09-11 19:53:42,850 - ERROR - Erro ao inserir curso com ID 14: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:42,851 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-11 19:53:43,081 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Test Driven Development.
+2024-09-11 19:53:43,082 - ERROR - Erro ao inserir curso com ID 15: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:43,082 - INFO - Curso Test Driven Development inserido.
+2024-09-11 19:53:43,194 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Computação.
+2024-09-11 19:53:43,194 - ERROR - Erro ao inserir curso com ID 16: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:43,195 - INFO - Curso Engenharia de Computação inserido.
+2024-09-11 19:53:43,313 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Sistemas de Informação.
+2024-09-11 19:53:43,314 - ERROR - Erro ao inserir curso com ID 17: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:43,314 - INFO - Curso Sistemas de Informação inserido.
+2024-09-11 19:53:43,407 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Ciências Contábeis.
+2024-09-11 19:53:43,407 - ERROR - Erro ao inserir curso com ID 18: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:43,407 - INFO - Curso Ciências Contábeis inserido.
+2024-09-11 19:53:43,585 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Administração.
+2024-09-11 19:53:43,587 - ERROR - Erro ao inserir curso com ID 19: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:43,587 - INFO - Curso Administração inserido.
+2024-09-11 19:53:44,022 - INFO - Usuário Ana Marcia Debiasi Duarte inserido para o curso Gestão da Inovação.
+2024-09-11 19:53:44,023 - ERROR - Erro ao inserir curso com ID 20: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:44,023 - INFO - Curso Gestão da Inovação inserido.
+2024-09-11 19:53:44,161 - INFO - Usuário Regina Oneda Mello inserido para o curso HP 12C - Nível 2 (Average).
+2024-09-11 19:53:44,161 - ERROR - Erro ao inserir curso com ID 21: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:44,162 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-11 19:53:44,265 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 3 (Advanced).
+2024-09-11 19:53:44,266 - ERROR - Erro ao inserir curso com ID 22: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:44,266 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-11 19:53:44,503 - INFO - Usuário Admin User inserido para o curso Controle de Versão com Git.
+2024-09-11 19:53:44,504 - ERROR - Erro ao inserir curso com ID 24: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:44,504 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-11 19:53:45,120 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Epistemologias do Sul e Cultura Jurídica.
+2024-09-11 19:53:45,120 - ERROR - Erro ao inserir curso com ID 25: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:45,121 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-11 19:53:45,534 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso LATEX com Overleaf para Artigos.
+2024-09-11 19:53:45,535 - ERROR - Erro ao inserir curso com ID 26: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:45,535 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-11 19:53:45,737 - INFO - Usuário Renato Scortegagna inserido para o curso MATLAB.
+2024-09-11 19:53:45,738 - ERROR - Erro ao inserir curso com ID 27: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:45,739 - INFO - Curso MATLAB inserido.
+2024-09-11 19:53:45,829 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Software com Ênfase em UML.
+2024-09-11 19:53:45,830 - ERROR - Erro ao inserir curso com ID 28: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:53:45,830 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-11 19:53:45,830 - INFO - Inserção de cursos concluída.
+2024-09-11 19:53:45,830 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-11 19:54:18,468 - ERROR - Erro durante a coleta de dados: 'float' object has no attribute 'get'
+2024-09-11 19:54:24,937 - INFO - Iniciando coleta de dados às 2024-09-11 19:54:24.937344
+2024-09-11 19:54:25,122 - INFO - Cursos coletados com sucesso.
+2024-09-11 19:54:25,122 - INFO - Iniciando inserção de categorias.
+2024-09-11 19:54:25,189 - ERROR - Categoria com ID 0 não encontrada na API.
+2024-09-11 19:54:25,190 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-11 19:54:25,191 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-11 19:54:25,191 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-11 19:54:25,192 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-11 19:54:25,193 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-11 19:54:25,193 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-11 19:54:25,193 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-11 19:54:25,194 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-11 19:54:25,194 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-11 19:54:25,195 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-11 19:54:25,195 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-11 19:54:25,195 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-11 19:54:25,196 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-11 19:54:25,196 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-11 19:54:25,197 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-11 19:54:25,197 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-11 19:54:25,197 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-11 19:54:25,197 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-11 19:54:25,199 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-11 19:54:25,199 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-11 19:54:25,199 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-11 19:54:25,200 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-11 19:54:25,200 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-11 19:54:25,201 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-11 19:54:25,201 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-11 19:54:25,202 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-11 19:54:25,202 - INFO - Inserção de categorias concluída.
+2024-09-11 19:54:25,202 - INFO - Iniciando inserção de cursos.
+2024-09-11 19:54:27,818 - INFO - Usuário Guest user   inserido para o curso E-Learning.
+2024-09-11 19:54:27,818 - ERROR - Erro ao inserir curso com ID 1: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:27,819 - INFO - Curso E-Learning inserido.
+2024-09-11 19:54:28,654 - INFO - Usuário Admin User inserido para o curso Análise Competitiva.
+2024-09-11 19:54:28,655 - ERROR - Erro ao inserir curso com ID 3: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:28,655 - INFO - Curso Análise Competitiva inserido.
+2024-09-11 19:54:28,808 - INFO - Usuário Admin User inserido para o curso Aprenda a fotografar com seu celular.
+2024-09-11 19:54:28,808 - ERROR - Erro ao inserir curso com ID 4: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:28,808 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-11 19:54:29,072 - INFO - Usuário Admin User inserido para o curso Regularização Fundiária Urbana #01.
+2024-09-11 19:54:29,072 - ERROR - Erro ao inserir curso com ID 5: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:29,073 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-11 19:54:29,226 - INFO - Usuário Admin User inserido para o curso Modelagem de Equações Estruturais com uso do SmartPLS3.
+2024-09-11 19:54:29,227 - ERROR - Erro ao inserir curso com ID 6: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:29,227 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-11 19:54:29,509 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Kubernetes #01.
+2024-09-11 19:54:29,509 - ERROR - Erro ao inserir curso com ID 7: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:29,509 - INFO - Curso Kubernetes #01 inserido.
+2024-09-11 19:54:29,823 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Implantação de Processos de Inovação.
+2024-09-11 19:54:29,824 - ERROR - Erro ao inserir curso com ID 8: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:29,824 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-11 19:54:30,063 - INFO - Usuário Admin User inserido para o curso IRPF 2022 na Prática.
+2024-09-11 19:54:30,063 - ERROR - Erro ao inserir curso com ID 9: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:30,063 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-11 19:54:30,305 - INFO - Usuário Carlos Carvalho inserido para o curso Valuation por Multiplos.
+2024-09-11 19:54:30,305 - ERROR - Erro ao inserir curso com ID 10: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:30,306 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-11 19:54:30,634 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Linux - Terminal no dia a dia.
+2024-09-11 19:54:30,634 - ERROR - Erro ao inserir curso com ID 11: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:30,635 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-11 19:54:31,115 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso  Capacitação para Pesquisa Ciêntifica.
+2024-09-11 19:54:31,115 - ERROR - Erro ao inserir curso com ID 12: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:31,115 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-11 19:54:31,286 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 1 (Ambiance).
+2024-09-11 19:54:31,286 - ERROR - Erro ao inserir curso com ID 13: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:31,287 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-11 19:54:31,626 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Gestão de Projetos #01.
+2024-09-11 19:54:31,627 - ERROR - Erro ao inserir curso com ID 14: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:31,627 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-11 19:54:31,844 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Test Driven Development.
+2024-09-11 19:54:31,844 - ERROR - Erro ao inserir curso com ID 15: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:31,844 - INFO - Curso Test Driven Development inserido.
+2024-09-11 19:54:31,951 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Computação.
+2024-09-11 19:54:31,952 - ERROR - Erro ao inserir curso com ID 16: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:31,952 - INFO - Curso Engenharia de Computação inserido.
+2024-09-11 19:54:32,066 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Sistemas de Informação.
+2024-09-11 19:54:32,066 - ERROR - Erro ao inserir curso com ID 17: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,066 - INFO - Curso Sistemas de Informação inserido.
+2024-09-11 19:54:32,160 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Ciências Contábeis.
+2024-09-11 19:54:32,161 - ERROR - Erro ao inserir curso com ID 18: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,161 - INFO - Curso Ciências Contábeis inserido.
+2024-09-11 19:54:32,291 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Administração.
+2024-09-11 19:54:32,291 - ERROR - Erro ao inserir curso com ID 19: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,292 - INFO - Curso Administração inserido.
+2024-09-11 19:54:32,674 - INFO - Usuário Ana Marcia Debiasi Duarte inserido para o curso Gestão da Inovação.
+2024-09-11 19:54:32,674 - ERROR - Erro ao inserir curso com ID 20: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,674 - INFO - Curso Gestão da Inovação inserido.
+2024-09-11 19:54:32,796 - INFO - Usuário Regina Oneda Mello inserido para o curso HP 12C - Nível 2 (Average).
+2024-09-11 19:54:32,797 - ERROR - Erro ao inserir curso com ID 21: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,797 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-11 19:54:32,915 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 3 (Advanced).
+2024-09-11 19:54:32,917 - ERROR - Erro ao inserir curso com ID 22: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:32,917 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-11 19:54:33,170 - INFO - Usuário Admin User inserido para o curso Controle de Versão com Git.
+2024-09-11 19:54:33,170 - ERROR - Erro ao inserir curso com ID 24: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:33,171 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-11 19:54:33,804 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Epistemologias do Sul e Cultura Jurídica.
+2024-09-11 19:54:33,804 - ERROR - Erro ao inserir curso com ID 25: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:33,805 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-11 19:54:34,169 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso LATEX com Overleaf para Artigos.
+2024-09-11 19:54:34,169 - ERROR - Erro ao inserir curso com ID 26: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:34,169 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-11 19:54:34,335 - INFO - Usuário Renato Scortegagna inserido para o curso MATLAB.
+2024-09-11 19:54:34,335 - ERROR - Erro ao inserir curso com ID 27: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:34,335 - INFO - Curso MATLAB inserido.
+2024-09-11 19:54:34,474 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Software com Ênfase em UML.
+2024-09-11 19:54:34,475 - ERROR - Erro ao inserir curso com ID 28: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:54:34,475 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-11 19:54:34,475 - INFO - Inserção de cursos concluída.
+2024-09-11 19:54:34,475 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-11 19:55:31,440 - ERROR - Erro durante a coleta de dados: 'float' object has no attribute 'get'
+2024-09-11 19:55:38,810 - INFO - Iniciando coleta de dados às 2024-09-11 19:55:38.809972
+2024-09-11 19:55:39,067 - INFO - Cursos coletados com sucesso.
+2024-09-11 19:55:39,067 - INFO - Iniciando inserção de categorias.
+2024-09-11 19:55:39,156 - ERROR - Categoria com ID 0 não encontrada na API.
+2024-09-11 19:55:39,160 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-11 19:55:39,160 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-11 19:55:39,161 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-11 19:55:39,163 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-11 19:55:39,164 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-11 19:55:39,166 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-11 19:55:39,167 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-11 19:55:39,169 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-11 19:55:39,170 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-11 19:55:39,171 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-11 19:55:39,172 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-11 19:55:39,174 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-11 19:55:39,175 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-11 19:55:39,176 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-11 19:55:39,180 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-11 19:55:39,182 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-11 19:55:39,184 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-11 19:55:39,185 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-11 19:55:39,186 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-11 19:55:39,187 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-11 19:55:39,187 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-11 19:55:39,189 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-11 19:55:39,189 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-11 19:55:39,190 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-11 19:55:39,191 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-11 19:55:39,191 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-11 19:55:39,192 - INFO - Inserção de categorias concluída.
+2024-09-11 19:55:39,192 - INFO - Iniciando inserção de cursos.
+2024-09-11 19:55:42,022 - INFO - Usuário Guest user   inserido para o curso E-Learning.
+2024-09-11 19:55:42,023 - ERROR - Erro ao inserir curso com ID 1: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:42,024 - INFO - Curso E-Learning inserido.
+2024-09-11 19:55:42,829 - INFO - Usuário Admin User inserido para o curso Análise Competitiva.
+2024-09-11 19:55:42,830 - ERROR - Erro ao inserir curso com ID 3: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:42,830 - INFO - Curso Análise Competitiva inserido.
+2024-09-11 19:55:42,929 - INFO - Usuário Admin User inserido para o curso Aprenda a fotografar com seu celular.
+2024-09-11 19:55:42,929 - ERROR - Erro ao inserir curso com ID 4: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:42,929 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-11 19:55:43,181 - INFO - Usuário Admin User inserido para o curso Regularização Fundiária Urbana #01.
+2024-09-11 19:55:43,181 - ERROR - Erro ao inserir curso com ID 5: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:43,182 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-11 19:55:43,307 - INFO - Usuário Admin User inserido para o curso Modelagem de Equações Estruturais com uso do SmartPLS3.
+2024-09-11 19:55:43,308 - ERROR - Erro ao inserir curso com ID 6: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:43,308 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-11 19:55:43,540 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Kubernetes #01.
+2024-09-11 19:55:43,541 - ERROR - Erro ao inserir curso com ID 7: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:43,541 - INFO - Curso Kubernetes #01 inserido.
+2024-09-11 19:55:43,882 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Implantação de Processos de Inovação.
+2024-09-11 19:55:43,883 - ERROR - Erro ao inserir curso com ID 8: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:43,884 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-11 19:55:44,064 - INFO - Usuário Admin User inserido para o curso IRPF 2022 na Prática.
+2024-09-11 19:55:44,064 - ERROR - Erro ao inserir curso com ID 9: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:44,064 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-11 19:55:44,340 - INFO - Usuário Carlos Carvalho inserido para o curso Valuation por Multiplos.
+2024-09-11 19:55:44,340 - ERROR - Erro ao inserir curso com ID 10: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:44,341 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-11 19:55:44,718 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Linux - Terminal no dia a dia.
+2024-09-11 19:55:44,720 - ERROR - Erro ao inserir curso com ID 11: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:44,720 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-11 19:55:45,215 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso  Capacitação para Pesquisa Ciêntifica.
+2024-09-11 19:55:45,215 - ERROR - Erro ao inserir curso com ID 12: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:45,215 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-11 19:55:45,394 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 1 (Ambiance).
+2024-09-11 19:55:45,394 - ERROR - Erro ao inserir curso com ID 13: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:45,394 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-11 19:55:45,709 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Gestão de Projetos #01.
+2024-09-11 19:55:45,709 - ERROR - Erro ao inserir curso com ID 14: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:45,710 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-11 19:55:45,922 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Test Driven Development.
+2024-09-11 19:55:45,923 - ERROR - Erro ao inserir curso com ID 15: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:45,924 - INFO - Curso Test Driven Development inserido.
+2024-09-11 19:55:46,047 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Computação.
+2024-09-11 19:55:46,047 - ERROR - Erro ao inserir curso com ID 16: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,048 - INFO - Curso Engenharia de Computação inserido.
+2024-09-11 19:55:46,175 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Sistemas de Informação.
+2024-09-11 19:55:46,175 - ERROR - Erro ao inserir curso com ID 17: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,176 - INFO - Curso Sistemas de Informação inserido.
+2024-09-11 19:55:46,279 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Ciências Contábeis.
+2024-09-11 19:55:46,280 - ERROR - Erro ao inserir curso com ID 18: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,280 - INFO - Curso Ciências Contábeis inserido.
+2024-09-11 19:55:46,408 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Administração.
+2024-09-11 19:55:46,408 - ERROR - Erro ao inserir curso com ID 19: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,408 - INFO - Curso Administração inserido.
+2024-09-11 19:55:46,805 - INFO - Usuário Ana Marcia Debiasi Duarte inserido para o curso Gestão da Inovação.
+2024-09-11 19:55:46,805 - ERROR - Erro ao inserir curso com ID 20: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,805 - INFO - Curso Gestão da Inovação inserido.
+2024-09-11 19:55:46,910 - INFO - Usuário Regina Oneda Mello inserido para o curso HP 12C - Nível 2 (Average).
+2024-09-11 19:55:46,910 - ERROR - Erro ao inserir curso com ID 21: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:46,910 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-11 19:55:47,015 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 3 (Advanced).
+2024-09-11 19:55:47,016 - ERROR - Erro ao inserir curso com ID 22: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:47,016 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-11 19:55:47,249 - INFO - Usuário Admin User inserido para o curso Controle de Versão com Git.
+2024-09-11 19:55:47,249 - ERROR - Erro ao inserir curso com ID 24: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:47,249 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-11 19:55:47,968 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Epistemologias do Sul e Cultura Jurídica.
+2024-09-11 19:55:47,968 - ERROR - Erro ao inserir curso com ID 25: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:47,969 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-11 19:55:48,356 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso LATEX com Overleaf para Artigos.
+2024-09-11 19:55:48,356 - ERROR - Erro ao inserir curso com ID 26: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:48,356 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-11 19:55:48,570 - INFO - Usuário Renato Scortegagna inserido para o curso MATLAB.
+2024-09-11 19:55:48,570 - ERROR - Erro ao inserir curso com ID 27: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:48,570 - INFO - Curso MATLAB inserido.
+2024-09-11 19:55:48,663 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Software com Ênfase em UML.
+2024-09-11 19:55:48,663 - ERROR - Erro ao inserir curso com ID 28: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:55:48,664 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-11 19:55:48,664 - INFO - Inserção de cursos concluída.
+2024-09-11 19:55:48,664 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-11 19:59:20,814 - ERROR - Erro durante a coleta de dados: 'float' object has no attribute 'get'
+2024-09-11 19:59:31,508 - INFO - Iniciando coleta de dados às 2024-09-11 19:59:31.508467
+2024-09-11 19:59:31,708 - INFO - Cursos coletados com sucesso.
+2024-09-11 19:59:31,708 - INFO - Iniciando inserção de categorias.
+2024-09-11 19:59:31,781 - ERROR - Categoria com ID 0 não encontrada na API.
+2024-09-11 19:59:31,783 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-11 19:59:31,784 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-11 19:59:31,785 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-11 19:59:31,786 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-11 19:59:31,786 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-11 19:59:31,787 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-11 19:59:31,788 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-11 19:59:31,788 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-11 19:59:31,789 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-11 19:59:31,790 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-11 19:59:31,790 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-11 19:59:31,791 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-11 19:59:31,791 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-11 19:59:31,792 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-11 19:59:31,793 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-11 19:59:31,793 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-11 19:59:31,794 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-11 19:59:31,794 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-11 19:59:31,795 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-11 19:59:31,795 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-11 19:59:31,797 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-11 19:59:31,797 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-11 19:59:31,798 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-11 19:59:31,798 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-11 19:59:31,799 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-11 19:59:31,799 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-11 19:59:31,799 - INFO - Inserção de categorias concluída.
+2024-09-11 19:59:31,799 - INFO - Iniciando inserção de cursos.
+2024-09-11 19:59:34,548 - INFO - Usuário Guest user   inserido para o curso E-Learning.
+2024-09-11 19:59:34,553 - ERROR - Erro ao inserir curso com ID 1: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:34,554 - INFO - Curso E-Learning inserido.
+2024-09-11 19:59:35,405 - INFO - Usuário Admin User inserido para o curso Análise Competitiva.
+2024-09-11 19:59:35,407 - ERROR - Erro ao inserir curso com ID 3: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:35,408 - INFO - Curso Análise Competitiva inserido.
+2024-09-11 19:59:35,524 - INFO - Usuário Admin User inserido para o curso Aprenda a fotografar com seu celular.
+2024-09-11 19:59:35,525 - ERROR - Erro ao inserir curso com ID 4: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:35,525 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-11 19:59:35,762 - INFO - Usuário Admin User inserido para o curso Regularização Fundiária Urbana #01.
+2024-09-11 19:59:35,763 - ERROR - Erro ao inserir curso com ID 5: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:35,763 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-11 19:59:35,882 - INFO - Usuário Admin User inserido para o curso Modelagem de Equações Estruturais com uso do SmartPLS3.
+2024-09-11 19:59:35,883 - ERROR - Erro ao inserir curso com ID 6: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:35,883 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-11 19:59:36,109 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Kubernetes #01.
+2024-09-11 19:59:36,110 - ERROR - Erro ao inserir curso com ID 7: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:36,110 - INFO - Curso Kubernetes #01 inserido.
+2024-09-11 19:59:36,419 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Implantação de Processos de Inovação.
+2024-09-11 19:59:36,423 - ERROR - Erro ao inserir curso com ID 8: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:36,423 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-11 19:59:36,645 - INFO - Usuário Admin User inserido para o curso IRPF 2022 na Prática.
+2024-09-11 19:59:36,645 - ERROR - Erro ao inserir curso com ID 9: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:36,645 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-11 19:59:36,869 - INFO - Usuário Carlos Carvalho inserido para o curso Valuation por Multiplos.
+2024-09-11 19:59:36,869 - ERROR - Erro ao inserir curso com ID 10: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:36,869 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-11 19:59:37,192 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Linux - Terminal no dia a dia.
+2024-09-11 19:59:37,193 - ERROR - Erro ao inserir curso com ID 11: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:37,194 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-11 19:59:37,796 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso  Capacitação para Pesquisa Ciêntifica.
+2024-09-11 19:59:37,796 - ERROR - Erro ao inserir curso com ID 12: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:37,797 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-11 19:59:38,003 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 1 (Ambiance).
+2024-09-11 19:59:38,003 - ERROR - Erro ao inserir curso com ID 13: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,003 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-11 19:59:38,309 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Gestão de Projetos #01.
+2024-09-11 19:59:38,309 - ERROR - Erro ao inserir curso com ID 14: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,309 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-11 19:59:38,529 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Test Driven Development.
+2024-09-11 19:59:38,529 - ERROR - Erro ao inserir curso com ID 15: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,529 - INFO - Curso Test Driven Development inserido.
+2024-09-11 19:59:38,645 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Computação.
+2024-09-11 19:59:38,646 - ERROR - Erro ao inserir curso com ID 16: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,646 - INFO - Curso Engenharia de Computação inserido.
+2024-09-11 19:59:38,757 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Sistemas de Informação.
+2024-09-11 19:59:38,757 - ERROR - Erro ao inserir curso com ID 17: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,758 - INFO - Curso Sistemas de Informação inserido.
+2024-09-11 19:59:38,865 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Ciências Contábeis.
+2024-09-11 19:59:38,865 - ERROR - Erro ao inserir curso com ID 18: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,866 - INFO - Curso Ciências Contábeis inserido.
+2024-09-11 19:59:38,983 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Administração.
+2024-09-11 19:59:38,983 - ERROR - Erro ao inserir curso com ID 19: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:38,983 - INFO - Curso Administração inserido.
+2024-09-11 19:59:39,389 - INFO - Usuário Ana Marcia Debiasi Duarte inserido para o curso Gestão da Inovação.
+2024-09-11 19:59:39,390 - ERROR - Erro ao inserir curso com ID 20: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:39,390 - INFO - Curso Gestão da Inovação inserido.
+2024-09-11 19:59:39,529 - INFO - Usuário Regina Oneda Mello inserido para o curso HP 12C - Nível 2 (Average).
+2024-09-11 19:59:39,530 - ERROR - Erro ao inserir curso com ID 21: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:39,530 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-11 19:59:39,641 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso HP 12C - Nível 3 (Advanced).
+2024-09-11 19:59:39,641 - ERROR - Erro ao inserir curso com ID 22: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:39,641 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-11 19:59:39,904 - INFO - Usuário Admin User inserido para o curso Controle de Versão com Git.
+2024-09-11 19:59:39,904 - ERROR - Erro ao inserir curso com ID 24: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:39,904 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-11 19:59:40,763 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Epistemologias do Sul e Cultura Jurídica.
+2024-09-11 19:59:40,763 - ERROR - Erro ao inserir curso com ID 25: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:40,764 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-11 19:59:41,306 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso LATEX com Overleaf para Artigos.
+2024-09-11 19:59:41,306 - ERROR - Erro ao inserir curso com ID 26: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:41,306 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-11 19:59:41,754 - INFO - Usuário Renato Scortegagna inserido para o curso MATLAB.
+2024-09-11 19:59:41,754 - ERROR - Erro ao inserir curso com ID 27: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:41,755 - INFO - Curso MATLAB inserido.
+2024-09-11 19:59:41,964 - INFO - Usuário CARLA DE ALMEIDA MARTINS BASSO inserido para o curso Engenharia de Software com Ênfase em UML.
+2024-09-11 19:59:41,964 - ERROR - Erro ao inserir curso com ID 28: DatabaseOperations.inserir_inscricao() missing 2 required positional arguments: 'progresso' and 'detalhes_usuario'
+2024-09-11 19:59:41,965 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-11 19:59:41,965 - INFO - Inserção de cursos concluída.
+2024-09-11 19:59:41,965 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-11 20:00:31,498 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:31,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:31,760 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:31,880 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:31,976 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:32,065 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,317 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,383 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,452 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,562 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,658 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,749 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:54,908 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,017 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,083 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,164 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,268 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,393 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,476 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,539 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,617 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:55,749 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:56,875 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:56,975 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,088 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,217 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,338 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,446 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,557 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,631 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,728 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:00:57,824 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:35,927 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,022 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,120 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,206 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,280 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,425 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,542 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,658 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,738 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,815 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,916 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:36,996 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,061 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,141 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,294 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,403 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,468 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,607 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,739 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,851 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:37,925 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,009 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,079 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,141 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,256 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,317 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,410 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,506 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,589 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,726 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,805 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,895 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:38,991 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,115 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,198 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,296 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,380 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,495 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,598 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,673 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,748 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,868 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:39,993 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,105 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,243 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,412 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,511 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,600 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,669 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,761 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,840 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:40,934 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,006 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,092 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,161 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,254 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,375 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,504 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,604 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,726 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,811 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,926 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:41,985 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,079 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,150 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,253 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,357 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,432 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,508 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,580 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,682 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,751 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,825 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:01:42,894 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-09-11 20:02:46,341 - INFO - Inserção de usuários e inscrições concluída.
+2024-09-11 20:02:46,341 - INFO - Coleta e armazenamento concluídos às 2024-09-11 20:02:46.341576

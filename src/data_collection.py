@@ -7,12 +7,12 @@ def coletar_todos_os_cursos(config):
     print(f"URL para coletar todos os cursos: {url}")  # Log da URL
     
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         response.raise_for_status()  # Levanta um erro se o status não for 200 OK
         print(f"Status Code: {response.status_code}")  # Log do status da resposta
         
         cursos = response.json()
-        print(f"Resposta da API: {cursos}")  # Log do conteúdo da resposta
+        # print(f"Resposta da API: {cursos}")  # Log do conteúdo da resposta
         
         return cursos
 
@@ -25,15 +25,36 @@ def coletar_todos_os_cursos(config):
 
     return None
 
+def coletar_detalhes_usuario_do_curso(config, curso_id, moodle_id):
+    url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json&userid={moodle_id}"
+    
+    print(f"URL para coletar detalhes de inscrição do usuário {moodle_id} no curso {curso_id}: {url}")
+    response = requests.get(url, verify=False)
+    
+    if response.status_code == 200:
+        try:
+            cursos = response.json()
+            for curso in cursos:
+                if curso['id'] == curso_id:
+                    return curso
+        except ValueError:
+            print("Erro ao converter resposta da API para JSON")
+    else:
+        print(f"Erro na API do Moodle: {response.json().get('message', 'Erro desconhecido')}")
+    
+    return None
+
+
 def coletar_usuarios_do_curso(config, curso_id):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_enrol_get_enrolled_users&moodlewsrestformat=json&courseid={curso_id}"
     
     print(f"URL para coletar usuários do curso {curso_id}: {url}")  # Log da URL
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     
     if response.status_code == 200:
         try:
             usuarios = response.json()
+            print (usuarios[1])
             return usuarios
         except ValueError:
             print("Erro ao converter resposta da API para JSON")
@@ -46,7 +67,7 @@ def buscar_curso_por_id(config, id_curso):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_course_get_courses&moodlewsrestformat=json&options[ids][0]={id_curso}"
     
     print(f"URL para buscar curso por ID {id_curso}: {url}")  # Log da URL
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     
     if response.status_code == 200:
         try:
@@ -100,7 +121,7 @@ def coletar_cursos_usuario(user_id):
         'moodlewsrestformat': 'json',
         'userid': user_id
     }
-    response = requests.get(url, params=params)
+    response = requests.get(url, params=params, verify=False)
     cursos = response.json()
     return cursos
 
@@ -108,7 +129,7 @@ def buscar_curso_por_id(config, id_curso):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_course_get_courses&moodlewsrestformat=json&options[ids][0]={id_curso}"
     
     try:
-        response = requests.get(url)
+        response = requests.get(url, verify=False)
         response.raise_for_status()
         cursos = response.json()
         
