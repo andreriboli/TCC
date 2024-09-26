@@ -1,0 +1,55 @@
+/* Estilos principais do menu */
+.navbar {
+  background-color: #343a40;  /* Cor de fundo escura */
+  color: white;
+  width: 100%;  /* Ocupa toda a largura da tela */
+  height: 60px;  /* Altura do menu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;  /* Fixa o menu no topo da página */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 90%;  /* Largura do conteúdo do menu */
+  max-width: 1200px;  /* Limite da largura máxima */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #007bff;
+}
+
+body {
+  padding-top: 60px;
+}

@@ -1,0 +1,11 @@
+/* Remover qualquer margem que deslocava o conteúdo */
+main {
+  margin-left: 0; /* Sem margem para que o conteúdo não seja deslocado */
+  transition: margin-left 0.3s ease; /* Apenas para suavidade ao interagir com a sidebar */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

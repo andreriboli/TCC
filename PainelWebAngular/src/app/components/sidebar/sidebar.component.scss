@@ -1,0 +1,59 @@
+#sidebar {
+  width: 250px;
+  position: fixed; /* Fixa a barra lateral, sobrepondo o conteúdo */
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Transição suave ao abrir/fechar */
+  z-index: 1000; /* Certifica que a sidebar está acima do conteúdo */
+}
+
+/* Quando a sidebar está oculta, ela é deslocada para fora da tela */
+#sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.nav-link {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.nav-link.active {
+  background-color: #ffc107; /* Cor amarela */
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+/* Botão retangular que aparece na lateral quando a sidebar está oculta */
+.toggle-btn {
+  position: fixed;
+  top: 20%; /* Centraliza verticalmente */
+  left: -30px; /* Sai um pouco da lateral da tela */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80px;
+  background-color: #343a40;
+  border: none; /* Remove borda */
+  border-radius: 0 10px 10px 0; /* Borda arredondada na direita */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 1100; /* Certifica que o botão fica sobre o conteúdo */
+}
+
+.toggle-btn:hover {
+  background-color: #ffc107; /* Fica amarelo ao passar o mouse */
+  color: black;
+}
+
+/* Ícone centralizado */
+.toggle-btn i {
+  font-size: 1.5rem;
+}

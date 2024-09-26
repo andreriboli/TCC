@@ -16,14 +16,37 @@ class VimeoScraper:
 
     def inicializar_driver(self):
         chrome_options = Options()
+        # Use um perfil temporário do Chrome
+        chrome_options.add_argument("--incognito")  # Modo anônimo
+
+        # Configurações de download
         chrome_options.add_experimental_option("prefs", {
-            "download.default_directory": self.download_dir,  # Diretório de download
-            "download.prompt_for_download": False,  # Desabilita o prompt de download
+            "download.default_directory": self.download_dir,
+            "download.prompt_for_download": False,
             "download.directory_upgrade": True,
             "safebrowsing.enabled": True
         })
+
+        # Configurações para remover detecção de automação
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+
+        # Inicializa o Chrome com as opções
         driver = webdriver.Chrome(options=chrome_options)
+
+        # Remove a propriedade 'webdriver'
+        driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+            "source": """
+            Object.defineProperty(navigator, 'webdriver', {
+            get: () => undefined
+            })
+            """
+        })
+
         return driver
+
+
 
     def login(self):
         try:
@@ -43,7 +66,7 @@ class VimeoScraper:
             if len(buttons) >= 4:
                 buttons[3].click()
             
-            WebDriverWait(self.driver, 20).until(
+            WebDriverWait(self.driver, 30).until(
                 EC.url_changes("https://vimeo.com/log_in")
             )
             print("Login bem-sucedido")
@@ -55,15 +78,12 @@ class VimeoScraper:
         try:
             self.driver.get("https://vimeo.com/analytics/video")
             
-            # Espera até que um elemento específico (pode ser o corpo ou qualquer outro elemento que só aparece após o carregamento)
             WebDriverWait(self.driver, 20).until(
                 EC.presence_of_element_located((By.TAG_NAME, "body"))
             )
             
-            # Adicionar uma espera extra para garantir que todos os scripts carreguem
-            time.sleep(5)  # Espera adicional de 5 segundos (ajuste conforme necessário)
+            time.sleep(5) 
             
-            # Usar o CSS Selector para localizar o botão
             csv_link = self.driver.find_element(By.CSS_SELECTOR, "#__next > div.naniiu-0.hidfuh > div.css-1tl0aqy > div.css-1t2az4r > div > div.sc-5z31bk-0.bwvIAq > div.mcrvh1-0.kMSZnu > div.css-qkv6yk > div.n2q0v9-4.dGlonL > a")
             
             if csv_link:
@@ -86,11 +106,13 @@ class VimeoScraper:
                 with open(file_path, 'wb') as file:
                     file.write(response.content)
                 print(f"Download completo. Arquivo salvo em: {file_path}")
+                return file_path
             else:
                 print(f"Erro ao baixar o CSV. Código de status: {response.status_code}")
+                return None
         except Exception as e:
             print(f"Erro ao tentar baixar o CSV: {e}")
-
+        return None
 
     def fechar(self):
         self.driver.quit()

@@ -17,8 +17,8 @@ class DBUtil:
             with self.conn.cursor() as cursor:
                 cursor.execute(query, params)
                 self.conn.commit()
-                return cursor  # Retornar o cursor para usar fetchone() quando necessário
+                return cursor 
         except Exception as e:
             self.conn.rollback()
             print(f"Erro ao executar a consulta: {e}")
-            return None  # Retornar None explicitamente em caso de erro
+            return None

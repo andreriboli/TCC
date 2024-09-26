@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import logging
+import pandas as pd
 import requests
 import urllib3
 from db_util import DBUtil
@@ -16,9 +17,9 @@ class DatabaseOperations:
     def inserir_usuario(self, dados_usuario):
         query = """
         INSERT INTO usuarios (
-            moodle_id, username, nome
+            moodle_id, username, nome, firstaccess, lastaccess
         ) VALUES (
-            %s, %s, %s
+            %s, %s, %s, %s, %s
         )
         ON CONFLICT (moodle_id) DO UPDATE
         SET 
@@ -26,36 +27,49 @@ class DatabaseOperations:
             nome = EXCLUDED.nome;
         """
         
+        firstaccess = dados_usuario.get('firstaccess', 0)
+        lastaccess = dados_usuario.get('lastaccess', 0)
+        
+        if firstaccess != 0:
+            firstaccess = datetime.fromtimestamp(firstaccess)
+        else:
+            firstaccess = None
+
+        if lastaccess != 0:
+            lastaccess = datetime.fromtimestamp(lastaccess)
+        else:
+            lastaccess = None
+
         params = (
-            dados_usuario['id'],  # moodle_id
-            dados_usuario['username'],  # username
-            dados_usuario['fullname']  # nome (antigo fullname)
+            dados_usuario['id'],
+            dados_usuario['username'],
+            dados_usuario['fullname'],
+            firstaccess,
+            lastaccess
         )
         
         print(f"Parâmetros fornecidos para inserção de usuário: {params}")
         self.db_util.execute_query(query, params)
 
+
     def inserir_curso(self, curso):
         try:
-            # Exibindo o curso para verificar a estrutura antes de tentar acessar 'categoryid'
-            print(f"Curso retornado da API: {curso}")
+            # print(f"Curso retornado da API: {curso}")
 
-            # Obter a categoria do curso
-            id_categoria = curso.get('categoryid')  # Corrigido para 'categoryid'
-
-            if id_categoria is None:
-                print(f"Categoria não encontrada para o curso com ID {curso['id']}. Pulando inserção.")
-                logging.error(f"Categoria não encontrada para o curso com ID {curso['id']}.")
-                return  # Pular a inserção deste curso
+            id_categoria = curso.get('categoryid')
             
-            # Verificar se o curso já existe no banco
+            if id_categoria is None:
+                # print(f"Categoria não encontrada para o curso com ID {curso['id']}. Pulando inserção.")
+                # logging.error(f"Categoria não encontrada para o curso com ID {curso['id']}.")
+                return
+            
             if not self.curso_existe(curso['id']):
-                print(f"Curso com ID {curso['id']} não encontrado no banco. Inserindo agora.")
+                # print(f"Curso com ID {curso['id']} não encontrado no banco. Inserindo agora.")
                 
-                # Inserir a categoria, se necessário
+                
                 id_categoria = self.inserir_categoria_por_id(id_categoria)
 
-                # Inserir o curso no banco de dados
+
                 query = """
                 INSERT INTO cursos (id_curso, nome_curso, id_categoria, data_inicio, data_fim)
                 VALUES (%s, %s, %s, to_timestamp(%s), to_timestamp(%s))
@@ -66,46 +80,44 @@ class DatabaseOperations:
                 """
                 
                 params = (
-                    curso['id'],  # id_curso
-                    curso['fullname'],  # nome_curso
-                    id_categoria,  # id_categoria
-                    curso.get('startdate', 0),  # data_inicio
-                    curso.get('enddate', 0)  # data_fim
+                    curso['id'],
+                    curso['fullname'],
+                    id_categoria,
+                    curso.get('startdate', 0),
+                    curso.get('enddate', 0)
                 )
 
-                print(f"Parâmetros fornecidos para inserção de curso: {params}")
+                # print(f"Parâmetros fornecidos para inserção de curso: {params}")
                 with self.db_util.conn.cursor() as cursor:
                     cursor.execute(query, params)
-                self.db_util.conn.commit()  # Confirmar a transação
+                self.db_util.conn.commit()
 
-                print(f"Curso com ID {curso['id']} inserido com sucesso.")
+                # print(f"Curso com ID {curso['id']} inserido com sucesso.")
 
-            else:
-                print(f"Curso com ID {curso['id']} já existe no banco.")
+            # else:
+            #     print(f"Curso com ID {curso['id']} já existe no banco.")
 
-            # **Mesmo que o curso já exista, continuamos a processar os usuários e inscrições**
-            print(f"Iniciando a inserção de usuários e inscrições para o curso {curso['fullname']}")
+            # print(f"Iniciando a inserção de usuários e inscrições para o curso {curso['fullname']}")
             
-            config = Config()
-            # Certifique-se de que está passando o curso['id'] corretamente para coletar os usuários
-            usuarios = coletar_usuarios_do_curso(config, curso['id'])  # Passando o curso['id'] como argumento
+            # config = Config()
+            # usuarios = coletar_usuarios_do_curso(config, curso['id']) 
 
-            if usuarios:
-                for usuario in usuarios:
-                    self.inserir_usuario(usuario)
-                    logging.info(f"Usuário {usuario['fullname']} inserido para o curso {curso['fullname']}.")
-                    self.inserir_inscricao(usuario['id'], curso)
-                    logging.info(f"Inscrição do usuário {usuario['fullname']} inserida no curso {curso['fullname']}.")
-            else:
-                logging.warning(f"Nenhum usuário encontrado para o curso {curso['fullname']}.")
+            # if usuarios:
+            #     for usuario in usuarios:
+            #         self.inserir_usuario(usuario)
+            #         logging.info(f"Usuário {usuario['fullname']} inserido para o curso {curso['fullname']}.")
+            #         self.inserir_inscricao(usuario['id'], curso)
+            #         logging.info(f"Inscrição do usuário {usuario['fullname']} inserida no curso {curso['fullname']}.")
+            # else:
+            #     logging.warning(f"Nenhum usuário encontrado para o curso {curso['fullname']}.")
 
         except Exception as e:
-            print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
+            # print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
             logging.error(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
     def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario):
         try:
-            # Verificar se o curso foi completado
+            
             completado = detalhes_usuario.get('completed', False)
             tempo_medio_conclusao = None
             primeiro_acesso = detalhes_usuario.get('startdate', 0)
@@ -114,9 +126,6 @@ class DatabaseOperations:
             if completado:
                 startdate = detalhes_usuario.get('startdate', 0)
                 enddate = detalhes_usuario.get('enddate', 0)
-
-                if enddate != 0:
-                    print(enddate)
 
                 if enddate == 0:
                     ultimo_acesso = detalhes_usuario.get('lastaccess', 0)
@@ -156,7 +165,7 @@ class DatabaseOperations:
                 tempo_medio_conclusao
             )
 
-            print(f"Parâmetros fornecidos para inserção de inscrição: {params}")
+            # print(f"Parâmetros fornecidos para inserção de inscrição: {params}")
             self.db_util.execute_query(query, params)
 
         except Exception as e:
@@ -172,7 +181,7 @@ class DatabaseOperations:
 
             for curso in cursos:
                 self.inserir_curso(curso)
-                self.inserir_inscricao(dados_usuario['id'], curso)
+                # self.inserir_inscricao(dados_usuario['id'], curso)
 
     def inserir_categoria_por_id(self, id_categoria):
         try:
@@ -184,7 +193,7 @@ class DatabaseOperations:
             if result:
                 return result[0]
             else:
-                print(f"Categoria com ID {id_categoria} não encontrada no banco. Buscando na API do Moodle.")
+                # print(f"Categoria com ID {id_categoria} não encontrada no banco. Buscando na API do Moodle.")
 
                 url = f"{self.config.MOODLE_URL}wstoken={self.config.MOODLE_TOKEN}&wsfunction=core_course_get_categories&moodlewsrestformat=json&criteria[0][key]=id&criteria[0][value]={id_categoria}"
 
@@ -207,26 +216,26 @@ class DatabaseOperations:
 
                     if result:
                         self.db_util.conn.commit()
-                        print(f"Categoria com ID {id_categoria} inserida com sucesso.")
+                        # print(f"Categoria com ID {id_categoria} inserida com sucesso.")
                         return result[0]
                     else:
-                        print(f"Falha ao inserir a nova categoria com ID {id_categoria}")
+                        # print(f"Falha ao inserir a nova categoria com ID {id_categoria}")
                         return None
                 else:
-                    print(f"Categoria com ID {id_categoria} não encontrada na API.")
-                    logging.error(f"Categoria com ID {id_categoria} não encontrada na API.")
+                    # print(f"Categoria com ID {id_categoria} não encontrada na API.")
+                    # logging.error(f"Categoria com ID {id_categoria} não encontrada na API.")
                     return None
 
         except requests.exceptions.HTTPError as http_err:
-            print(f"Erro HTTP ao fazer a solicitação à API do Moodle: {http_err}")
-            logging.error(f"Erro HTTP ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {http_err}")
+            # print(f"Erro HTTP ao fazer a solicitação à API do Moodle: {http_err}")
+            # logging.error(f"Erro HTTP ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {http_err}")
             return None
         except requests.exceptions.RequestException as req_err:
-            print(f"Erro ao fazer a solicitação à API do Moodle: {req_err}")
-            logging.error(f"Erro ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {req_err}")
+            # print(f"Erro ao fazer a solicitação à API do Moodle: {req_err}")
+            # logging.error(f"Erro ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {req_err}")
             return None
         except Exception as e:
-            print(f"Erro inesperado ao buscar ou inserir a categoria: {e}")
+            # print(f"Erro inesperado ao buscar ou inserir a categoria: {e}")
             logging.error(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
         return None
 
@@ -247,10 +256,10 @@ class DatabaseOperations:
             if cursos:
                 return cursos[0]
             else:
-                print(f"Curso com id {curso_id} não encontrado na resposta.")
+                # print(f"Curso com id {curso_id} não encontrado na resposta.")
                 return None
         else:
-            print(f"Erro ao consultar a API do Moodle. Status code: {response.status_code}")
+            # print(f"Erro ao consultar a API do Moodle. Status code: {response.status_code}")
             return None
 
     def curso_existe(self, id_curso):
@@ -262,25 +271,24 @@ class DatabaseOperations:
                 result = cursor.fetchone()
                 return result is not None
         except Exception as e:
-            print(f"Erro ao verificar a existência do curso: {e}")
+            # print(f"Erro ao verificar a existência do curso: {e}")
             return False
 
 
-    def inserir_dados_vimeo(self, views, impressions, finishes, downloads, unique_impressions,
-                            unique_viewers, mean_percent_watched, mean_seconds_watched,
-                            total_seconds_watched, video_uri, video_title, video_created_time,
-                            likes, comments):
+    def inserir_dados_vimeo(self, views, impressions, finishes, downloads, unique_impressions, unique_viewers,
+                        mean_percent_watched, mean_seconds_watched, total_seconds_watched, id_vimeo_video,
+                        title, created_time, likes, comments):
         try:
             query = """
-            INSERT INTO vimeo_videos (
-                views, impressions, finishes, downloads, unique_impressions, unique_viewers,
-                mean_percent_watched, mean_seconds_watched, total_seconds_watched,
-                id_vimeo_video, video_title, video_created_time, likes, comments
+            INSERT INTO video_analytics (
+                id_vimeo_video, title, created_time, views, impressions, finishes, downloads, 
+                unique_impressions, unique_viewers, mean_percent_watched, mean_seconds_watched, 
+                total_seconds_watched, likes, comments
+            ) VALUES (
+                %s, %s, to_timestamp(%s, 'YYYY-MM-DD"T"HH24:MI:SS'), %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
             )
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, to_timestamp(%s, 'YYYY-MM-DD"T"HH24:MI:SS"Z"'), %s, %s)
             ON CONFLICT (id_vimeo_video) DO UPDATE
-            SET 
-                views = EXCLUDED.views,
+            SET views = EXCLUDED.views,
                 impressions = EXCLUDED.impressions,
                 finishes = EXCLUDED.finishes,
                 downloads = EXCLUDED.downloads,
@@ -289,38 +297,62 @@ class DatabaseOperations:
                 mean_percent_watched = EXCLUDED.mean_percent_watched,
                 mean_seconds_watched = EXCLUDED.mean_seconds_watched,
                 total_seconds_watched = EXCLUDED.total_seconds_watched,
-                video_title = EXCLUDED.video_title,
-                video_created_time = EXCLUDED.video_created_time,
                 likes = EXCLUDED.likes,
                 comments = EXCLUDED.comments;
             """
+            
             params = (
-                views, impressions, finishes, downloads, unique_impressions,
-                unique_viewers, mean_percent_watched, mean_seconds_watched,
-                total_seconds_watched, video_uri, video_title, video_created_time,
-                likes, comments
+                id_vimeo_video,
+                title,
+                created_time.split("+")[0], 
+                views if not pd.isna(views) else 0,
+                impressions if not pd.isna(impressions) else 0,
+                finishes if not pd.isna(finishes) else 0,
+                downloads if not pd.isna(downloads) else 0,
+                unique_impressions if not pd.isna(unique_impressions) else 0,
+                unique_viewers if not pd.isna(unique_viewers) else 0,
+                mean_percent_watched if not pd.isna(mean_percent_watched) else 0,
+                mean_seconds_watched if not pd.isna(mean_seconds_watched) else 0,
+                total_seconds_watched if not pd.isna(total_seconds_watched) else 0,
+                likes if not pd.isna(likes) else 0,
+                comments if not pd.isna(comments) else 0
             )
-            print(f"Parâmetros fornecidos para inserção de dados Vimeo: {params}")
+            
+            # print(f"Parâmetros fornecidos para inserção de dados Vimeo: {params}")
             self.db_util.execute_query(query, params)
-            self.db_util.conn.commit()  # Confirmar a transação
 
         except Exception as e:
             print(f"Erro ao inserir dados do Vimeo: {e}")
-            logging.error(f"Erro ao inserir dados do Vimeo: {e}")
 
-    def salvar_dados_vimeo(self, df):
+    def salvar_dados_vimeo(self, df): 
+        db_util = DBUtil(
+            dbname=self.config.DB_NAME,
+            user=self.config.DB_USER,
+            password=self.config.DB_PASSWORD,
+            host=self.config.DB_HOST,
+            port=self.config.DB_PORT
+        )
+    
         try:
-            logging.info("Conectado ao banco de dados com sucesso.")
+            db_util.connect()
+            # logging.info("Conectado ao banco de dados com sucesso.")
             
-            # Iterar sobre as linhas do dataframe e inserir no banco de dados
             for index, row in df.iterrows():
+                if pd.isna(row['metadata.connections.video.uri']) or row['metadata.connections.video.uri'].strip() == "":
+                    # print(f"Linha {index} ignorada por não conter um ID de vídeo válido.")
+                    continue
+
                 self.inserir_dados_vimeo(
                     row['views'], row['impressions'], row['finishes'], row['downloads'],
                     row['unique_impressions'], row['unique_viewers'], row['mean_percent_watched'],
-                    row['mean_seconds_watched'], row['total_seconds_watched'], row['metadata.connections.video.uri'],
-                    row['metadata.connections.video.title'], row['metadata.connections.video.created_time'],
-                    row['metadata.connections.video.likes'], row['metadata.connections.video.comments']
+                    row['mean_seconds_watched'], row['total_seconds_watched'], 
+                    row['metadata.connections.video.uri'], row['metadata.connections.video.title'],
+                    row['metadata.connections.video.created_time'], row['metadata.connections.video.likes'],
+                    row['metadata.connections.video.comments']
                 )
             logging.info("Dados do Vimeo inseridos no banco de dados.")
         except Exception as e:
             logging.error(f"Erro ao salvar os dados do Vimeo: {e}")
+        finally:
+            db_util.disconnect()
+            logging.info("Desconectado do banco de dados.")
