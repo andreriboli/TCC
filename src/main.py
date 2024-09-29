@@ -16,16 +16,16 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
-def executar_coleta_diaria():
-    config = Config()
+def executar_coleta_diaria(config, db_util):
+    # config = Config()
 
-    db_util = DBUtil(
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=config.DB_PASSWORD,
-        host=config.DB_HOST,
-        port=config.DB_PORT
-    )
+    # db_util = DBUtil(
+    #     dbname=config.DB_NAME,
+    #     user=config.DB_USER,
+    #     password=config.DB_PASSWORD,
+    #     host=config.DB_HOST,
+    #     port=config.DB_PORT
+    # )
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 
     # vimeo_scraper.login()
@@ -153,5 +153,14 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
             print(f"Nenhum usuário encontrado para o curso {curso['fullname']}")
 
 if __name__ == "__main__":
-    executar_coleta_diaria()
-    # start_api()
+    config = Config()
+    db_util = DBUtil(
+        dbname=config.DB_NAME,
+        user=config.DB_USER,
+        password=config.DB_PASSWORD,
+        host=config.DB_HOST,
+        port=config.DB_PORT
+    )
+    database_operations = DatabaseOperations(db_util, config)
+    # executar_coleta_diaria(config, db_util)
+    start_api(database_operations)

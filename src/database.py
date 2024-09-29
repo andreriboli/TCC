@@ -23,8 +23,8 @@ class DatabaseOperations:
         )
         ON CONFLICT (moodle_id) DO UPDATE
         SET 
-            username = EXCLUDED.username,
-            nome = EXCLUDED.nome;
+            lastaccess = EXCLUDED.lastaccess
+        WHERE usuar ios.lastaccess IS DISTINCT FROM EXCLUDED.lastaccess;
         """
         
         firstaccess = dados_usuario.get('firstaccess', 0)
@@ -273,6 +273,39 @@ class DatabaseOperations:
         except Exception as e:
             # print(f"Erro ao verificar a existência do curso: {e}")
             return False
+        
+    def ultimos_usuarios_logados(self, start_date, end_date):
+        query = """
+            WITH date_series AS (
+                SELECT generate_series(
+                    TO_DATE(%s, 'YYYY-MM-DD'),
+                    TO_DATE(%s, 'YYYY-MM-DD'),
+                    '1 day'::interval
+                )::date AS data_login
+            )
+            SELECT
+                date_series.data_login,
+                COALESCE(COUNT(u.id_usuario), 0) AS quantidade_usuarios
+            FROM
+                date_series
+            LEFT JOIN usuarios u ON TO_CHAR(u.lastaccess, 'YYYY-MM-DD') = TO_CHAR(date_series.data_login, 'YYYY-MM-DD')
+            AND u.lastaccess BETWEEN TO_TIMESTAMP(%s, 'YYYY-MM-DD HH24:MI:SS')
+            AND TO_TIMESTAMP(%s, 'YYYY-MM-DD HH24:MI:SS')
+            GROUP BY
+                date_series.data_login
+            ORDER BY
+                date_series.data_login;
+        """
+        
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, (start_date, end_date, start_date + ' 00:00:00', end_date + ' 23:59:59'))
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao obter os últimos usuários logados: {e}")
+            return None
+
 
 
     def inserir_dados_vimeo(self, views, impressions, finishes, downloads, unique_impressions, unique_viewers,

@@ -1,29 +1,71 @@
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Consulta</h5>
-          <p class="card-text">Faça consultas aos dados.</p>
-          <a routerLink="/consulta" class="btn btn-primary">Ir para Consultas</a>
+<div class="container mt-4">
+  <!-- Filtro de data dentro de um card do Bootstrap -->
+  <div class="card p-4 mb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <label for="startDate">Data Inicial:</label>
+        <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate">
+      </div>
+      <div class="col-md-3">
+        <label for="endDate">Data Final:</label>
+        <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate">
+      </div>
+    </div>
+  </div>
+
+  <!-- Gráficos dentro de cards do Bootstrap -->
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Últimos Usuários Logados</h5>
+        <canvas baseChart [datasets]="barChartUltimosUsuariosLogadosData.datasets"
+          [labels]="barChartUltimosUsuariosLogadosLabels" [type]="barChartUltimosUsuariosLogadosType"
+          [legend]="barChartUltimosUsuariosLogadosLegend" [options]="barChartUltimosUsuariosLogadosOptions">
+        </canvas>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Gráfico 2</h5>
+        <div style="display: block;">
+          <!-- <canvas baseChart
+                  [datasets]="barChartData.datasets"
+                  [labels]="barChartData.labels"
+                  [type]="barChartType"
+                  [legend]="barChartLegend"
+                  [options]="barChartOptions">
+          </canvas> -->
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Gráficos</h5>
-          <p class="card-text">Visualize gráficos de dados.</p>
-          <a routerLink="/graficos" class="btn btn-primary">Ver Gráficos</a>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Gráfico 3</h5>
+        <div style="display: block;">
+          <!-- <canvas baseChart
+                  [datasets]="barChartData.datasets"
+                  [labels]="barChartData.labels"
+                  [type]="barChartType"
+                  [legend]="barChartLegend"
+                  [options]="barChartOptions">''
+          </canvas> -->
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Menu</h5>
-          <p class="card-text">Acesse o menu de navegação.</p>
-          <a routerLink="/menu" class="btn btn-primary">Ir para o Menu</a>
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Gráfico 4</h5>
+        <div style="display: block;">
+          <!-- <canvas baseChart
+                  [datasets]="barChartData.datasets"
+                  [labels]="barChartData.labels"
+                  [type]="barChartType"
+                  [legend]="barChartLegend"
+                  [options]="barChartOptions">
+          </canvas> -->
         </div>
       </div>
     </div>
