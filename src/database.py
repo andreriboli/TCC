@@ -24,7 +24,7 @@ class DatabaseOperations:
         ON CONFLICT (moodle_id) DO UPDATE
         SET 
             lastaccess = EXCLUDED.lastaccess
-        WHERE usuar ios.lastaccess IS DISTINCT FROM EXCLUDED.lastaccess;
+        WHERE usuarios.lastaccess IS DISTINCT FROM EXCLUDED.lastaccess;
         """
         
         firstaccess = dados_usuario.get('firstaccess', 0)
@@ -305,7 +305,32 @@ class DatabaseOperations:
         except Exception as e:
             print(f"Erro ao obter os últimos usuários logados: {e}")
             return None
-
+        
+    def distribuicao_cursos_ativos(self):
+        query = """
+        SELECT 
+            c2.id_categoria,
+            c2.nome_categoria,
+            COUNT(i.id_usuario) AS total_usuarios
+        FROM 
+            cursos c
+        INNER JOIN inscricoes i ON c.id_curso = i.id_curso
+        inner join categorias c2 on c2.id_categoria = c.id_categoria
+        GROUP BY 
+            c2.id_categoria,
+            c2.nome_categoria
+        ORDER BY 
+            total_usuarios DESC;
+        """
+        
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao obter as categorias: {e}")
+            return None
 
 
     def inserir_dados_vimeo(self, views, impressions, finishes, downloads, unique_impressions, unique_viewers,

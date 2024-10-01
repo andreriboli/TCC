@@ -1,9 +1,6 @@
-<!-- Sidebar -->
 <div id="sidebar" class="bg-dark text-white vh-100 d-flex flex-column p-3" [class.hidden]="isHidden">
-  <!-- Botão de ocultar sidebar -->
   <button class="btn btn-sm btn-outline-warning align-self-end mb-2" (click)="toggleSidebar()">⟨</button>
 
-  <!-- Navegação na sidebar -->
   <ul class="nav nav-pills flex-column mt-2">
     <li class="nav-item">
       <a class="nav-link text-white" aria-current="page" routerLink="/home">
@@ -23,7 +20,6 @@
   </ul>
 </div>
 
-<!-- Botão de exibição quando a sidebar estiver oculta -->
 <button *ngIf="isHidden" class="toggle-btn" (click)="toggleSidebar()">
   <i class="bi bi-list"></i>
 </button>

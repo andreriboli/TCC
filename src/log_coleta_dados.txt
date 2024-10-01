@@ -371,3 +371,223 @@
 2024-09-29 19:27:02,186 - INFO - 127.0.0.1 - - [29/Sep/2024 19:27:02] "GET /api/usuarios/logados?startDate=2024-09-22&endDate=2024-09-29 HTTP/1.1" 200 -
 2024-09-29 19:27:05,630 - INFO - 127.0.0.1 - - [29/Sep/2024 19:27:05] "GET /api/usuarios/logados?startDate=2024-09-22&endDate=2024-09-29 HTTP/1.1" 200 -
 2024-09-29 19:27:33,122 - INFO - 127.0.0.1 - - [29/Sep/2024 19:27:33] "GET /api/usuarios/logados?startDate=2024-08-30&endDate=2024-09-29 HTTP/1.1" 200 -
+2024-09-30 19:12:05,959 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 19:12:05,959 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 19:13:00,297 - INFO - 127.0.0.1 - - [30/Sep/2024 19:13:00] "GET /api/usuarios/logados?startDate=2024-08-31&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:14:09,228 - INFO - 127.0.0.1 - - [30/Sep/2024 19:14:09] "GET /api/usuarios/logados?startDate=2024-08-31&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:15:36,686 - INFO - 127.0.0.1 - - [30/Sep/2024 19:15:36] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:16:14,147 - INFO - 127.0.0.1 - - [30/Sep/2024 19:16:14] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:18:42,931 - INFO - 127.0.0.1 - - [30/Sep/2024 19:18:42] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:18:52,674 - INFO - Iniciando coleta de dados às 2024-09-30 19:18:52.674616
+2024-09-30 19:18:52,859 - INFO - Cursos coletados com sucesso.
+2024-09-30 19:18:52,859 - INFO - Iniciando inserção de categorias.
+2024-09-30 19:18:52,909 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-30 19:18:52,909 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-30 19:18:52,909 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-30 19:18:52,909 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-30 19:18:52,909 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-30 19:18:52,909 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-30 19:18:52,909 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-30 19:18:52,909 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-30 19:18:52,909 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-30 19:18:52,909 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-30 19:18:52,909 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-30 19:18:52,909 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-30 19:18:52,909 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-30 19:18:52,909 - INFO - Inserção de categorias concluída.
+2024-09-30 19:18:52,909 - INFO - Iniciando inserção de cursos.
+2024-09-30 19:18:52,909 - INFO - Curso E-Learning inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Análise Competitiva inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Kubernetes #01 inserido.
+2024-09-30 19:18:52,909 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-30 19:18:52,909 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-30 19:18:52,924 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-30 19:18:52,924 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-30 19:18:52,924 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-30 19:18:52,924 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-30 19:18:52,925 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-30 19:18:52,925 - INFO - Curso Test Driven Development inserido.
+2024-09-30 19:18:52,925 - INFO - Curso Engenharia de Computação inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Sistemas de Informação inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Ciências Contábeis inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Administração inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Gestão da Inovação inserido.
+2024-09-30 19:18:52,926 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-30 19:18:52,926 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-30 19:18:52,926 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-30 19:18:52,926 - INFO - Curso MATLAB inserido.
+2024-09-30 19:18:52,926 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-30 19:18:52,926 - INFO - Inserção de cursos concluída.
+2024-09-30 19:18:52,926 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-30 19:19:28,563 - INFO - Iniciando coleta de dados às 2024-09-30 19:19:28.563396
+2024-09-30 19:19:28,716 - INFO - Cursos coletados com sucesso.
+2024-09-30 19:19:28,716 - INFO - Iniciando inserção de categorias.
+2024-09-30 19:19:28,786 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-09-30 19:19:28,786 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-09-30 19:19:28,786 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-09-30 19:19:28,786 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-09-30 19:19:28,786 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-09-30 19:19:28,786 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-09-30 19:19:28,786 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-09-30 19:19:28,786 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-09-30 19:19:28,786 - INFO - Categoria 10 inserida para o curso Administração
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-09-30 19:19:28,786 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-09-30 19:19:28,786 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-09-30 19:19:28,786 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-09-30 19:19:28,786 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-09-30 19:19:28,786 - INFO - Inserção de categorias concluída.
+2024-09-30 19:19:28,786 - INFO - Iniciando inserção de cursos.
+2024-09-30 19:19:28,786 - INFO - Curso E-Learning inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Análise Competitiva inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Kubernetes #01 inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-09-30 19:19:28,786 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Valuation por Multiplos inserido.
+2024-09-30 19:19:28,786 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-09-30 19:19:28,786 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-09-30 19:19:28,786 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Test Driven Development inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Engenharia de Computação inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Sistemas de Informação inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Ciências Contábeis inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Administração inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Gestão da Inovação inserido.
+2024-09-30 19:19:28,802 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-09-30 19:19:28,802 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Controle de Versão com Git inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-09-30 19:19:28,802 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-09-30 19:19:28,802 - INFO - Curso MATLAB inserido.
+2024-09-30 19:19:28,802 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-09-30 19:19:28,802 - INFO - Inserção de cursos concluída.
+2024-09-30 19:19:28,802 - INFO - Iniciando inserção de usuários e inscrições.
+2024-09-30 19:21:30,006 - INFO - Inserção de usuários e inscrições concluída.
+2024-09-30 19:21:30,006 - INFO - Coleta e armazenamento concluídos às 2024-09-30 19:21:30.006248
+2024-09-30 19:21:30,037 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 19:21:30,037 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 19:21:45,835 - INFO - 127.0.0.1 - - [30/Sep/2024 19:21:45] "[33mGET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1[0m" 404 -
+2024-09-30 19:22:07,583 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 19:22:07,583 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 19:22:10,350 - INFO - 127.0.0.1 - - [30/Sep/2024 19:22:10] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:25:46,390 - INFO - 127.0.0.1 - - [30/Sep/2024 19:25:46] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:26:52,231 - INFO - 127.0.0.1 - - [30/Sep/2024 19:26:52] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:32:09,897 - INFO - 127.0.0.1 - - [30/Sep/2024 19:32:09] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:32:11,152 - INFO - 127.0.0.1 - - [30/Sep/2024 19:32:11] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:33:11,458 - INFO - 127.0.0.1 - - [30/Sep/2024 19:33:11] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:35:05,133 - INFO - 127.0.0.1 - - [30/Sep/2024 19:35:05] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:35:06,403 - INFO - 127.0.0.1 - - [30/Sep/2024 19:35:06] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:35:15,508 - INFO - 127.0.0.1 - - [30/Sep/2024 19:35:15] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:36:49,779 - INFO - 127.0.0.1 - - [30/Sep/2024 19:36:49] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:36:53,047 - INFO - 127.0.0.1 - - [30/Sep/2024 19:36:53] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:44:36,622 - INFO - 127.0.0.1 - - [30/Sep/2024 19:44:36] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:44:38,355 - INFO - 127.0.0.1 - - [30/Sep/2024 19:44:38] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:44:40,789 - INFO - 127.0.0.1 - - [30/Sep/2024 19:44:40] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:44:41,799 - INFO - 127.0.0.1 - - [30/Sep/2024 19:44:41] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:45:14,502 - INFO - 127.0.0.1 - - [30/Sep/2024 19:45:14] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:45:15,867 - INFO - 127.0.0.1 - - [30/Sep/2024 19:45:15] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:46:37,450 - INFO - 127.0.0.1 - - [30/Sep/2024 19:46:37] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:46:39,042 - INFO - 127.0.0.1 - - [30/Sep/2024 19:46:39] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:46:41,080 - INFO - 127.0.0.1 - - [30/Sep/2024 19:46:41] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:47:51,566 - INFO - 127.0.0.1 - - [30/Sep/2024 19:47:51] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:47:53,075 - INFO - 127.0.0.1 - - [30/Sep/2024 19:47:53] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:09,384 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:09] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:10,796 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:10] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:17,194 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:17] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:22,140 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:22] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:27,043 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:27] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:33,148 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:33] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:44,263 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:44] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:45,125 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:45] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:49,552 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:49] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:50,091 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:50] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:51,168 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:51] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:56,274 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:56] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:56,943 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:56] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:48:58,245 - INFO - 127.0.0.1 - - [30/Sep/2024 19:48:58] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:51:05,350 - INFO - 127.0.0.1 - - [30/Sep/2024 19:51:05] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:51:16,150 - INFO - 127.0.0.1 - - [30/Sep/2024 19:51:16] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:52:18,430 - INFO - 127.0.0.1 - - [30/Sep/2024 19:52:18] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:52:52,172 - INFO - 127.0.0.1 - - [30/Sep/2024 19:52:52] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 19:54:35,720 - INFO - 127.0.0.1 - - [30/Sep/2024 19:54:35] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:16:39,365 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 20:16:39,365 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 20:17:25,440 - INFO - 127.0.0.1 - - [30/Sep/2024 20:17:25] "[33mGET /api/categorias/distribuicao-cursos-ativos HTTP/1.1[0m" 404 -
+2024-09-30 20:19:11,359 - INFO - 127.0.0.1 - - [30/Sep/2024 20:19:11] "[33mGET /api/categorias/distribuicao-cursos-ativos HTTP/1.1[0m" 404 -
+2024-09-30 20:19:24,396 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 20:19:24,397 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 20:20:26,415 - INFO - 127.0.0.1 - - [30/Sep/2024 20:20:26] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 20:23:26,583 - INFO - 127.0.0.1 - - [30/Sep/2024 20:23:26] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:32:39,985 - INFO - 127.0.0.1 - - [30/Sep/2024 20:32:39] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:42:37,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 20:42:37,552 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 20:45:14,162 - INFO - 127.0.0.1 - - [30/Sep/2024 20:45:14] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:45:15,145 - INFO - 127.0.0.1 - - [30/Sep/2024 20:45:15] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:45:52,857 - INFO - 127.0.0.1 - - [30/Sep/2024 20:45:52] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:45:52,861 - INFO - 127.0.0.1 - - [30/Sep/2024 20:45:52] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 20:48:25,002 - INFO - 127.0.0.1 - - [30/Sep/2024 20:48:25] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 20:48:25,002 - INFO - 127.0.0.1 - - [30/Sep/2024 20:48:25] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 20:50:20,217 - INFO - 127.0.0.1 - - [30/Sep/2024 20:50:20] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 20:50:20,217 - INFO - 127.0.0.1 - - [30/Sep/2024 20:50:20] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:11:11,624 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 21:11:11,624 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 21:11:15,532 - INFO - 127.0.0.1 - - [30/Sep/2024 21:11:15] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:11:15,533 - INFO - 127.0.0.1 - - [30/Sep/2024 21:11:15] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:13:15,806 - INFO - 127.0.0.1 - - [30/Sep/2024 21:13:15] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:13:15,820 - INFO - 127.0.0.1 - - [30/Sep/2024 21:13:15] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:13:28,185 - INFO - 127.0.0.1 - - [30/Sep/2024 21:13:28] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:13:28,515 - INFO - 127.0.0.1 - - [30/Sep/2024 21:13:28] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:18:48,975 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-30 21:18:48,975 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-30 21:21:04,254 - INFO - 127.0.0.1 - - [30/Sep/2024 21:21:04] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:21:04,287 - INFO - 127.0.0.1 - - [30/Sep/2024 21:21:04] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:23:00,384 - INFO - 127.0.0.1 - - [30/Sep/2024 21:23:00] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:23:00,385 - INFO - 127.0.0.1 - - [30/Sep/2024 21:23:00] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:23:09,904 - INFO - 127.0.0.1 - - [30/Sep/2024 21:23:09] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:23:10,365 - INFO - 127.0.0.1 - - [30/Sep/2024 21:23:10] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:26:39,406 - INFO - 127.0.0.1 - - [30/Sep/2024 21:26:39] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:26:39,406 - INFO - 127.0.0.1 - - [30/Sep/2024 21:26:39] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -
+2024-09-30 21:29:03,945 - INFO - 127.0.0.1 - - [30/Sep/2024 21:29:03] "GET /api/usuarios/logados?startDate=2024-09-23&endDate=2024-09-30 HTTP/1.1" 200 -
+2024-09-30 21:29:03,966 - INFO - 127.0.0.1 - - [30/Sep/2024 21:29:03] "GET /api/categorias/distribuicao-cursos-ativos HTTP/1.1" 200 -

@@ -17,24 +17,24 @@
   <div class="row justify-content-center">
     <div class="col-md-6 mb-3">
       <div class="card text-center p-3">
-        <h5>Últimos Usuários Logados</h5>
-        <canvas baseChart [datasets]="barChartUltimosUsuariosLogadosData.datasets"
-          [labels]="barChartUltimosUsuariosLogadosLabels" [type]="barChartUltimosUsuariosLogadosType"
-          [legend]="barChartUltimosUsuariosLogadosLegend" [options]="barChartUltimosUsuariosLogadosOptions">
+        <h5>Nº Usuários Logados nos Últimos 7 dias</h5>
+        <canvas baseChart [datasets]="chartUltimosUsuariosLogadosData.datasets"
+          [labels]="chartUltimosUsuariosLogadosLabels" [type]="chartUltimosUsuariosLogadosType"
+          [legend]="chartUltimosUsuariosLogadosLegend" [options]="chartUltimosUsuariosLogadosOptions">
         </canvas>
       </div>
     </div>
     <div class="col-md-6 mb-3">
       <div class="card text-center p-3">
-        <h5>Gráfico 2</h5>
+        <h5>Nº Inscrições Gategoria</h5>
         <div style="display: block;">
-          <!-- <canvas baseChart
-                  [datasets]="barChartData.datasets"
-                  [labels]="barChartData.labels"
-                  [type]="barChartType"
-                  [legend]="barChartLegend"
-                  [options]="barChartOptions">
-          </canvas> -->
+          <canvas
+            baseChart [datasets]="chartCursosByCategoriaData.datasets"
+            [labels]="chartCursosByCategoriaLabels"
+            [type]="chartCursosByCategoriaType"
+            [legend]="chartCursosByCategoriaLegend"
+            [options]="chartCursosByCategoriaOptions">
+          </canvas>
         </div>
       </div>
     </div>

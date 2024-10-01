@@ -9,3 +9,29 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.sidebar {
+  background-color: #343a40; /* Cor de fundo da sidebar */
+  height: 100vh; /* Altura total da tela */
+}
+
+.sidebar-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-link {
+  color: white !important;
+  padding: 10px;
+}
+
+.nav-link.active {
+  background-color: #f1a800;
+  color: #fff;
+}
+
+.navbar-brand img {
+  max-width: 150px;
+  height: auto;
+  margin-right: 15px; /* Espaço entre a logo e o texto */
+}
