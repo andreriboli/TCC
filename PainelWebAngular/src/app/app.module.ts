@@ -12,6 +12,9 @@ import { GraficosComponent } from './components/components/graficos/graficos.com
 import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AlunosComponent } from './components/components/alunos/alunos.component';
+import { ProfessoresComponent } from './components/components/professores/professores.component';
+import { CursosComponent } from './components/components/cursos/cursos.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomeComponent,
     ConsultaComponent,
     GraficosComponent,
-    SidebarComponent
+    SidebarComponent,
+    AlunosComponent,
+    ProfessoresComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,

@@ -163,4 +163,71 @@ if __name__ == "__main__":
     )
     database_operations = DatabaseOperations(db_util, config)
     # executar_coleta_diaria(config, db_util)
-    start_api(database_operations)
+    # start_api(database_operations)
+    # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
+
+    # vimeo_scraper.login()
+    # csv_url = vimeo_scraper.obter_link_csv()
+
+    # if csv_url:
+            # csv_file_path = vimeo_scraper.download_csv_directly(csv_url, config.DOWNLOAD_DIR)
+
+    #         if csv_file_path:
+    try:
+    # Carregar o arquivo CSV em um DataFrame
+        file_path = r"C:\Desenvolvimento\vimeo_analytics2.csv"
+        df = pd.read_csv(file_path)
+        
+        # Renomear as colunas para corresponder à tabela no banco de dados
+        df.rename(columns={
+            'views': 'views',
+            'impressions': 'impressions',
+            'finishes': 'finishes',
+            'downloads': 'downloads',
+            'unique_impressions': 'unique_impressions',
+            'unique_viewers': 'unique_viewers',
+            'mean_percent_watched': 'mean_percent_watched',
+            'mean_seconds_watched': 'mean_seconds_watched',
+            'total_seconds_watched': 'total_seconds_watched',
+            'metadata.connections.video.uri': 'id_vimeo_video',
+            'metadata.connections.video.title': 'title',
+            'metadata.connections.video.created_time': 'created_time',
+            'metadata.connections.video.likes': 'likes',
+            'metadata.connections.video.comments': 'comments'
+        }, inplace=True)
+        
+        # Exibir as primeiras linhas para verificar os dados
+        print("Dados com colunas renomeadas:")
+        print(df.head())
+
+        # Iterar sobre cada linha do DataFrame e inserir no banco de dados
+        for index, row in df.iterrows():
+            print("aaaaaaaaaaaaaaaaaaaaaaa")
+            print(row)
+            # database_operations.inserir_dados_vimeo(row)  # Chama a função passando cada linha (row) como parâmetro
+
+    except FileNotFoundError:
+        print(f"Erro: O arquivo {file_path} não foi encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro ao tentar ler o arquivo: {e}")
+
+                
+    #             database_operations = DatabaseOperations(db_util, config)
+
+    #             try:
+    #                 db_util.connect()
+    #                 logging.info("Conectado ao banco de dados com sucesso.")
+
+    #                 database_operations.salvar_dados_vimeo(df)
+
+    #             except Exception as e:
+    #                 logging.error(f"Erro durante a inserção dos dados no banco: {e}")
+                
+    #             finally:
+    #                 db_util.disconnect()
+    #                 logging.info("Desconectado do banco de dados.")
+
+    #         else:
+    #             logging.error("O link do CSV não foi capturado com sucesso.")
+            
+    #         vimeo_scraper.fechar()

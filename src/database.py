@@ -333,9 +333,7 @@ class DatabaseOperations:
             return None
 
 
-    def inserir_dados_vimeo(self, views, impressions, finishes, downloads, unique_impressions, unique_viewers,
-                        mean_percent_watched, mean_seconds_watched, total_seconds_watched, id_vimeo_video,
-                        title, created_time, likes, comments):
+    def inserir_dados_vimeo(self, data_row):
         try:
             query = """
             INSERT INTO video_analytics (
@@ -360,20 +358,20 @@ class DatabaseOperations:
             """
             
             params = (
-                id_vimeo_video,
-                title,
-                created_time.split("+")[0], 
-                views if not pd.isna(views) else 0,
-                impressions if not pd.isna(impressions) else 0,
-                finishes if not pd.isna(finishes) else 0,
-                downloads if not pd.isna(downloads) else 0,
-                unique_impressions if not pd.isna(unique_impressions) else 0,
-                unique_viewers if not pd.isna(unique_viewers) else 0,
-                mean_percent_watched if not pd.isna(mean_percent_watched) else 0,
-                mean_seconds_watched if not pd.isna(mean_seconds_watched) else 0,
-                total_seconds_watched if not pd.isna(total_seconds_watched) else 0,
-                likes if not pd.isna(likes) else 0,
-                comments if not pd.isna(comments) else 0
+                data_row['id_vimeo_video'],
+                data_row['title'],
+                data_row['created_time'].split("+")[0],  # Ajusta o formato da data
+                data_row['views'] if not pd.isna(data_row['views']) else 0,
+                data_row['impressions'] if not pd.isna(data_row['impressions']) else 0,
+                data_row['finishes'] if not pd.isna(data_row['finishes']) else 0,
+                data_row['downloads'] if not pd.isna(data_row['downloads']) else 0,
+                data_row['unique_impressions'] if not pd.isna(data_row['unique_impressions']) else 0,
+                data_row['unique_viewers'] if not pd.isna(data_row['unique_viewers']) else 0,
+                data_row['mean_percent_watched'] if not pd.isna(data_row['mean_percent_watched']) else 0,
+                data_row['mean_seconds_watched'] if not pd.isna(data_row['mean_seconds_watched']) else 0,
+                data_row['total_seconds_watched'] if not pd.isna(data_row['total_seconds_watched']) else 0,
+                data_row['likes'] if not pd.isna(data_row['likes']) else 0,
+                data_row['comments'] if not pd.isna(data_row['comments']) else 0
             )
             
             # print(f"Parâmetros fornecidos para inserção de dados Vimeo: {params}")
@@ -381,6 +379,7 @@ class DatabaseOperations:
 
         except Exception as e:
             print(f"Erro ao inserir dados do Vimeo: {e}")
+
 
     def salvar_dados_vimeo(self, df): 
         db_util = DBUtil(
