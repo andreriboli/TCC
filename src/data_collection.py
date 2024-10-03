@@ -45,6 +45,24 @@ def coletar_detalhes_usuario_do_curso(config, curso_id, moodle_id):
     return None
 
 
+def coletar_atividades_concluidas_do_usuario(config, course_id, user_id):
+    url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_completion_get_activities_completion_status&moodlewsrestformat=json&courseid={course_id}&userid={user_id}"
+    
+    print(f"URL para coletar atividades concluídas do usuário {user_id} no curso {course_id}: {url}")
+    response = requests.get(url, verify=False)
+    
+    if response.status_code == 200:
+        try:
+            atividades = response.json().get('statuses', [])
+            print(f"Atividades coletadas para o usuário {user_id} no curso {course_id}: {atividades}")
+            return atividades
+        except ValueError:
+            print("Erro ao converter a resposta da API para JSON")
+    else:
+        print(f"Erro na API do Moodle: {response.json().get('message', 'Erro desconhecido')}")
+
+    return []
+
 def coletar_usuarios_do_curso(config, curso_id):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_enrol_get_enrolled_users&moodlewsrestformat=json&courseid={curso_id}"
     

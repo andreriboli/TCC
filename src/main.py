@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 import pandas as pd
 from api import start_api
-from data_collection import coletar_detalhes_usuario_do_curso, coletar_todos_os_cursos, coletar_usuarios_do_curso
+from data_collection import coletar_atividades_concluidas_do_usuario, coletar_detalhes_usuario_do_curso, coletar_todos_os_cursos, coletar_usuarios_do_curso
 from database import DatabaseOperations
 from db_util import DBUtil
 from config import Config
@@ -147,8 +147,14 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                     curso_id=curso['id'],
                     progresso=progresso,
                     # tempo_medio_conclusao=tempo_medio_conclusao,
-                    detalhes_usuario=usuario
+                    detalhes_usuario = detalhes_usuario,
+                    usuario=usuario
                 )
+
+                atividades_concluidas = coletar_atividades_concluidas_do_usuario(config, curso['id'], moodle_id)
+                if atividades_concluidas:
+                    for atividade in atividades_concluidas:
+                        database_operations.inserir_atividade_concluida(moodle_id, curso['id'], atividade)
         else:
             print(f"Nenhum usuário encontrado para o curso {curso['fullname']}")
 
@@ -174,9 +180,11 @@ if __name__ == "__main__":
 
     #         if csv_file_path:
     # try:
-    # # Carregar o arquivo CSV em um DataFrame
-    #     file_path = r"C:\Desenvolvimento\vimeo_analytics2.csv"
-    #     df = pd.read_csv(file_path)
+    #     file_path = r"C:\Desenvolvimento\stats_export (2).csv"
+    #     df = pd.read_csv(file_path, skip_blank_lines=True)
+ 
+    #     if df.iloc[-1].isnull().all() or df.iloc[-1].str.contains(r'["]').any():
+    #         df = df[:-1]
         
     #     # Renomear as colunas para corresponder à tabela no banco de dados
     #     df.rename(columns={
@@ -197,14 +205,12 @@ if __name__ == "__main__":
     #     }, inplace=True)
         
     #     # Exibir as primeiras linhas para verificar os dados
-    #     print("Dados com colunas renomeadas:")
-    #     print(df.head())
+    #     # print("Dados com colunas renomeadas:")
+    #     # print(df.head())
 
     #     # Iterar sobre cada linha do DataFrame e inserir no banco de dados
     #     for index, row in df.iterrows():
-    #         print("aaaaaaaaaaaaaaaaaaaaaaa")
-    #         print(row)
-    #         # database_operations.inserir_dados_vimeo(row)  # Chama a função passando cada linha (row) como parâmetro
+    #         database_operations.inserir_dados_vimeo(row)  # Chama a função passando cada linha (row) como parâmetro
 
     # except FileNotFoundError:
     #     print(f"Erro: O arquivo {file_path} não foi encontrado.")

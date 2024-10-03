@@ -115,7 +115,7 @@ class DatabaseOperations:
             # print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
             logging.error(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
-    def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario):
+    def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario, usuario):
         try:
             
             completado = detalhes_usuario.get('completed', False)
@@ -343,7 +343,7 @@ class DatabaseOperations:
             ) VALUES (
                 %s, %s, to_timestamp(%s, 'YYYY-MM-DD"T"HH24:MI:SS'), %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
             )
-            ON CONFLICT (id_vimeo_video) DO UPDATE
+            ON CONFLICT (id) DO UPDATE
             SET views = EXCLUDED.views,
                 impressions = EXCLUDED.impressions,
                 finishes = EXCLUDED.finishes,
@@ -356,9 +356,10 @@ class DatabaseOperations:
                 likes = EXCLUDED.likes,
                 comments = EXCLUDED.comments;
             """
-            
+
+            id_vimeo_video = data_row['id_vimeo_video'].split('/')[-1]
             params = (
-                data_row['id_vimeo_video'],
+                id_vimeo_video,  # Salvar apenas o número do vídeo
                 data_row['title'],
                 data_row['created_time'].split("+")[0],  # Ajusta o formato da data
                 data_row['views'] if not pd.isna(data_row['views']) else 0,
@@ -374,7 +375,6 @@ class DatabaseOperations:
                 data_row['comments'] if not pd.isna(data_row['comments']) else 0
             )
             
-            # print(f"Parâmetros fornecidos para inserção de dados Vimeo: {params}")
             self.db_util.execute_query(query, params)
 
         except Exception as e:
@@ -413,3 +413,28 @@ class DatabaseOperations:
         finally:
             db_util.disconnect()
             logging.info("Desconectado do banco de dados.")
+
+    def inserir_atividade_concluida(self, moodle_id, curso_id, atividade):
+        try:
+            query = """
+            INSERT INTO atividades (id_usuario, id_curso, cmid, completado, data_conclusao)
+            VALUES (%s, %s, %s, %s, to_timestamp(%s))
+            ON CONFLICT (id_usuario, id_curso, cmid) DO UPDATE
+            SET completado = EXCLUDED.completado,
+                data_conclusao = EXCLUDED.data_conclusao;
+            """
+            params = (
+                moodle_id,
+                curso_id,
+                atividade['cmid'],  # Usar o cmid como identificador da atividade
+                atividade['state'] == 1,  # 1 para completado, 0 para não completado
+                atividade.get('timecompleted', 0) if atividade.get('timecompleted') else None
+            )
+
+            print(f"Parâmetros fornecidos para inserção de atividade concluída: {params}")
+            self.db_util.execute_query(query, params)
+
+        except Exception as e:
+            print(f"Erro ao inserir atividade concluída: {e}")
+            logging.error(f"Erro ao inserir atividade concluída: {e}")
+

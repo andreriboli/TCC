@@ -688,3 +688,183 @@
 2024-10-02 13:07:48,030 - INFO - Iniciando inserção de usuários e inscrições.
 2024-10-02 13:11:52,632 - INFO - Inserção de usuários e inscrições concluída.
 2024-10-02 13:11:52,632 - INFO - Coleta e armazenamento concluídos às 2024-10-02 13:11:52.632849
+2024-10-02 20:12:48,963 - INFO - Iniciando coleta de dados às 2024-10-02 20:12:48.963368
+2024-10-02 20:12:49,139 - INFO - Cursos coletados com sucesso.
+2024-10-02 20:12:49,139 - INFO - Iniciando inserção de categorias.
+2024-10-02 20:12:49,189 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-02 20:12:49,190 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-02 20:12:49,190 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-02 20:12:49,191 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-02 20:12:49,191 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-02 20:12:49,191 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-02 20:12:49,191 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-02 20:12:49,192 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-02 20:12:49,192 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-02 20:12:49,192 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-02 20:12:49,192 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-02 20:12:49,193 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-02 20:12:49,193 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-02 20:12:49,193 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-02 20:12:49,193 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-02 20:12:49,193 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-02 20:12:49,193 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-02 20:12:49,194 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-02 20:12:49,194 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-02 20:12:49,194 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-02 20:12:49,194 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-02 20:12:49,194 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-02 20:12:49,194 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-02 20:12:49,194 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-02 20:12:49,194 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-02 20:12:49,195 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-02 20:12:49,195 - INFO - Inserção de categorias concluída.
+2024-10-02 20:12:49,195 - INFO - Iniciando inserção de cursos.
+2024-10-02 20:12:49,196 - INFO - Curso E-Learning inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Análise Competitiva inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Kubernetes #01 inserido.
+2024-10-02 20:12:49,197 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-02 20:12:49,197 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-02 20:12:49,198 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-02 20:12:49,198 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-02 20:12:49,198 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-02 20:12:49,198 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-02 20:12:49,198 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-02 20:12:49,198 - INFO - Curso Test Driven Development inserido.
+2024-10-02 20:12:49,198 - INFO - Curso Engenharia de Computação inserido.
+2024-10-02 20:12:49,199 - INFO - Curso Sistemas de Informação inserido.
+2024-10-02 20:12:49,199 - INFO - Curso Ciências Contábeis inserido.
+2024-10-02 20:12:49,199 - INFO - Curso Administração inserido.
+2024-10-02 20:12:49,199 - INFO - Curso Gestão da Inovação inserido.
+2024-10-02 20:12:49,199 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-02 20:12:49,199 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-02 20:12:49,199 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-02 20:12:49,200 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-02 20:12:49,200 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-02 20:12:49,200 - INFO - Curso MATLAB inserido.
+2024-10-02 20:12:49,200 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-02 20:12:49,200 - INFO - Inserção de cursos concluída.
+2024-10-02 20:12:49,200 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-02 20:12:49,985 - ERROR - Erro durante a coleta de dados: DatabaseOperations.inserir_inscricao() got an unexpected keyword argument 'tempo_medio_conclusao'
+2024-10-02 20:58:42,523 - INFO - Iniciando coleta de dados às 2024-10-02 20:58:42.523604
+2024-10-02 20:58:42,665 - INFO - Cursos coletados com sucesso.
+2024-10-02 20:58:42,665 - INFO - Iniciando inserção de categorias.
+2024-10-02 20:58:42,720 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-02 20:58:42,720 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-02 20:58:42,720 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-02 20:58:42,720 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-02 20:58:42,723 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-02 20:58:42,723 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-02 20:58:42,723 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-02 20:58:42,723 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-02 20:58:42,723 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-02 20:58:42,723 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-02 20:58:42,723 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-02 20:58:42,723 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-02 20:58:42,723 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-02 20:58:42,723 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-02 20:58:42,723 - INFO - Inserção de categorias concluída.
+2024-10-02 20:58:42,723 - INFO - Iniciando inserção de cursos.
+2024-10-02 20:58:42,723 - INFO - Curso E-Learning inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Análise Competitiva inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Kubernetes #01 inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-02 20:58:42,723 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-02 20:58:42,723 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-02 20:58:42,723 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Test Driven Development inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Engenharia de Computação inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Sistemas de Informação inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Ciências Contábeis inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Administração inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Gestão da Inovação inserido.
+2024-10-02 20:58:42,723 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-02 20:58:42,723 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-02 20:58:42,723 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-02 20:58:42,732 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-02 20:58:42,732 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-02 20:58:42,732 - INFO - Curso MATLAB inserido.
+2024-10-02 20:58:42,732 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-02 20:58:42,732 - INFO - Inserção de cursos concluída.
+2024-10-02 20:58:42,732 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-02 21:02:20,203 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-02 21:02:20,203 - INFO - Coleta e armazenamento concluídos às 2024-10-02 21:02:20.203592
+2024-10-02 21:02:54,873 - INFO - Iniciando coleta de dados às 2024-10-02 21:02:54.873408
+2024-10-02 21:02:55,144 - INFO - Cursos coletados com sucesso.
+2024-10-02 21:02:55,144 - INFO - Iniciando inserção de categorias.
+2024-10-02 21:02:55,193 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-02 21:02:55,193 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-02 21:02:55,194 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-02 21:02:55,194 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-02 21:02:55,194 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-02 21:02:55,194 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-02 21:02:55,195 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-02 21:02:55,195 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-02 21:02:55,195 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-02 21:02:55,195 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-02 21:02:55,195 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-02 21:02:55,196 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-02 21:02:55,196 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-02 21:02:55,196 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-02 21:02:55,196 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-02 21:02:55,196 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-02 21:02:55,197 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-02 21:02:55,197 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-02 21:02:55,197 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-02 21:02:55,197 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-02 21:02:55,197 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-02 21:02:55,197 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-02 21:02:55,197 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-02 21:02:55,198 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-02 21:02:55,198 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-02 21:02:55,198 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-02 21:02:55,198 - INFO - Inserção de categorias concluída.
+2024-10-02 21:02:55,198 - INFO - Iniciando inserção de cursos.
+2024-10-02 21:02:55,199 - INFO - Curso E-Learning inserido.
+2024-10-02 21:02:55,199 - INFO - Curso Análise Competitiva inserido.
+2024-10-02 21:02:55,199 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-02 21:02:55,200 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-02 21:02:55,200 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-02 21:02:55,200 - INFO - Curso Kubernetes #01 inserido.
+2024-10-02 21:02:55,200 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-02 21:02:55,201 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-02 21:02:55,201 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-02 21:02:55,201 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-02 21:02:55,201 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-02 21:02:55,202 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Test Driven Development inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Engenharia de Computação inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Sistemas de Informação inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Ciências Contábeis inserido.
+2024-10-02 21:02:55,202 - INFO - Curso Administração inserido.
+2024-10-02 21:02:55,203 - INFO - Curso Gestão da Inovação inserido.
+2024-10-02 21:02:55,203 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-02 21:02:55,203 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-02 21:02:55,203 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-02 21:02:55,203 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-02 21:02:55,203 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-02 21:02:55,203 - INFO - Curso MATLAB inserido.
+2024-10-02 21:02:55,204 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-02 21:02:55,204 - INFO - Inserção de cursos concluída.
+2024-10-02 21:02:55,204 - INFO - Iniciando inserção de usuários e inscrições.
