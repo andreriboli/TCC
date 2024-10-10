@@ -196,6 +196,41 @@ class DatabaseOperations:
         except Exception as e:
             logging.error(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
         return None
+    
+    def distribuicao_cursos_ativos(self):
+        query = """
+        SELECT 
+            c.id_curso,
+            c.nome_curso,
+            COUNT(i.id_usuario) AS total_alunos
+        FROM 
+            cursos c
+        INNER JOIN 
+            inscricoes i ON c.id_curso = i.id_curso
+        GROUP BY 
+            c.id_curso, c.nome_curso
+        ORDER BY 
+            total_alunos DESC;
+        """
+        
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+
+                cursos_ativos = []
+                for row in result:
+                    curso = {
+                        "id_curso": row[0],
+                        "nome_curso": row[1],
+                        "total_alunos": row[2]
+                    }
+                    cursos_ativos.append(curso)
+
+                return cursos_ativos
+        except Exception as e:
+            print(f"Erro ao obter a distribuição de alunos por curso: {e}")
+            return None
 
     
     def coletar_curso_por_id(self, curso_id):
@@ -261,9 +296,7 @@ class DatabaseOperations:
             print(f"Erro ao obter os últimos usuários logados: {e}")
             return None
         
-    def distribuicao_cursos_ativos(self, end_date):
-        print("datafim: ")
-        print(end_date)
+    def distribuicao_cursos_ativos_by_category(self, end_date):
         query = """
         SELECT 
             c2.id_categoria,
@@ -317,9 +350,9 @@ class DatabaseOperations:
 
             id_vimeo_video = data_row['id_vimeo_video'].split('/')[-1]
             params = (
-                id_vimeo_video,  # Salvar apenas o número do vídeo
+                id_vimeo_video,
                 data_row['title'],
-                data_row['created_time'].split("+")[0],  # Ajusta o formato da data
+                data_row['created_time'].split("+")[0],
                 data_row['views'] if not pd.isna(data_row['views']) else 0,
                 data_row['impressions'] if not pd.isna(data_row['impressions']) else 0,
                 data_row['finishes'] if not pd.isna(data_row['finishes']) else 0,
@@ -350,11 +383,9 @@ class DatabaseOperations:
     
         try:
             db_util.connect()
-            # logging.info("Conectado ao banco de dados com sucesso.")
             
             for index, row in df.iterrows():
                 if pd.isna(row['metadata.connections.video.uri']) or row['metadata.connections.video.uri'].strip() == "":
-                    # print(f"Linha {index} ignorada por não conter um ID de vídeo válido.")
                     continue
 
                 self.inserir_dados_vimeo(
@@ -384,8 +415,8 @@ class DatabaseOperations:
             params = (
                 moodle_id,
                 curso_id,
-                atividade['cmid'],  # Usar o cmid como identificador da atividade
-                atividade['state'] == 1,  # 1 para completado, 0 para não completado
+                atividade['cmid'],
+                atividade['state'] == 1,
                 atividade.get('timecompleted', 0) if atividade.get('timecompleted') else None
             )
 

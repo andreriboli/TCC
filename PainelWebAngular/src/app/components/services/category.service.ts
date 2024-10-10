@@ -16,6 +16,6 @@ export class CategoryService extends BaseService<any> {
         .set('startDate', startDate)
         .set('endDate', endDate);
 
-    return this.get('/distribuicao-cursos-ativos', params);
+    return this.get('/distribuicao-cursos-ativos-by-category', params);
   }
 }

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 export abstract class BaseService<T> {
 
-  private apiUrl = 'http://localhost:5000/api';  // URL base da API
+  private apiUrl = 'http://localhost:5000/api';
 
   constructor(protected http: HttpClient, protected resourcePath: string) {}
 
