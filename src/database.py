@@ -54,19 +54,12 @@ class DatabaseOperations:
 
     def inserir_curso(self, curso):
         try:
-            # print(f"Curso retornado da API: {curso}")
-
             id_categoria = curso.get('categoryid')
             
             if id_categoria is None:
-                # print(f"Categoria não encontrada para o curso com ID {curso['id']}. Pulando inserção.")
-                # logging.error(f"Categoria não encontrada para o curso com ID {curso['id']}.")
                 return
             
             if not self.curso_existe(curso['id']):
-                # print(f"Curso com ID {curso['id']} não encontrado no banco. Inserindo agora.")
-                
-                
                 id_categoria = self.inserir_categoria_por_id(id_categoria)
 
 
@@ -87,32 +80,10 @@ class DatabaseOperations:
                     curso.get('enddate', 0)
                 )
 
-                # print(f"Parâmetros fornecidos para inserção de curso: {params}")
                 with self.db_util.conn.cursor() as cursor:
                     cursor.execute(query, params)
                 self.db_util.conn.commit()
-
-                # print(f"Curso com ID {curso['id']} inserido com sucesso.")
-
-            # else:
-            #     print(f"Curso com ID {curso['id']} já existe no banco.")
-
-            # print(f"Iniciando a inserção de usuários e inscrições para o curso {curso['fullname']}")
-            
-            # config = Config()
-            # usuarios = coletar_usuarios_do_curso(config, curso['id']) 
-
-            # if usuarios:
-            #     for usuario in usuarios:
-            #         self.inserir_usuario(usuario)
-            #         logging.info(f"Usuário {usuario['fullname']} inserido para o curso {curso['fullname']}.")
-            #         self.inserir_inscricao(usuario['id'], curso)
-            #         logging.info(f"Inscrição do usuário {usuario['fullname']} inserida no curso {curso['fullname']}.")
-            # else:
-            #     logging.warning(f"Nenhum usuário encontrado para o curso {curso['fullname']}.")
-
         except Exception as e:
-            # print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
             logging.error(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
     def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario, usuario):
@@ -165,7 +136,6 @@ class DatabaseOperations:
                 tempo_medio_conclusao
             )
 
-            # print(f"Parâmetros fornecidos para inserção de inscrição: {params}")
             self.db_util.execute_query(query, params)
 
         except Exception as e:
@@ -181,7 +151,6 @@ class DatabaseOperations:
 
             for curso in cursos:
                 self.inserir_curso(curso)
-                # self.inserir_inscricao(dados_usuario['id'], curso)
 
     def inserir_categoria_por_id(self, id_categoria):
         try:
@@ -193,8 +162,6 @@ class DatabaseOperations:
             if result:
                 return result[0]
             else:
-                # print(f"Categoria com ID {id_categoria} não encontrada no banco. Buscando na API do Moodle.")
-
                 url = f"{self.config.MOODLE_URL}wstoken={self.config.MOODLE_TOKEN}&wsfunction=core_course_get_categories&moodlewsrestformat=json&criteria[0][key]=id&criteria[0][value]={id_categoria}"
 
                 response = requests.get(url, verify=False)
@@ -216,26 +183,17 @@ class DatabaseOperations:
 
                     if result:
                         self.db_util.conn.commit()
-                        # print(f"Categoria com ID {id_categoria} inserida com sucesso.")
                         return result[0]
                     else:
-                        # print(f"Falha ao inserir a nova categoria com ID {id_categoria}")
                         return None
                 else:
-                    # print(f"Categoria com ID {id_categoria} não encontrada na API.")
-                    # logging.error(f"Categoria com ID {id_categoria} não encontrada na API.")
                     return None
 
         except requests.exceptions.HTTPError as http_err:
-            # print(f"Erro HTTP ao fazer a solicitação à API do Moodle: {http_err}")
-            # logging.error(f"Erro HTTP ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {http_err}")
             return None
         except requests.exceptions.RequestException as req_err:
-            # print(f"Erro ao fazer a solicitação à API do Moodle: {req_err}")
-            # logging.error(f"Erro ao fazer a solicitação à API do Moodle para a categoria {id_categoria}: {req_err}")
             return None
         except Exception as e:
-            # print(f"Erro inesperado ao buscar ou inserir a categoria: {e}")
             logging.error(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
         return None
 
@@ -256,10 +214,8 @@ class DatabaseOperations:
             if cursos:
                 return cursos[0]
             else:
-                # print(f"Curso com id {curso_id} não encontrado na resposta.")
                 return None
         else:
-            # print(f"Erro ao consultar a API do Moodle. Status code: {response.status_code}")
             return None
 
     def curso_existe(self, id_curso):
@@ -271,7 +227,6 @@ class DatabaseOperations:
                 result = cursor.fetchone()
                 return result is not None
         except Exception as e:
-            # print(f"Erro ao verificar a existência do curso: {e}")
             return False
         
     def ultimos_usuarios_logados(self, start_date, end_date):
@@ -307,10 +262,12 @@ class DatabaseOperations:
             return None
         
     def distribuicao_cursos_ativos(self, end_date):
+        print("datafim: ")
+        print(end_date)
         query = """
         SELECT 
             c2.id_categoria,
-            c2.nome_categoria
+            c2.nome_categoria,
             COUNT(i.id_usuario) AS total_usuarios
         FROM 
             cursos c
@@ -327,7 +284,7 @@ class DatabaseOperations:
         
         try:
             with self.db_util.conn.cursor() as cursor:
-                cursor.execute(query, (end_date))
+                cursor.execute(query, (end_date,))
                 result = cursor.fetchall()
                 return result
         except Exception as e:

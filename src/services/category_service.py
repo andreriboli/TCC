@@ -6,10 +6,8 @@ class CategoryService:
 
         @app.route('/api/categorias/distribuicao-cursos-ativos', methods=['GET'])
         def distribuicao_cursos_ativos():
-            start_date = request.args.get('startDate')
             end_date = request.args.get('endDate')
 
-            print(f"Data de início: {start_date}")
             print(f"Data de fim: {end_date}")
             categorias = self.db_operations.distribuicao_cursos_ativos(end_date)
             

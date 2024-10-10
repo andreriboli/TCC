@@ -119,19 +119,29 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
 
 if __name__ == "__main__":
     config = Config()
-    db_util = DBUtil(
+
+    db_util_coleta = DBUtil(
         dbname=config.DB_NAME,
         user=config.DB_USER,
         password=config.DB_PASSWORD,
         host=config.DB_HOST,
         port=config.DB_PORT
     )
+
+    db_util_api = DBUtil(
+        dbname=config.DB_NAME,
+        user=config.DB_USER,
+        password=config.DB_PASSWORD,
+        host=config.DB_HOST,
+        port=config.DB_PORT
+    )
+
     # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util))
     # coleta_thread.start()
-    database_operations = DatabaseOperations(db_util, config)
+    # database_operations = DatabaseOperations(db_util_coleta, config)
 
-    start_api(database_operations)
-    # executar_coleta_diaria(config, db_util)
+    database_operations_api = DatabaseOperations(db_util_api, config)
+    start_api(database_operations_api)
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 
     # vimeo_scraper.login()

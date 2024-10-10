@@ -1786,3 +1786,487 @@
  * Running on http://127.0.0.1:5000
 2024-10-09 21:23:02,769 - INFO - [33mPress CTRL+C to quit[0m
 2024-10-09 21:23:26,638 - INFO - 127.0.0.1 - - [09/Oct/2024 21:23:26] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-02&endDate=2024-10-09 HTTP/1.1[0m" 404 -
+2024-10-10 11:05:23,382 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 11:05:23,382 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 11:05:27,106 - INFO - Iniciando coleta de dados às 2024-10-10 11:05:27.106565
+2024-10-10 11:05:34,146 - INFO - Iniciando coleta de dados às 2024-10-10 11:05:34.146652
+2024-10-10 11:05:34,149 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 11:05:34,150 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 11:05:34,289 - INFO - Cursos coletados com sucesso.
+2024-10-10 11:05:34,289 - INFO - Iniciando inserção de categorias.
+2024-10-10 11:05:34,380 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-10 11:05:34,381 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-10 11:05:34,381 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-10 11:05:34,381 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-10 11:05:34,381 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-10 11:05:34,382 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-10 11:05:34,382 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-10 11:05:34,382 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-10 11:05:34,382 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-10 11:05:34,382 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-10 11:05:34,382 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-10 11:05:34,382 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-10 11:05:34,382 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-10 11:05:34,382 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-10 11:05:34,383 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-10 11:05:34,383 - INFO - Inserção de categorias concluída.
+2024-10-10 11:05:34,383 - INFO - Iniciando inserção de cursos.
+2024-10-10 11:05:34,384 - INFO - Curso E-Learning inserido.
+2024-10-10 11:05:34,384 - INFO - Curso Análise Competitiva inserido.
+2024-10-10 11:05:34,384 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-10 11:05:34,384 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-10 11:05:34,384 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Kubernetes #01 inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-10 11:05:34,385 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-10 11:05:34,385 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-10 11:05:34,385 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Test Driven Development inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Engenharia de Computação inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Sistemas de Informação inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Ciências Contábeis inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Administração inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Gestão da Inovação inserido.
+2024-10-10 11:05:34,385 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-10 11:05:34,385 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-10 11:05:34,385 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-10 11:05:34,385 - INFO - Curso MATLAB inserido.
+2024-10-10 11:05:34,385 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-10 11:05:34,385 - INFO - Inserção de cursos concluída.
+2024-10-10 11:05:34,385 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-10 11:06:18,835 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:19,007 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:19,184 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:19,364 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:19,524 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:19,714 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:57,536 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:57,695 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:57,855 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,030 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,190 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,359 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,575 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,745 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:58,898 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,072 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,263 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,446 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,626 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,777 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:06:59,934 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,092 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,266 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,449 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,600 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,780 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:00,974 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:01,138 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:01,295 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:01,453 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:01,689 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:01,874 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:07:12,073 - INFO - Iniciando coleta de dados às 2024-10-10 11:07:12.073079
+2024-10-10 11:07:12,209 - INFO - Cursos coletados com sucesso.
+2024-10-10 11:07:12,210 - INFO - Iniciando inserção de categorias.
+2024-10-10 11:07:12,281 - ERROR - Erro durante a coleta de dados: connection already closed
+2024-10-10 11:08:08,252 - INFO - Iniciando coleta de dados às 2024-10-10 11:08:08.252557
+2024-10-10 11:08:08,255 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 11:08:08,255 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 11:08:08,382 - INFO - Cursos coletados com sucesso.
+2024-10-10 11:08:08,382 - INFO - Iniciando inserção de categorias.
+2024-10-10 11:08:08,456 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-10 11:08:08,457 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-10 11:08:08,457 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-10 11:08:08,457 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-10 11:08:08,457 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-10 11:08:08,457 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-10 11:08:08,458 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-10 11:08:08,458 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-10 11:08:08,458 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-10 11:08:08,458 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-10 11:08:08,458 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-10 11:08:08,458 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-10 11:08:08,458 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-10 11:08:08,458 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-10 11:08:08,458 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-10 11:08:08,459 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-10 11:08:08,459 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-10 11:08:08,459 - INFO - Inserção de categorias concluída.
+2024-10-10 11:08:08,459 - INFO - Iniciando inserção de cursos.
+2024-10-10 11:08:08,459 - INFO - Curso E-Learning inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Análise Competitiva inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Kubernetes #01 inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-10 11:08:08,459 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-10 11:08:08,459 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-10 11:08:08,460 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-10 11:08:08,460 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Test Driven Development inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Engenharia de Computação inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Sistemas de Informação inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Ciências Contábeis inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Administração inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Gestão da Inovação inserido.
+2024-10-10 11:08:08,460 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-10 11:08:08,460 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-10 11:08:08,460 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-10 11:08:08,460 - INFO - Curso MATLAB inserido.
+2024-10-10 11:08:08,460 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-10 11:08:08,460 - INFO - Inserção de cursos concluída.
+2024-10-10 11:08:08,460 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-10 11:08:50,310 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:08:50,478 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:08:50,639 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:08:50,791 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:08:50,961 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:08:51,141 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:27,620 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:27,783 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:27,950 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:28,128 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:28,293 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:28,481 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:28,697 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:28,857 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,008 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,173 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,367 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,549 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,718 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:29,872 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,025 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,186 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,352 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,531 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,681 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:30,857 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,047 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,211 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,367 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,527 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,695 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:09:31,857 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,028 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,210 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,376 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,533 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,699 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:30,921 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,098 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,267 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,423 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,588 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,740 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:31,912 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,069 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,233 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,391 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,572 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,730 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:32,925 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,096 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,273 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,453 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,759 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:33,913 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:34,112 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:34,262 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:34,436 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:34,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:34,772 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,010 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,179 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,361 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,532 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,740 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:35,910 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,076 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,238 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,429 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,614 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,781 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:36,940 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,110 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,284 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,448 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,643 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,796 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:37,951 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,111 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,264 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,448 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,607 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,761 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:38,916 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,090 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,260 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,441 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,609 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,782 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:39,944 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:40,130 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:40,302 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:40,503 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:40,653 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:40,845 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,007 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,177 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,367 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,538 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,698 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:41,866 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:42,042 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:42,202 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:42,361 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:10:42,514 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-10 11:11:02,357 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:02] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:02,358 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:02] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:05,589 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:05] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:05,590 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:05] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:10,146 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:10] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:10,146 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:10] "GET /api/usuarios/logados?startDate=2024-10-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:11,946 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:11] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-09-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:11,947 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:11] "GET /api/usuarios/logados?startDate=2024-09-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:12,072 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-08-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:12,073 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "GET /api/usuarios/logados?startDate=2024-08-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:12,208 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-07-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:12,210 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "GET /api/usuarios/logados?startDate=2024-07-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:12,354 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-06-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:12,356 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:12] "GET /api/usuarios/logados?startDate=2024-06-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:13,237 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-05-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:13,238 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "GET /api/usuarios/logados?startDate=2024-05-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:13,379 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-04-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:13,382 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "GET /api/usuarios/logados?startDate=2024-04-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:13,530 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-03-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:13,532 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "GET /api/usuarios/logados?startDate=2024-03-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:13,918 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-02-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:13,920 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:13] "GET /api/usuarios/logados?startDate=2024-02-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:14,144 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-01-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:14,148 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "GET /api/usuarios/logados?startDate=2024-01-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:14,296 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-12-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:14,301 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "GET /api/usuarios/logados?startDate=2023-12-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:14,544 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:14,547 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "GET /api/usuarios/logados?startDate=2023-11-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:14,697 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-10-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:14,701 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "GET /api/usuarios/logados?startDate=2023-10-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:14,844 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-09-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:14,848 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:14] "GET /api/usuarios/logados?startDate=2023-09-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:15,109 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-08-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:15,112 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "GET /api/usuarios/logados?startDate=2023-08-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:15,352 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:15,356 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "GET /api/usuarios/logados?startDate=2023-07-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:15,629 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-06-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:15,633 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "GET /api/usuarios/logados?startDate=2023-06-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:15,784 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-05-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:15,788 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "GET /api/usuarios/logados?startDate=2023-05-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:15,914 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-04-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:15,918 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:15] "GET /api/usuarios/logados?startDate=2023-04-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:16,066 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:16] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-03-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:16,070 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:16] "GET /api/usuarios/logados?startDate=2023-03-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:11:16,204 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:16] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2023-02-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:11:16,208 - INFO - 127.0.0.1 - - [10/Oct/2024 11:11:16] "GET /api/usuarios/logados?startDate=2023-02-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 11:12:34,592 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-10 11:12:34,592 - INFO - Coleta e armazenamento concluídos às 2024-10-10 11:12:34.592097
+2024-10-10 11:12:44,896 - INFO - 127.0.0.1 - - [10/Oct/2024 11:12:44] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:13:11,403 - INFO - 127.0.0.1 - - [10/Oct/2024 11:13:11] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:50,673 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:50] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:50,674 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:50] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,161 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,162 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,522 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,525 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,753 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 11:16:52,755 - INFO - 127.0.0.1 - - [10/Oct/2024 11:16:52] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:16:50,870 - ERROR - Erro durante a coleta de dados: 'DBUtil' object has no attribute 'dbname'
+2024-10-10 12:18:37,855 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 12:18:37,855 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 12:19:01,651 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:01] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:19:01,655 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:01] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:19:16,791 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:16] "GET /api/usuarios/logados?startDate=2024-10-01&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:19:16,795 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:16] "[33mGET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-01&endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:19:37,231 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:37] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:19:37,975 - INFO - 127.0.0.1 - - [10/Oct/2024 12:19:37] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:20:46,169 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 12:20:46,169 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 12:20:50,708 - INFO - 127.0.0.1 - - [10/Oct/2024 12:20:50] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:22:49,079 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 12:22:49,079 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 12:22:51,390 - INFO - 127.0.0.1 - - [10/Oct/2024 12:22:51] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:22:59,656 - INFO - 127.0.0.1 - - [10/Oct/2024 12:22:59] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:00,547 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:00] "[33mGET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:03,200 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-10 12:23:03,200 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-10 12:23:04,885 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:04] "GET /api/categorias/distribuicao-cursos-ativos?endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:23:12,349 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:12] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:23:12,349 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:12] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:23:16,072 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-09-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:16,073 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-09-10 HTTP/1.1" 200 -
+2024-10-10 12:23:16,260 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-08-10 HTTP/1.1" 200 -
+2024-10-10 12:23:16,261 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-08-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:16,415 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-07-10 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:16,416 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:16] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-07-10 HTTP/1.1" 200 -
+2024-10-10 12:23:17,817 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:17] "[33mGET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:17,818 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:17] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:20,698 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:20] "[33mGET /api/usuarios/logados?startDate=2024-10-02&endDate=2024-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:20,698 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:20] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,415 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "[33mGET /api/usuarios/logados?startDate=2024-09-02&endDate=2024-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:22,416 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-09-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,568 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-08-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,569 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "[33mGET /api/usuarios/logados?startDate=2024-08-02&endDate=2024-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:23:22,720 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-07-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,721 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/usuarios/logados?startDate=2024-07-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,962 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-06-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:22,962 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:22] "GET /api/usuarios/logados?startDate=2024-06-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,224 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2024-05-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,224 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-05-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,366 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-04-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,367 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2024-04-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,472 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2024-03-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,473 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-03-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,618 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2024-02-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,618 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-02-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,733 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2024-01-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,734 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-01-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,868 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/usuarios/logados?startDate=2023-12-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:23,868 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-12-02&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:24,588 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:24] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:24,588 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:24] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:23:34,508 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:34] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-07-04 HTTP/1.1" 200 -
+2024-10-10 12:23:34,511 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:34] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-07-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,163 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-06-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,165 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-06-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,285 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-05-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,285 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-05-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,416 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-04-04 HTTP/1.1" 200 -
+2024-10-10 12:23:53,418 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:53] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-04-04 HTTP/1.1" 200 -
+2024-10-10 12:23:54,729 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:54] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:23:54,733 - INFO - 127.0.0.1 - - [10/Oct/2024 12:23:54] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:23,669 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:23] "GET /api/usuarios/logados?startDate=2023-11-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:23,669 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:23] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-11-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,083 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-10-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,083 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/usuarios/logados?startDate=2023-10-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,580 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/usuarios/logados?startDate=2023-09-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,580 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-09-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,865 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-08-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:26,867 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:26] "GET /api/usuarios/logados?startDate=2023-08-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:27,197 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:27] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:27,198 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:27] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:44,748 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:44] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:44,748 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:44] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:44,904 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:44] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:44,904 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:44] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,047 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,048 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,243 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,243 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,395 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:45,397 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:45] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,062 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,064 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,259 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-08-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,262 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-08-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,749 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,750 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,928 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:46,928 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:46] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,068 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,068 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,272 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,272 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,424 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,424 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,567 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,567 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,724 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,724 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2024-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,886 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-12-03 HTTP/1.1" 200 -
+2024-10-10 12:24:47,886 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:47] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-12-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,278 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-11-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,279 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-11-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,439 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-10-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,440 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-10-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,589 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-09-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,590 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-09-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,757 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-08-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,760 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-08-03 HTTP/1.1" 200 -
+2024-10-10 12:24:48,871 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:48,873 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:48] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,058 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-06-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,058 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,218 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-05-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,219 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,396 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,396 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-04-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,558 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,558 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-03-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,680 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,680 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-02-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,828 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2023-01-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,832 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2023-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:49,964 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-12-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:49,965 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:49] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-12-03 HTTP/1.1" 200 -
+2024-10-10 12:24:50,101 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-11-03 HTTP/1.1" 200 -
+2024-10-10 12:24:50,102 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-11-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:50,293 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-10-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:50,294 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-10-03 HTTP/1.1" 200 -
+2024-10-10 12:24:50,532 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-09-03 HTTP/1.1" 200 -
+2024-10-10 12:24:50,533 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-09-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:50,949 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-08-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:50,949 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:50] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-08-03 HTTP/1.1" 200 -
+2024-10-10 12:24:51,090 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-07-03 HTTP/1.1" 200 -
+2024-10-10 12:24:51,091 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-07-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:51,230 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-06-03 HTTP/1.1" 200 -
+2024-10-10 12:24:51,230 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-06-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:51,392 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-05-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:51,393 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-05-03 HTTP/1.1" 200 -
+2024-10-10 12:24:51,581 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-04-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:51,581 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:51] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-04-03 HTTP/1.1" 200 -
+2024-10-10 12:24:55,665 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:55] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-03-03 HTTP/1.1" 200 -
+2024-10-10 12:24:55,665 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:55] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-03-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:56,043 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-02-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:56,044 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-02-03 HTTP/1.1" 200 -
+2024-10-10 12:24:56,246 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2022-01-03 HTTP/1.1" 200 -
+2024-10-10 12:24:56,246 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-01-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:56,388 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2021-12-03 HTTP/1.1[0m" 404 -
+2024-10-10 12:24:56,388 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2021-12-03 HTTP/1.1" 200 -
