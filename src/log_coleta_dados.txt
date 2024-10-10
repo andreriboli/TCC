@@ -2270,3 +2270,15 @@
 2024-10-10 12:24:56,246 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2022-01-03 HTTP/1.1[0m" 404 -
 2024-10-10 12:24:56,388 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "[33mGET /api/usuarios/logados?startDate=2023-07-29&endDate=2021-12-03 HTTP/1.1[0m" 404 -
 2024-10-10 12:24:56,388 - INFO - 127.0.0.1 - - [10/Oct/2024 12:24:56] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2023-07-29&endDate=2021-12-03 HTTP/1.1" 200 -
+2024-10-10 12:33:38,999 - INFO - 127.0.0.1 - - [10/Oct/2024 12:33:38] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:33:38,999 - INFO - 127.0.0.1 - - [10/Oct/2024 12:33:38] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:52,835 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:52] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:52,835 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:52] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:53,016 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:53] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:53,035 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:53] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:56,781 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:56] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:34:56,782 - INFO - 127.0.0.1 - - [10/Oct/2024 12:34:56] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:35:42,211 - INFO - 127.0.0.1 - - [10/Oct/2024 12:35:42] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:35:42,223 - INFO - 127.0.0.1 - - [10/Oct/2024 12:35:42] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:36:06,618 - INFO - 127.0.0.1 - - [10/Oct/2024 12:36:06] "GET /api/usuarios/logados?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
+2024-10-10 12:36:06,621 - INFO - 127.0.0.1 - - [10/Oct/2024 12:36:06] "GET /api/categorias/distribuicao-cursos-ativos?startDate=2024-10-03&endDate=2024-10-10 HTTP/1.1" 200 -
