@@ -11,9 +11,9 @@ import { CategoryService } from '../../services/category.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+[x: string]: any;
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  // Configurações do gráfico de "Últimos Usuários Logados"
   public chartUltimosUsuariosLogadosOptions: ChartOptions<'bar'> = {
     responsive: true,
     scales: {
@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
     datasets: [{ data: [], label: 'Usuários Logados' }],
   };
 
-  // Configurações do gráfico de pizza para cursos por categoria
+
   public chartCursosByCategoriaOptions: ChartOptions<'pie'> = {
     responsive: true,
     plugins: {
@@ -53,15 +53,13 @@ export class HomeComponent implements OnInit {
       },
       datalabels: {
         display: (context) => {
-          return context.dataset.data[context.dataIndex] !== 0;  // Oculta rótulos com valor zero
+          return context.dataset.data[context.dataIndex] !== 0;
         },
         color: '#fff',
         font: {
           weight: 'bold',
           size: 16
         },
-        // stroke: 'black',  // Define a cor da borda ao redor do rótulo
-        // strokeWidth: 2,   // Define a espessura da borda
         anchor: 'center',
         align: 'center'
       },
@@ -97,10 +95,8 @@ export class HomeComponent implements OnInit {
     private userService: UserService,
     private categoryService: CategoryService
   ) {
-    // Registrar o plugin globalmente
     Chart.register(DataLabelsPlugin);
 
-    // Configuração global para ocultar rótulos de valores zero
     Chart.defaults.set('plugins.datalabels', {
       display: (context : any) => context.dataset.data[context.dataIndex] !== 0,  // Oculta rótulos de valor zero
       color: '#fff',
@@ -121,7 +117,6 @@ export class HomeComponent implements OnInit {
     this.loadCategoriaUsuariosData();
   }
 
-  // Formatar a data para o formato desejado
   formatDate(date: Date): string {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -129,7 +124,6 @@ export class HomeComponent implements OnInit {
     return `${year}-${month}-${day}`;
   }
 
-  // Formatar data para DD/MM
   formatToDDMM(dateStr: string): string {
     const date = new Date(dateStr);
     const day = String(date.getDate()).padStart(2, '0');
@@ -137,7 +131,6 @@ export class HomeComponent implements OnInit {
     return `${day}/${month}`;
   }
 
-  // Carregar dados de "Últimos Usuários Logados"
   loadUltimosUsuariosLogados(): void {
     this.userService
       .ultimosUsuariosLogados(this.startDate, this.endDate)
@@ -167,21 +160,23 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  // Carregar dados para o gráfico de pizza (cursos por categoria)
   loadCategoriaUsuariosData(): void {
-    this.categoryService.getDistribuicaoCursosAtivos().subscribe((data: any) => {
-      console.log('Dados recebidos do backend:', data);
+    this.categoryService.getDistribuicaoCursosAtivos(this.startDate, this.endDate).subscribe((data: any) => {
 
-      // Ajustar as labels e os dados
       this.chartCursosByCategoriaLabels = data.map((item: any) => item[1]);  // Nome da categoria
       this.chartCursosByCategoriaData.datasets[0].data = data.map((item: any) => item[2]);  // Total de usuários
 
-      // Atualizar o gráfico
       if (this.chart) {
         this.chart.update();
       }
     }, error => {
       console.error('Erro ao carregar os dados de categorias:', error);
     });
+  }
+
+  onChangeDate() {
+    console.log("onChangeDate");
+    this.loadUltimosUsuariosLogados();
+    this.loadCategoriaUsuariosData();
   }
 }

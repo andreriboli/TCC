@@ -11,8 +11,11 @@ export class CategoryService extends BaseService<any> {
     super(http, 'categorias');
   }
 
-  getDistribuicaoCursosAtivos(): Observable<any> {
-    let params = new HttpParams();
+  getDistribuicaoCursosAtivos(startDate: string, endDate: string): Observable<any> {
+    let params = new HttpParams()
+        .set('startDate', startDate)
+        .set('endDate', endDate);
+
     return this.get('/distribuicao-cursos-ativos', params);
   }
 }

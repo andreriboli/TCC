@@ -306,16 +306,18 @@ class DatabaseOperations:
             print(f"Erro ao obter os últimos usuários logados: {e}")
             return None
         
-    def distribuicao_cursos_ativos(self):
+    def distribuicao_cursos_ativos(self, end_date):
         query = """
         SELECT 
             c2.id_categoria,
-            c2.nome_categoria,
+            c2.nome_categoria
             COUNT(i.id_usuario) AS total_usuarios
         FROM 
             cursos c
         INNER JOIN inscricoes i ON c.id_curso = i.id_curso
-        inner join categorias c2 on c2.id_categoria = c.id_categoria
+        INNER JOIN categorias c2 ON c2.id_categoria = c.id_categoria
+        WHERE 
+            i.data_primeiro_acesso < %s
         GROUP BY 
             c2.id_categoria,
             c2.nome_categoria
@@ -325,13 +327,12 @@ class DatabaseOperations:
         
         try:
             with self.db_util.conn.cursor() as cursor:
-                cursor.execute(query)
+                cursor.execute(query, (end_date))
                 result = cursor.fetchall()
                 return result
         except Exception as e:
             print(f"Erro ao obter as categorias: {e}")
             return None
-
 
     def inserir_dados_vimeo(self, data_row):
         try:

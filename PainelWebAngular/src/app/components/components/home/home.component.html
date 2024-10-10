@@ -1,19 +1,17 @@
 <div class="container mt-4">
-  <!-- Filtro de data dentro de um card do Bootstrap -->
   <div class="card p-4 mb-4">
     <div class="row justify-content-center">
       <div class="col-md-3">
         <label for="startDate">Data Inicial:</label>
-        <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate">
+        <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" (ngModelChange)="onChangeDate()">
       </div>
       <div class="col-md-3">
         <label for="endDate">Data Final:</label>
-        <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate">
+        <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate" (ngModelChange)="onChangeDate()">
       </div>
     </div>
   </div>
 
-  <!-- Gráficos dentro de cards do Bootstrap -->
   <div class="row justify-content-center">
     <div class="col-md-6 mb-3">
       <div class="card text-center p-3">
@@ -26,7 +24,7 @@
     </div>
     <div class="col-md-6 mb-3">
       <div class="card text-center p-3">
-        <h5>Nº Matrículas Gategoria</h5>
+        <h5>Nº Matrículas por Gategoria</h5>
         <div style="display: block;">
           <canvas
             baseChart [datasets]="chartCursosByCategoriaData.datasets"

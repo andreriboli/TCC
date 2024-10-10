@@ -1,3 +1,4 @@
+import threading
 import time
 import logging
 from datetime import datetime, timedelta
@@ -17,52 +18,10 @@ logging.basicConfig(
 )
 
 def executar_coleta_diaria(config, db_util):
-    # config = Config()
 
-    # db_util = DBUtil(
-    #     dbname=config.DB_NAME,
-    #     user=config.DB_USER,
-    #     password=config.DB_PASSWORD,
-    #     host=config.DB_HOST,
-    #     port=config.DB_PORT
-    # )
-    # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
-
-    # vimeo_scraper.login()
-    # csv_url = vimeo_scraper.obter_link_csv()
-
-    # if csv_url:
-    #         csv_file_path = vimeo_scraper.download_csv_directly(csv_url, config.DOWNLOAD_DIR)
-
-    #         if csv_file_path:
-    #             df = pd.read_csv(csv_file_path)
-
-                
-    #             database_operations = DatabaseOperations(db_util, config)
-
-    #             try:
-    #                 db_util.connect()
-    #                 logging.info("Conectado ao banco de dados com sucesso.")
-
-    #                 database_operations.salvar_dados_vimeo(df)
-
-    #             except Exception as e:
-    #                 logging.error(f"Erro durante a inserção dos dados no banco: {e}")
-                
-    #             finally:
-    #                 db_util.disconnect()
-    #                 logging.info("Desconectado do banco de dados.")
-
-    #         else:
-    #             logging.error("O link do CSV não foi capturado com sucesso.")
-            
-    #         vimeo_scraper.fechar()
-    
     try:
-        # Conectar ao banco de dados
         db_util.connect()
 
-        # Inicializar operações no banco de dados
         database_operations = DatabaseOperations(db_util, config)
 
         now = datetime.now()
@@ -167,9 +126,12 @@ if __name__ == "__main__":
         host=config.DB_HOST,
         port=config.DB_PORT
     )
+    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util))
+    # coleta_thread.start()
     database_operations = DatabaseOperations(db_util, config)
-    executar_coleta_diaria(config, db_util)
-    # start_api(database_operations)
+
+    start_api(database_operations)
+    # executar_coleta_diaria(config, db_util)
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 
     # vimeo_scraper.login()
