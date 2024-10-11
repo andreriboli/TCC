@@ -2357,3 +2357,597 @@
 2024-10-10 20:46:12,107 - INFO - 127.0.0.1 - - [10/Oct/2024 20:46:12] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
 2024-10-10 20:47:22,734 - INFO - 127.0.0.1 - - [10/Oct/2024 20:47:22] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
 2024-10-10 20:51:44,109 - INFO - 127.0.0.1 - - [10/Oct/2024 20:51:44] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:31:55,885 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 11:31:55,885 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 11:33:57,676 - INFO - 127.0.0.1 - - [11/Oct/2024 11:33:57] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:33:57,677 - INFO - 127.0.0.1 - - [11/Oct/2024 11:33:57] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:33:59,475 - INFO - 127.0.0.1 - - [11/Oct/2024 11:33:59] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:33:59,477 - INFO - 127.0.0.1 - - [11/Oct/2024 11:33:59] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:34:00,174 - INFO - 127.0.0.1 - - [11/Oct/2024 11:34:00] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:34:00,175 - INFO - 127.0.0.1 - - [11/Oct/2024 11:34:00] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 11:34:05,767 - INFO - 127.0.0.1 - - [11/Oct/2024 11:34:05] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:38:02,467 - INFO - 127.0.0.1 - - [11/Oct/2024 11:38:02] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:38:07,292 - INFO - 127.0.0.1 - - [11/Oct/2024 11:38:07] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:40:28,839 - INFO - 127.0.0.1 - - [11/Oct/2024 11:40:28] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:40:31,850 - INFO - 127.0.0.1 - - [11/Oct/2024 11:40:31] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:41:48,585 - INFO - 127.0.0.1 - - [11/Oct/2024 11:41:48] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:41:53,083 - INFO - 127.0.0.1 - - [11/Oct/2024 11:41:53] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:45:56,624 - INFO - 127.0.0.1 - - [11/Oct/2024 11:45:56] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:46:00,270 - INFO - 127.0.0.1 - - [11/Oct/2024 11:46:00] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:46:20,878 - INFO - 127.0.0.1 - - [11/Oct/2024 11:46:20] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:46:53,570 - INFO - 127.0.0.1 - - [11/Oct/2024 11:46:53] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:47:15,589 - INFO - 127.0.0.1 - - [11/Oct/2024 11:47:15] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:48:44,472 - INFO - 127.0.0.1 - - [11/Oct/2024 11:48:44] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:51:04,799 - INFO - 127.0.0.1 - - [11/Oct/2024 11:51:04] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:51:12,262 - INFO - 127.0.0.1 - - [11/Oct/2024 11:51:12] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:51:24,412 - INFO - 127.0.0.1 - - [11/Oct/2024 11:51:24] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:51:33,279 - INFO - 127.0.0.1 - - [11/Oct/2024 11:51:33] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:51:42,304 - INFO - 127.0.0.1 - - [11/Oct/2024 11:51:42] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:52:18,879 - INFO - 127.0.0.1 - - [11/Oct/2024 11:52:18] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:52:24,954 - INFO - 127.0.0.1 - - [11/Oct/2024 11:52:24] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:53:54,802 - INFO - 127.0.0.1 - - [11/Oct/2024 11:53:54] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:54:00,595 - INFO - 127.0.0.1 - - [11/Oct/2024 11:54:00] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:54:01,891 - INFO - 127.0.0.1 - - [11/Oct/2024 11:54:01] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:54:02,640 - INFO - 127.0.0.1 - - [11/Oct/2024 11:54:02] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:55:00,196 - INFO - 127.0.0.1 - - [11/Oct/2024 11:55:00] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:55:36,012 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 11:55:36,012 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 11:55:37,900 - INFO - 127.0.0.1 - - [11/Oct/2024 11:55:37] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:56:03,358 - INFO - 127.0.0.1 - - [11/Oct/2024 11:56:03] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:57:07,192 - INFO - 127.0.0.1 - - [11/Oct/2024 11:57:07] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:57:11,222 - INFO - 127.0.0.1 - - [11/Oct/2024 11:57:11] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:57:26,894 - INFO - 127.0.0.1 - - [11/Oct/2024 11:57:26] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:58:51,685 - INFO - 127.0.0.1 - - [11/Oct/2024 11:58:51] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 11:59:06,522 - INFO - 127.0.0.1 - - [11/Oct/2024 11:59:06] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:00:42,486 - INFO - 127.0.0.1 - - [11/Oct/2024 12:00:42] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:00:50,980 - INFO - 127.0.0.1 - - [11/Oct/2024 12:00:50] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:19:36,283 - INFO - 127.0.0.1 - - [11/Oct/2024 12:19:36] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:19:54,986 - INFO - 127.0.0.1 - - [11/Oct/2024 12:19:54] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:21:09,406 - INFO - 127.0.0.1 - - [11/Oct/2024 12:21:09] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:21:30,686 - INFO - 127.0.0.1 - - [11/Oct/2024 12:21:30] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:23:56,708 - INFO - 127.0.0.1 - - [11/Oct/2024 12:23:56] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:24:35,213 - INFO - 127.0.0.1 - - [11/Oct/2024 12:24:35] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:26:56,824 - INFO - 127.0.0.1 - - [11/Oct/2024 12:26:56] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:27:05,407 - INFO - 127.0.0.1 - - [11/Oct/2024 12:27:05] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:28:03,434 - INFO - 127.0.0.1 - - [11/Oct/2024 12:28:03] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:29:06,323 - INFO - 127.0.0.1 - - [11/Oct/2024 12:29:06] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:34:22,145 - INFO - 127.0.0.1 - - [11/Oct/2024 12:34:22] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:34:38,714 - INFO - 127.0.0.1 - - [11/Oct/2024 12:34:38] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 12:34:38,714 - INFO - 127.0.0.1 - - [11/Oct/2024 12:34:38] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 12:34:53,672 - INFO - 127.0.0.1 - - [11/Oct/2024 12:34:53] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:35:24,129 - INFO - 127.0.0.1 - - [11/Oct/2024 12:35:24] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 12:40:41,179 - INFO - Iniciando coleta de dados às 2024-10-11 12:40:41.179660
+2024-10-11 12:40:41,181 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 12:40:41,181 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 12:40:41,512 - INFO - Cursos coletados com sucesso.
+2024-10-11 12:40:41,513 - INFO - Iniciando inserção de categorias.
+2024-10-11 12:40:41,547 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-11 12:40:41,548 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-11 12:40:41,548 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-11 12:40:41,549 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-11 12:40:41,549 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-11 12:40:41,549 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-11 12:40:41,550 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-11 12:40:41,550 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-11 12:40:41,550 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-11 12:40:41,550 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-11 12:40:41,550 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-11 12:40:41,551 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-11 12:40:41,551 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-11 12:40:41,551 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-11 12:40:41,551 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-11 12:40:41,552 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-11 12:40:41,552 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-11 12:40:41,552 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-11 12:40:41,552 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-11 12:40:41,552 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-11 12:40:41,552 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-11 12:40:41,552 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-11 12:40:41,553 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-11 12:40:41,553 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-11 12:40:41,553 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-11 12:40:41,553 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-11 12:40:41,553 - INFO - Inserção de categorias concluída.
+2024-10-11 12:40:41,553 - INFO - Iniciando inserção de cursos.
+2024-10-11 12:40:41,553 - INFO - Curso E-Learning inserido.
+2024-10-11 12:40:41,553 - INFO - Curso Análise Competitiva inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Kubernetes #01 inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-11 12:40:41,554 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-11 12:40:41,554 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-11 12:40:41,554 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-11 12:40:41,554 - INFO - Curso Test Driven Development inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Engenharia de Computação inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Sistemas de Informação inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Ciências Contábeis inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Administração inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Gestão da Inovação inserido.
+2024-10-11 12:40:41,555 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-11 12:40:41,555 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-11 12:40:41,555 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-11 12:40:41,555 - INFO - Curso MATLAB inserido.
+2024-10-11 12:40:41,555 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-11 12:40:41,555 - INFO - Inserção de cursos concluída.
+2024-10-11 12:40:41,555 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-11 12:41:06,156 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:06,295 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:06,426 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:06,548 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:06,671 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:06,853 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:35,767 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:35,894 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,020 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,174 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,302 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,443 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,619 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,741 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,852 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:36,982 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,143 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,292 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,430 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,543 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,661 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,786 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:37,926 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,080 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,198 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,339 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,503 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,643 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,761 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:38,878 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:39,005 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:41:39,127 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:45,415 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:45,568 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:45,706 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:45,827 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:45,950 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,131 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,273 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,403 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,520 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,652 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,773 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:46,912 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,038 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,169 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,287 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,439 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,565 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,751 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:47,896 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,055 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,217 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,339 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,452 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,567 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,746 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:48,867 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,011 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,157 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,299 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,521 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,657 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,815 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:49,964 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,138 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,284 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,415 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,538 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,703 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,852 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:50,982 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,106 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,253 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,395 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,525 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,700 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,824 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:51,954 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,082 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,205 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,356 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,471 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,593 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,724 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,870 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:52,995 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,122 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,251 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,383 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,505 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,648 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,786 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:53,976 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,099 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,249 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,377 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,507 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,674 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,804 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:54,937 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:55,064 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:55,210 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:55,344 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:55,475 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:42:55,597 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 12:44:25,135 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-11 12:44:25,135 - INFO - Coleta e armazenamento concluídos às 2024-10-11 12:44:25.135284
+2024-10-11 13:38:52,604 - INFO - 127.0.0.1 - - [11/Oct/2024 13:38:52] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 13:41:13,570 - INFO - Iniciando coleta de dados às 2024-10-11 13:41:13.570658
+2024-10-11 13:41:13,575 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 13:41:13,575 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 13:41:13,719 - INFO - Cursos coletados com sucesso.
+2024-10-11 13:41:13,719 - INFO - Iniciando inserção de categorias.
+2024-10-11 13:41:13,773 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-11 13:41:13,774 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-11 13:41:13,774 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-11 13:41:13,774 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-11 13:41:13,774 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-11 13:41:13,774 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-11 13:41:13,775 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-11 13:41:13,775 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-11 13:41:13,775 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-11 13:41:13,775 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-11 13:41:13,775 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-11 13:41:13,775 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-11 13:41:13,775 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-11 13:41:13,775 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-11 13:41:13,775 - INFO - Inserção de categorias concluída.
+2024-10-11 13:41:13,775 - INFO - Iniciando inserção de cursos.
+2024-10-11 13:41:13,775 - INFO - Curso E-Learning inserido.
+2024-10-11 13:41:13,775 - INFO - Curso Análise Competitiva inserido.
+2024-10-11 13:41:13,775 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-11 13:41:13,775 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-11 13:41:13,775 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-11 13:41:13,775 - INFO - Curso Kubernetes #01 inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-11 13:41:13,776 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-11 13:41:13,776 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-11 13:41:13,776 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Test Driven Development inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Engenharia de Computação inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Sistemas de Informação inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Ciências Contábeis inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Administração inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Gestão da Inovação inserido.
+2024-10-11 13:41:13,776 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-11 13:41:13,776 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-11 13:41:13,776 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-11 13:41:13,777 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-11 13:41:13,777 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-11 13:41:13,777 - INFO - Curso MATLAB inserido.
+2024-10-11 13:41:13,777 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-11 13:41:13,777 - INFO - Inserção de cursos concluída.
+2024-10-11 13:41:13,777 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-11 13:41:49,889 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:41:50,019 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:41:50,153 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:41:50,271 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:41:50,389 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:41:50,541 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:20,650 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:20,783 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:20,911 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,070 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,207 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,343 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,526 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,659 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,774 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:21,902 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,060 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,202 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,339 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,454 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,570 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,688 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,826 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:22,972 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,131 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,274 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,442 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,576 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,712 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,833 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:23,972 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:42:24,102 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:46,906 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,057 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,185 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,311 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,442 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,634 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,782 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:47,911 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,034 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,163 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,291 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,433 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,579 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,708 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,825 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:48,964 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,086 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,261 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,403 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,565 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,711 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,847 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:49,985 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,110 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,295 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,419 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,574 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,723 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:50,865 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,054 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,198 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,339 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,482 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,651 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,785 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:51,914 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,049 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,214 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,367 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,495 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,618 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,759 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:52,904 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,030 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,203 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,323 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,439 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,560 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,681 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,826 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:53,948 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,065 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,193 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,347 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,475 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,630 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,767 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:54,907 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,039 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,186 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,324 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,492 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,613 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,772 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:55,904 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,034 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,218 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,347 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,474 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,604 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,753 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:56,879 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:57,008 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:43:57,131 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:45:29,811 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-11 13:45:29,811 - INFO - Coleta e armazenamento concluídos às 2024-10-11 13:45:29.811550
+2024-10-11 13:48:47,625 - INFO - Iniciando coleta de dados às 2024-10-11 13:48:47.625148
+2024-10-11 13:48:47,628 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 13:48:47,628 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 13:48:47,742 - INFO - Cursos coletados com sucesso.
+2024-10-11 13:48:47,742 - INFO - Iniciando inserção de categorias.
+2024-10-11 13:48:47,796 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-11 13:48:47,797 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-11 13:48:47,797 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-11 13:48:47,797 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-11 13:48:47,797 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-11 13:48:47,797 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-11 13:48:47,797 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-11 13:48:47,798 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-11 13:48:47,798 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-11 13:48:47,798 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-11 13:48:47,798 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-11 13:48:47,798 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-11 13:48:47,798 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-11 13:48:47,798 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-11 13:48:47,798 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-11 13:48:47,798 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-11 13:48:47,798 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-11 13:48:47,798 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-11 13:48:47,798 - INFO - Inserção de categorias concluída.
+2024-10-11 13:48:47,798 - INFO - Iniciando inserção de cursos.
+2024-10-11 13:48:47,799 - INFO - Curso E-Learning inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Análise Competitiva inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Kubernetes #01 inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-11 13:48:47,799 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-11 13:48:47,799 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-11 13:48:47,800 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-11 13:48:47,800 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Test Driven Development inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Engenharia de Computação inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Sistemas de Informação inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Ciências Contábeis inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Administração inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Gestão da Inovação inserido.
+2024-10-11 13:48:47,800 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-11 13:48:47,800 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-11 13:48:47,800 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-11 13:48:47,801 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-11 13:48:47,801 - INFO - Curso MATLAB inserido.
+2024-10-11 13:48:47,801 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-11 13:48:47,801 - INFO - Inserção de cursos concluída.
+2024-10-11 13:48:47,801 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-11 13:49:22,838 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:22,963 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:23,090 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:23,205 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:23,316 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:23,456 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:52,865 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:52,987 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,121 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,265 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,390 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,532 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,716 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,848 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:53,980 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,117 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,272 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,408 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,567 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,692 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,812 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:54,935 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,068 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,206 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,315 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,457 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,635 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,770 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:55,897 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:56,018 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:56,154 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:49:56,290 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:45,720 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:45,870 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:45,996 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,118 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,250 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,440 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,594 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,729 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,854 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:46,987 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,126 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,269 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,395 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,522 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,646 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,798 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:47,923 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,084 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,230 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,384 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,527 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,685 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,827 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:48,959 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,132 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,253 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,393 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,543 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,682 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:49,880 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,015 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,169 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,310 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,496 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,632 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,775 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:50,904 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,079 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,254 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,379 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,496 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,634 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,777 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:51,905 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,077 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,201 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,322 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,451 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,571 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,717 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,838 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:52,969 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,095 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,249 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,375 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,502 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,629 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,766 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:53,895 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,035 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,181 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,373 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,490 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,652 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,784 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:54,913 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,075 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,207 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,333 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,459 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,599 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,727 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,854 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:50:55,985 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-11 13:52:26,975 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-11 13:52:26,975 - INFO - Coleta e armazenamento concluídos às 2024-10-11 13:52:26.975879
+2024-10-11 17:11:13,505 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-11 17:11:13,505 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-11 17:11:33,810 - INFO - 127.0.0.1 - - [11/Oct/2024 17:11:33] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:12:26,123 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:26] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:12:26,124 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:26] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:12:31,974 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:31] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:12:31,975 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:31] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:12:57,972 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:57] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:12:57,973 - INFO - 127.0.0.1 - - [11/Oct/2024 17:12:57] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:13:27,150 - INFO - 127.0.0.1 - - [11/Oct/2024 17:13:27] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:13:27,150 - INFO - 127.0.0.1 - - [11/Oct/2024 17:13:27] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:13:35,800 - INFO - 127.0.0.1 - - [11/Oct/2024 17:13:35] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:13:35,800 - INFO - 127.0.0.1 - - [11/Oct/2024 17:13:35] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:16:13,295 - INFO - 127.0.0.1 - - [11/Oct/2024 17:16:13] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:16:13,296 - INFO - 127.0.0.1 - - [11/Oct/2024 17:16:13] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:19:52,138 - INFO - 127.0.0.1 - - [11/Oct/2024 17:19:52] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:19:52,139 - INFO - 127.0.0.1 - - [11/Oct/2024 17:19:52] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-11 17:33:05,991 - INFO - 127.0.0.1 - - [11/Oct/2024 17:33:05] "GET /api/usuarios/logados?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:33:05,992 - INFO - 127.0.0.1 - - [11/Oct/2024 17:33:05] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-04&endDate=2024-10-11 HTTP/1.1" 200 -
+2024-10-11 17:33:10,314 - INFO - 127.0.0.1 - - [11/Oct/2024 17:33:10] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-11 17:38:20,450 - INFO - 127.0.0.1 - - [11/Oct/2024 17:38:20] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -

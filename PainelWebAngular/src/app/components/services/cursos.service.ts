@@ -17,5 +17,11 @@ export class CursosService extends BaseService<any> {
     return this.get('/distribuicao-alunos', params);
   }
 
+  getTopCursosMaisAcessadosSemana(): Observable<any> {
+    let params = new HttpParams()
+
+    return this.get('/mais-acessados-semana', params);
+  }
+
 
 }

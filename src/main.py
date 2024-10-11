@@ -136,9 +136,9 @@ if __name__ == "__main__":
         port=config.DB_PORT
     )
 
-    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util))
-    # coleta_thread.start()
     # database_operations = DatabaseOperations(db_util_coleta, config)
+    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    # coleta_thread.start()
 
     database_operations_api = DatabaseOperations(db_util_api, config)
     start_api(database_operations_api)
