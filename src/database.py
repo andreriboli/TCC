@@ -86,13 +86,42 @@ class DatabaseOperations:
         except Exception as e:
             logging.error(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
+    def top_cursos_mais_acessados_semana(self):
+        query = """
+        SELECT 
+            c.id_curso,
+            c.nome_curso,
+            COUNT(i.id_usuario) AS total_acessos
+        FROM 
+            cursos c
+        INNER JOIN inscricoes i ON c.id_curso = i.id_curso
+        WHERE 
+            i.data_ultimo_acesso BETWEEN NOW() - INTERVAL '7 days' AND NOW()
+        GROUP BY 
+            c.id_curso, c.nome_curso
+        ORDER BY 
+            total_acessos DESC
+        LIMIT 10;
+        """
+        
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao obter os cursos mais acessados da semana: {e}")
+            return None
+
     def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario, usuario):
         try:
             
+            if moodle_id == 274 :
+                print("teste")
             completado = detalhes_usuario.get('completed', False)
             tempo_medio_conclusao = None
             primeiro_acesso = detalhes_usuario.get('startdate', 0)
-            ultimo_acesso = detalhes_usuario.get('enddate', 0)
+            ultimo_acesso = detalhes_usuario.get('lastaccess', 0)
 
             if completado:
                 startdate = detalhes_usuario.get('startdate', 0)
