@@ -11,7 +11,7 @@ import { CategoryService } from '../../services/category.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-[x: string]: any;
+
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public chartUltimosUsuariosLogadosOptions: ChartOptions<'bar'> = {

@@ -1,1 +1,42 @@
-<p>professores works!</p>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+      <div class="col-md-6 mb-3">
+          <div class="card text-center p-3">
+              <h5>Número de Alunos por Curso</h5>
+              <!-- <canvas baseChart [data]="chartDistribuicaoCursosAtivosDataConfig"
+                  [type]="chartDistribuicaoCursosAtivosType" [options]="chartDistribuicaoCursosAtivosOptions">
+              </canvas> -->
+          </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+          <div class="card text-center p-3">
+              <h5>Professores com mais cursos</h5>
+              <canvas
+                  baseChart [datasets]="chartTopProfessorData.datasets"
+                  [labels]="chartTopProfessorLabels"
+                  [type]="chartTopProfessorType"
+                  [legend]="chartTopProfessorLegend"
+                  [options]="chartTopProfessorOptions">
+            </canvas>
+          </div>
+      </div>
+  </div>
+
+  <div class="row justify-content-center">
+      <div class="col-md-6 mb-3">
+          <div class="card text-center p-3">
+              <h5>Gráfico 3</h5>
+              <div style="display: block;">
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6 mb-3">
+          <div class="card text-center p-3">
+              <h5>Gráfico 4</h5>
+              <div style="display: block;">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

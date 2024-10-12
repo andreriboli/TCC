@@ -96,7 +96,7 @@ class DatabaseOperations:
             cursos c
         INNER JOIN inscricoes i ON c.id_curso = i.id_curso
         WHERE 
-            i.data_ultimo_acesso BETWEEN NOW() - INTERVAL '7 days' AND NOW()
+            i.data_ultimo_acesso BETWEEN NOW() - INTERVAL '14 days' AND NOW()
         GROUP BY 
             c.id_curso, c.nome_curso
         ORDER BY 
@@ -140,7 +140,7 @@ class DatabaseOperations:
             else:
                 primeiro_acesso = None
 
-            if ultimo_acesso != 0:
+            if ultimo_acesso != 0 and ultimo_acesso is not None:
                 ultimo_acesso = datetime.fromtimestamp(ultimo_acesso)
             else:
                 ultimo_acesso = None
@@ -456,3 +456,68 @@ class DatabaseOperations:
             print(f"Erro ao inserir atividade concluída: {e}")
             logging.error(f"Erro ao inserir atividade concluída: {e}")
 
+    def inserir_professor(self, id_usuario, id_curso):
+        query = """
+            INSERT INTO professor (id_usuario, id_curso)
+            VALUES (%s, %s)
+            ON CONFLICT (id_usuario, id_curso) DO NOTHING;
+        """
+        
+        params = (id_usuario, id_curso)
+        
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, params)
+                self.db_util.conn.commit()
+        except Exception as e:
+            print(f"Erro ao inserir professor: {e}")
+
+    def top_professores(self):
+        query = """
+        SELECT 
+            u.nome AS professor_nome,
+            COUNT(p.id_curso) AS numero_de_cursos
+        FROM 
+            professor p
+        JOIN 
+            usuarios u ON p.id_usuario = u.moodle_id
+        GROUP BY 
+            u.nome
+        ORDER BY 
+            numero_de_cursos DESC;
+        """
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao obter os professores com mais cursos: {e}")
+            return None
+        
+    def cursos_com_menos_inscricoes(database_operations):
+        query = """
+        SELECT 
+            c.nome_curso AS nome_curso, 
+            COUNT(i.id_usuario) AS numero_de_inscricoes
+        FROM 
+            cursos c
+        LEFT JOIN 
+            inscricoes i ON c.id_curso = i.id_curso
+        WHERE 
+            c.id_curso != 1
+        GROUP BY 
+            c.nome_curso
+        ORDER BY 
+            numero_de_inscricoes ASC
+        LIMIT 10;
+        """
+        
+        try:
+            with database_operations.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao obter cursos com menos inscrições: {e}")
+            return None

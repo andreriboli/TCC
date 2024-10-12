@@ -20,3 +20,12 @@ class CursoService:
                 return jsonify(resultado), 200
             except Exception as e:
                 return jsonify({"error": str(e)}), 500    
+            
+        
+        @app.route('/api/cursos/menos-inscricoes', methods=['GET'])
+        def cursos_com_menos_inscricoes():
+            try:
+                resultado = db_operations.cursos_com_menos_inscricoes()
+                return jsonify(resultado), 200
+            except Exception as e:
+                return jsonify({"error": str(e)}), 500    

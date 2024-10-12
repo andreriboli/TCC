@@ -2360,3 +2360,658 @@
 2024-10-12 15:54:32,369 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 2024-10-12 15:54:32,369 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 16:08:54,905 - INFO - 127.0.0.1 - - [12/Oct/2024 16:08:54] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:09:01,780 - INFO - 127.0.0.1 - - [12/Oct/2024 16:09:01] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:09:02,147 - INFO - 127.0.0.1 - - [12/Oct/2024 16:09:02] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:09:03,463 - INFO - 127.0.0.1 - - [12/Oct/2024 16:09:03] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:11:38,470 - INFO - 127.0.0.1 - - [12/Oct/2024 16:11:38] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:13:45,755 - INFO - 127.0.0.1 - - [12/Oct/2024 16:13:45] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:14:12,248 - INFO - 127.0.0.1 - - [12/Oct/2024 16:14:12] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:15:25,134 - INFO - 127.0.0.1 - - [12/Oct/2024 16:15:25] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:15:34,059 - INFO - 127.0.0.1 - - [12/Oct/2024 16:15:34] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:16:32,831 - INFO - 127.0.0.1 - - [12/Oct/2024 16:16:32] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:16:32,832 - INFO - 127.0.0.1 - - [12/Oct/2024 16:16:32] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:20:22,011 - INFO - 127.0.0.1 - - [12/Oct/2024 16:20:22] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:20:22,011 - INFO - 127.0.0.1 - - [12/Oct/2024 16:20:22] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:20:30,227 - INFO - 127.0.0.1 - - [12/Oct/2024 16:20:30] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:20:30,529 - INFO - 127.0.0.1 - - [12/Oct/2024 16:20:30] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:26:18,663 - INFO - 127.0.0.1 - - [12/Oct/2024 16:26:18] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:26:18,664 - INFO - 127.0.0.1 - - [12/Oct/2024 16:26:18] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:29:34,714 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:34] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:29:34,714 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:34] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:29:35,513 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:35] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:29:35,823 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:35] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:29:37,220 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:37] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:29:37,220 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:37] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:29:45,529 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:45] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:29:45,848 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:45] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:29:59,621 - INFO - 127.0.0.1 - - [12/Oct/2024 16:29:59] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:31:43,840 - INFO - Iniciando coleta de dados às 2024-10-12 16:31:43.840030
+2024-10-12 16:31:43,875 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 16:31:43,876 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 16:31:44,035 - INFO - Cursos coletados com sucesso.
+2024-10-12 16:31:44,035 - INFO - Iniciando inserção de categorias.
+2024-10-12 16:31:44,144 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-12 16:31:44,146 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-12 16:31:44,146 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-12 16:31:44,147 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-12 16:31:44,148 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-12 16:31:44,149 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-12 16:31:44,150 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-12 16:31:44,151 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-12 16:31:44,152 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-12 16:31:44,152 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-12 16:31:44,153 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-12 16:31:44,153 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-12 16:31:44,154 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-12 16:31:44,155 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-12 16:31:44,156 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-12 16:31:44,156 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-12 16:31:44,157 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-12 16:31:44,157 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-12 16:31:44,158 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-12 16:31:44,159 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-12 16:31:44,160 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-12 16:31:44,161 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-12 16:31:44,162 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-12 16:31:44,163 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-12 16:31:44,164 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-12 16:31:44,165 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-12 16:31:44,165 - INFO - Inserção de categorias concluída.
+2024-10-12 16:31:44,165 - INFO - Iniciando inserção de cursos.
+2024-10-12 16:31:44,168 - INFO - Curso E-Learning inserido.
+2024-10-12 16:31:44,169 - INFO - Curso Análise Competitiva inserido.
+2024-10-12 16:31:44,169 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-12 16:31:44,170 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-12 16:31:44,170 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-12 16:31:44,171 - INFO - Curso Kubernetes #01 inserido.
+2024-10-12 16:31:44,172 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-12 16:31:44,173 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-12 16:31:44,173 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-12 16:31:44,174 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-12 16:31:44,174 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-12 16:31:44,175 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-12 16:31:44,175 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-12 16:31:44,176 - INFO - Curso Test Driven Development inserido.
+2024-10-12 16:31:44,176 - INFO - Curso Engenharia de Computação inserido.
+2024-10-12 16:31:44,176 - INFO - Curso Sistemas de Informação inserido.
+2024-10-12 16:31:44,177 - INFO - Curso Ciências Contábeis inserido.
+2024-10-12 16:31:44,177 - INFO - Curso Administração inserido.
+2024-10-12 16:31:44,178 - INFO - Curso Gestão da Inovação inserido.
+2024-10-12 16:31:44,178 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-12 16:31:44,178 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-12 16:31:44,179 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-12 16:31:44,180 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-12 16:31:44,180 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-12 16:31:44,181 - INFO - Curso MATLAB inserido.
+2024-10-12 16:31:44,181 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-12 16:31:44,181 - INFO - Inserção de cursos concluída.
+2024-10-12 16:31:44,181 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-12 16:31:46,163 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:46,361 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:46,533 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:46,713 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:46,901 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:47,116 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:47,314 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:47,523 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:47,949 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:48,156 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:48,349 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:48,551 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:48,761 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:48,962 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:49,184 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:49,408 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:49,630 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:49,867 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:50,102 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:50,280 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:50,478 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:50,672 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:50,871 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,048 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,220 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,406 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,805 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:51,982 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:52,156 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:52,344 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:52,565 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:52,783 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:52,989 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:53,171 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:53,376 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:53,596 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:53,793 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:53,995 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:54,431 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:54,653 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:54,951 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:55,133 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:55,319 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:55,507 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:55,704 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:55,886 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,065 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,245 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,400 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,575 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,759 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:56,946 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:57,160 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:57,346 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:57,510 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:57,684 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:57,889 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:58,063 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:58,247 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:58,423 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:58,595 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:58,832 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:59,002 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:59,213 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:59,409 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:59,640 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:31:59,845 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:00,072 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:00,328 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:00,564 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:00,816 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:01,050 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:01,273 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:01,462 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:01,646 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:01,819 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:02,034 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:02,245 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:02,455 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:02,660 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:02,841 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:03,104 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:03,326 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:03,554 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:03,770 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:04,019 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:04,246 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:04,450 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:04,912 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:05,132 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:05,404 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:05,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:05,824 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:06,064 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:06,285 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:06,516 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:06,743 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:06,988 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:07,197 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:07,409 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:07,651 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:07,885 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:08,077 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:08,288 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:08,481 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:08,666 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:08,874 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:09,052 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:09,237 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:09,416 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:09,618 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:09,807 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:10,010 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:10,203 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:10,402 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:10,605 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:10,827 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:11,053 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:26,897 - INFO - 127.0.0.1 - - [12/Oct/2024 16:32:26] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:32:26,920 - INFO - 127.0.0.1 - - [12/Oct/2024 16:32:26] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:32:30,444 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:35,680 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:35,878 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:36,097 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:36,301 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:36,457 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:36,661 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:32:36,885 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:36,955 - INFO - 127.0.0.1 - - [12/Oct/2024 16:32:36] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:32:37,332 - INFO - 127.0.0.1 - - [12/Oct/2024 16:32:37] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:32:37,885 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:45,922 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:50,369 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:32:51,775 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:05,054 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:13,181 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:13,369 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:13,525 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:13,729 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:13,894 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:14,092 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:14,321 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:14,485 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:14,640 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:14,810 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:15,029 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:15,210 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:15,444 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:15,633 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:15,815 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:16,018 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:16,242 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:16,515 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:16,687 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:16,905 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:17,163 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:17,368 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:17,553 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:17,721 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:17,912 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:18,079 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:33:23,975 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:24,230 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:29,854 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:30,169 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:31,350 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:31,671 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:31,806 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:32,117 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:32,609 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:32,928 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:33,234 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:33,408 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:33,582 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:33,730 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:33,891 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,038 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,179 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,316 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,486 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,817 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:34,971 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:35,127 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:35,286 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:35,951 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:33:36,096 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:34:01,548 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:34:07,328 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:34:16,781 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 16:34:23,078 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:23,270 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:23,429 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:23,587 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:23,759 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,003 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,209 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,393 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,565 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,748 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:24,919 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,093 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,269 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,436 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,602 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,778 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:25,949 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:26,145 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:26,343 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:26,553 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:26,776 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:26,967 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:27,130 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:27,299 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:27,511 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:27,670 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:27,879 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:28,104 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:28,294 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:28,554 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:28,747 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:28,964 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:29,175 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:29,401 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:29,595 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:29,827 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,005 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,207 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,396 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,585 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,745 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:30,952 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:31,174 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:31,374 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:31,617 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:31,787 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:31,954 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:32,109 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:32,253 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:32,433 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:34:32,603 - ERROR - Erro ao inserir inscrição: 'NoneType' object has no attribute 'get'
+2024-10-12 16:35:39,355 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 16:35:39,355 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 16:35:43,449 - INFO - 127.0.0.1 - - [12/Oct/2024 16:35:43] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:35:43,449 - INFO - 127.0.0.1 - - [12/Oct/2024 16:35:43] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:39:06,595 - INFO - 127.0.0.1 - - [12/Oct/2024 16:39:06] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:39:06,596 - INFO - 127.0.0.1 - - [12/Oct/2024 16:39:06] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:39:22,474 - INFO - 127.0.0.1 - - [12/Oct/2024 16:39:22] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:39:22,787 - INFO - 127.0.0.1 - - [12/Oct/2024 16:39:22] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:40:34,750 - INFO - 127.0.0.1 - - [12/Oct/2024 16:40:34] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:40:34,795 - INFO - 127.0.0.1 - - [12/Oct/2024 16:40:34] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 16:40:39,059 - INFO - 127.0.0.1 - - [12/Oct/2024 16:40:39] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:40:39,433 - INFO - 127.0.0.1 - - [12/Oct/2024 16:40:39] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:41:18,614 - INFO - 127.0.0.1 - - [12/Oct/2024 16:41:18] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:41:18,931 - INFO - 127.0.0.1 - - [12/Oct/2024 16:41:18] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 16:42:58,299 - INFO - 127.0.0.1 - - [12/Oct/2024 16:42:58] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 16:42:58,299 - INFO - 127.0.0.1 - - [12/Oct/2024 16:42:58] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 17:03:57,110 - INFO - Iniciando coleta de dados às 2024-10-12 17:03:57.110071
+2024-10-12 17:03:57,318 - INFO - Cursos coletados com sucesso.
+2024-10-12 17:03:57,318 - INFO - Iniciando inserção de categorias.
+2024-10-12 17:03:57,392 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-12 17:03:57,393 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-12 17:03:57,394 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-12 17:03:57,394 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-12 17:03:57,395 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-12 17:03:57,395 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-12 17:03:57,396 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-12 17:03:57,396 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-12 17:03:57,396 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-12 17:03:57,397 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-12 17:03:57,398 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-12 17:03:57,399 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-12 17:03:57,400 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-12 17:03:57,401 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-12 17:03:57,401 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-12 17:03:57,402 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-12 17:03:57,402 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-12 17:03:57,403 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-12 17:03:57,403 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-12 17:03:57,403 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-12 17:03:57,404 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-12 17:03:57,404 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-12 17:03:57,405 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-12 17:03:57,405 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-12 17:03:57,405 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-12 17:03:57,406 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-12 17:03:57,406 - INFO - Inserção de categorias concluída.
+2024-10-12 17:03:57,406 - INFO - Iniciando inserção de cursos.
+2024-10-12 17:03:57,411 - INFO - Curso E-Learning inserido.
+2024-10-12 17:03:57,412 - INFO - Curso Análise Competitiva inserido.
+2024-10-12 17:03:57,412 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-12 17:03:57,413 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-12 17:03:57,413 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-12 17:03:57,413 - INFO - Curso Kubernetes #01 inserido.
+2024-10-12 17:03:57,414 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-12 17:03:57,414 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-12 17:03:57,414 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-12 17:03:57,415 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-12 17:03:57,415 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-12 17:03:57,416 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-12 17:03:57,416 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-12 17:03:57,416 - INFO - Curso Test Driven Development inserido.
+2024-10-12 17:03:57,417 - INFO - Curso Engenharia de Computação inserido.
+2024-10-12 17:03:57,417 - INFO - Curso Sistemas de Informação inserido.
+2024-10-12 17:03:57,417 - INFO - Curso Ciências Contábeis inserido.
+2024-10-12 17:03:57,418 - INFO - Curso Administração inserido.
+2024-10-12 17:03:57,418 - INFO - Curso Gestão da Inovação inserido.
+2024-10-12 17:03:57,419 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-12 17:03:57,419 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-12 17:03:57,419 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-12 17:03:57,420 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-12 17:03:57,420 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-12 17:03:57,420 - INFO - Curso MATLAB inserido.
+2024-10-12 17:03:57,421 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-12 17:03:57,421 - INFO - Inserção de cursos concluída.
+2024-10-12 17:03:57,421 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-12 17:03:59,768 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:00,016 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:00,312 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:00,496 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:00,727 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:00,944 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:01,137 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:01,388 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:01,936 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:02,134 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:02,316 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:02,878 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:03,090 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:03,292 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:03,498 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:03,689 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:03,886 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:04,085 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:04,363 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:04,569 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:04,820 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,013 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,180 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,389 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,585 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,781 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:05,967 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:06,180 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:06,628 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:06,781 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:06,940 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,122 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,276 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,438 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,608 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,790 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:07,965 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:08,147 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:08,368 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:08,723 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:08,899 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,073 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,237 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,408 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,580 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,741 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:09,902 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:10,069 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:10,393 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:10,651 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:10,818 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:10,979 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:11,142 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:11,468 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:11,657 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:11,982 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:12,146 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:12,320 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:12,476 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:12,669 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:12,837 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:13,012 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:13,214 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:13,390 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:13,559 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:13,877 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:14,195 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:04:14,402 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:01,580 - INFO - Iniciando coleta de dados às 2024-10-12 17:06:01.580523
+2024-10-12 17:06:01,700 - INFO - Cursos coletados com sucesso.
+2024-10-12 17:06:01,701 - INFO - Iniciando inserção de categorias.
+2024-10-12 17:06:01,765 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-12 17:06:01,766 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-12 17:06:01,766 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-12 17:06:01,767 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-12 17:06:01,767 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-12 17:06:01,768 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-12 17:06:01,768 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-12 17:06:01,768 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-12 17:06:01,769 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-12 17:06:01,769 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-12 17:06:01,769 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-12 17:06:01,770 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-12 17:06:01,770 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-12 17:06:01,771 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-12 17:06:01,771 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-12 17:06:01,771 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-12 17:06:01,772 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-12 17:06:01,772 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-12 17:06:01,772 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-12 17:06:01,772 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-12 17:06:01,772 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-12 17:06:01,773 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-12 17:06:01,773 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-12 17:06:01,774 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-12 17:06:01,774 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-12 17:06:01,774 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-12 17:06:01,774 - INFO - Inserção de categorias concluída.
+2024-10-12 17:06:01,774 - INFO - Iniciando inserção de cursos.
+2024-10-12 17:06:01,777 - INFO - Curso E-Learning inserido.
+2024-10-12 17:06:01,777 - INFO - Curso Análise Competitiva inserido.
+2024-10-12 17:06:01,777 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-12 17:06:01,778 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-12 17:06:01,778 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-12 17:06:01,778 - INFO - Curso Kubernetes #01 inserido.
+2024-10-12 17:06:01,778 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-12 17:06:01,779 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-12 17:06:01,779 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-12 17:06:01,779 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-12 17:06:01,779 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-12 17:06:01,779 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-12 17:06:01,780 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-12 17:06:01,780 - INFO - Curso Test Driven Development inserido.
+2024-10-12 17:06:01,780 - INFO - Curso Engenharia de Computação inserido.
+2024-10-12 17:06:01,780 - INFO - Curso Sistemas de Informação inserido.
+2024-10-12 17:06:01,781 - INFO - Curso Ciências Contábeis inserido.
+2024-10-12 17:06:01,781 - INFO - Curso Administração inserido.
+2024-10-12 17:06:01,781 - INFO - Curso Gestão da Inovação inserido.
+2024-10-12 17:06:01,781 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-12 17:06:01,781 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-12 17:06:01,782 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-12 17:06:01,782 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-12 17:06:01,782 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-12 17:06:01,782 - INFO - Curso MATLAB inserido.
+2024-10-12 17:06:01,783 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-12 17:06:01,783 - INFO - Inserção de cursos concluída.
+2024-10-12 17:06:01,783 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-12 17:06:03,566 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:03,770 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:03,948 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:04,129 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:04,333 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:04,509 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:04,719 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:04,911 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:05,272 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:05,441 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:05,605 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:05,789 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:05,976 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:06,155 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:06,340 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:06,511 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:06,668 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:06,841 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,023 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,222 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,392 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,563 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,714 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:07,885 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,065 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,269 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,457 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,623 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,781 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:08,947 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:09,136 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:09,295 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:09,468 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:09,649 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:09,836 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:06:10,025 - ERROR - Erro ao inserir inscrição: 'NoneType' object cannot be interpreted as an integer
+2024-10-12 17:15:10,749 - INFO - Iniciando coleta de dados às 2024-10-12 17:15:10.749740
+2024-10-12 17:15:10,893 - INFO - Cursos coletados com sucesso.
+2024-10-12 17:15:10,894 - INFO - Iniciando inserção de categorias.
+2024-10-12 17:15:10,954 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-12 17:15:10,955 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-12 17:15:10,955 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-12 17:15:10,955 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-12 17:15:10,956 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-12 17:15:10,956 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-12 17:15:10,956 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-12 17:15:10,957 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-12 17:15:10,957 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-12 17:15:10,958 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-12 17:15:10,958 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-12 17:15:10,958 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-12 17:15:10,958 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-12 17:15:10,959 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-12 17:15:10,959 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-12 17:15:10,959 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-12 17:15:10,960 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-12 17:15:10,960 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-12 17:15:10,960 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-12 17:15:10,960 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-12 17:15:10,961 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-12 17:15:10,961 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-12 17:15:10,961 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-12 17:15:10,961 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-12 17:15:10,962 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-12 17:15:10,962 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-12 17:15:10,962 - INFO - Inserção de categorias concluída.
+2024-10-12 17:15:10,962 - INFO - Iniciando inserção de cursos.
+2024-10-12 17:15:10,964 - INFO - Curso E-Learning inserido.
+2024-10-12 17:15:10,964 - INFO - Curso Análise Competitiva inserido.
+2024-10-12 17:15:10,964 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-12 17:15:10,964 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-12 17:15:10,964 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-12 17:15:10,965 - INFO - Curso Kubernetes #01 inserido.
+2024-10-12 17:15:10,965 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-12 17:15:10,965 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-12 17:15:10,966 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-12 17:15:10,966 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-12 17:15:10,966 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-12 17:15:10,966 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-12 17:15:10,967 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-12 17:15:10,967 - INFO - Curso Test Driven Development inserido.
+2024-10-12 17:15:10,967 - INFO - Curso Engenharia de Computação inserido.
+2024-10-12 17:15:10,967 - INFO - Curso Sistemas de Informação inserido.
+2024-10-12 17:15:10,968 - INFO - Curso Ciências Contábeis inserido.
+2024-10-12 17:15:10,968 - INFO - Curso Administração inserido.
+2024-10-12 17:15:10,968 - INFO - Curso Gestão da Inovação inserido.
+2024-10-12 17:15:10,969 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-12 17:15:10,969 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-12 17:15:10,969 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-12 17:15:10,969 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-12 17:15:10,969 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-12 17:15:10,970 - INFO - Curso MATLAB inserido.
+2024-10-12 17:15:10,970 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-12 17:15:10,970 - INFO - Inserção de cursos concluída.
+2024-10-12 17:15:10,970 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-12 17:19:46,722 - ERROR - Erro durante a coleta de dados: HTTPSConnectionPool(host='e-learning-cco.unoesc.edu.br', port=443): Max retries exceeded with url: /moodle/webservice/rest/server.php?wstoken=3a8281cc9763e6c73e3082d817d2218c&wsfunction=core_enrol_get_users_courses&moodlewsrestformat=json&userid=3659 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F3357BDE50>, 'Connection to e-learning-cco.unoesc.edu.br timed out. (connect timeout=None)'))
+2024-10-12 18:09:47,507 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-12 18:09:47,507 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-12 18:10:05,080 - INFO - 127.0.0.1 - - [12/Oct/2024 18:10:05] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 18:13:23,715 - INFO - 127.0.0.1 - - [12/Oct/2024 18:13:23] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 18:13:23,717 - INFO - 127.0.0.1 - - [12/Oct/2024 18:13:23] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 18:13:36,454 - INFO - 127.0.0.1 - - [12/Oct/2024 18:13:36] "[33mGET /api/cursos/top-professor HTTP/1.1[0m" 404 -
+2024-10-12 18:13:44,621 - INFO - 127.0.0.1 - - [12/Oct/2024 18:13:44] "[33mGET /api/cursos/top-professor HTTP/1.1[0m" 404 -
+2024-10-12 18:14:00,261 - INFO - 127.0.0.1 - - [12/Oct/2024 18:14:00] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 18:17:23,602 - INFO - 127.0.0.1 - - [12/Oct/2024 18:17:23] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 18:17:45,917 - INFO - 127.0.0.1 - - [12/Oct/2024 18:17:45] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 18:18:08,220 - INFO - 127.0.0.1 - - [12/Oct/2024 18:18:08] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 18:18:13,678 - INFO - 127.0.0.1 - - [12/Oct/2024 18:18:13] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 20:03:31,426 - INFO - 127.0.0.1 - - [12/Oct/2024 20:03:31] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 20:04:44,680 - INFO - 127.0.0.1 - - [12/Oct/2024 20:04:44] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 20:06:12,044 - INFO - 127.0.0.1 - - [12/Oct/2024 20:06:12] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 20:06:51,470 - INFO - 127.0.0.1 - - [12/Oct/2024 20:06:51] "GET /api/usuarios/logados?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 20:06:51,780 - INFO - 127.0.0.1 - - [12/Oct/2024 20:06:51] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-05&endDate=2024-10-12 HTTP/1.1" 200 -
+2024-10-12 20:06:56,076 - INFO - 127.0.0.1 - - [12/Oct/2024 20:06:56] "GET /api/professor/top-professor HTTP/1.1" 200 -
+2024-10-12 20:07:02,662 - INFO - 127.0.0.1 - - [12/Oct/2024 20:07:02] "[33mGET /api/cursos/menos-inscricoes HTTP/1.1[0m" 404 -
+2024-10-12 20:07:02,975 - INFO - 127.0.0.1 - - [12/Oct/2024 20:07:02] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 20:07:03,290 - INFO - 127.0.0.1 - - [12/Oct/2024 20:07:03] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 20:10:34,070 - INFO - 127.0.0.1 - - [12/Oct/2024 20:10:34] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 20:10:34,087 - INFO - 127.0.0.1 - - [12/Oct/2024 20:10:34] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 20:42:07,854 - INFO - 127.0.0.1 - - [12/Oct/2024 20:42:07] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-12 20:42:07,864 - INFO - 127.0.0.1 - - [12/Oct/2024 20:42:07] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-12 20:42:07,920 - INFO - 127.0.0.1 - - [12/Oct/2024 20:42:07] "[33mGET /api/cursos/menos-inscricoes HTTP/1.1[0m" 404 -

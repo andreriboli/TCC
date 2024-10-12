@@ -23,5 +23,11 @@ export class CursosService extends BaseService<any> {
     return this.get('/mais-acessados-semana', params);
   }
 
+  getCursosMenosInscricoes(): Observable<any> {
+    let params = new HttpParams()
+
+    return this.get('/menos-inscricoes', params);
+  }
+
 
 }
