@@ -1,2 +1,3 @@
 .venv/
 src/log_coleta_dados.txt
+src/services/__pycache__/curso_service.cpython-310.pyc
