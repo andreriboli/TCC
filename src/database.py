@@ -90,7 +90,7 @@ class DatabaseOperations:
         query = """
         SELECT 
             c.id_curso,
-            c.nome_curso,
+            LEFT(UPPER(c.nome_curso), 15) AS nome_curso,
             COUNT(i.id_usuario) AS total_acessos
         FROM 
             cursos c
@@ -230,7 +230,7 @@ class DatabaseOperations:
         query = """
         SELECT 
             c.id_curso,
-            c.nome_curso,
+            LEFT(UPPER(c.nome_curso), 18) AS nome_curso,
             COUNT(i.id_usuario) AS total_alunos
         FROM 
             cursos c
@@ -239,7 +239,8 @@ class DatabaseOperations:
         GROUP BY 
             c.id_curso, c.nome_curso
         ORDER BY 
-            total_alunos DESC;
+            total_alunos DESC
+        LIMIT 10;
         """
         
         try:
@@ -498,7 +499,7 @@ class DatabaseOperations:
     def cursos_com_menos_inscricoes(database_operations):
         query = """
         SELECT 
-            c.nome_curso AS nome_curso, 
+            LEFT(UPPER(c.nome_curso), 15) AS nome_curso,
             COUNT(i.id_usuario) AS numero_de_inscricoes
         FROM 
             cursos c

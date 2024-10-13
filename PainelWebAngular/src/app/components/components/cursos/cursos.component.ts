@@ -11,13 +11,13 @@ import { ChartEvent } from 'chart.js/dist/core/core.plugins';
     styleUrls: ['./cursos.component.scss'],
 })
 export class CursosComponent implements OnInit, AfterViewInit {
-    @ViewChild(BaseChartDirective) chartDistribuicao: | BaseChartDirective | undefined;
-    @ViewChild(BaseChartDirective) chartTopCursos: | BaseChartDirective | undefined;
-    @ViewChild(BaseChartDirective) chartCursoMenosInscricoes : | BaseChartDirective | undefined;
+
+  @ViewChild(BaseChartDirective) chartDistribuicao: | BaseChartDirective | undefined;
+  @ViewChild(BaseChartDirective) chartTopCursoSemana: | BaseChartDirective | undefined;
+  @ViewChild(BaseChartDirective) chartCursosMenosInscricoes: | BaseChartDirective | undefined;
 
     public chartDistribuicaoCursosAtivosLabels: string[] = [];
     public chartDistribuicaoCursosAtivosData: number[] = [];
-
     public chartDistribuicaoCursosAtivosOptions: ChartOptions<'pie'> = {
         responsive: true,
         plugins: {
@@ -48,10 +48,8 @@ export class CursosComponent implements OnInit, AfterViewInit {
             },
         },
     };
-
     public chartDistribuicaoCursosAtivosType = 'pie' as const;
-    public chartDistribuicaoCursosAtivosDataConfig: ChartConfiguration<'pie'>['data'] =
-        {
+    public chartDistribuicaoCursosAtivosDataConfig: ChartConfiguration<'pie'>['data'] = {
             labels: this.chartDistribuicaoCursosAtivosLabels,
             datasets: [
                 {
@@ -67,65 +65,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
                     ],
                 },
             ],
-        };
-
-    public chartCursoMenosInscricoesLabels: string[] = [];
-    public chartCursoMenosInscricoesData: number[] = [];
-
-    public chartCursoMenosInscricoesOptions: ChartOptions<'pie'> = {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true,
-                position: 'top',
-            },
-            datalabels: {
-                display: (context) => {
-                    return context.dataset.data[context.dataIndex] !== 0;
-                },
-                color: '#fff',
-                font: {
-                    weight: 'bold',
-                    size: 16,
-                },
-                anchor: 'center',
-                align: 'center',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function (context) {
-                        const label = context.label || '';
-                        const value = context.raw || 0;
-                        return `${label}: ${value}`;
-                    },
-                },
-            },
-        },
     };
-
-    public chartCursoMenosInscricoesType = 'pie' as const;
-    public chartCursoMenosInscricoesDataConfig: ChartConfiguration<'pie'>['data'] =
-        {
-            labels: this.chartCursoMenosInscricoesLabels,
-            datasets: [
-                {
-                    data: this.chartCursoMenosInscricoesData,
-                    backgroundColor: [
-                        '#FF6384',
-                        '#36A2EB',
-                        '#FFCE56',
-                        '#4BC0C0',
-                        '#9966FF',
-                        '#FF9F40',
-                        '#C9CBCF',
-                    ],
-                },
-            ],
-        };
-
-    @ViewChild(BaseChartDirective) chartTopCursoSemana:
-        | BaseChartDirective
-        | undefined;
 
     public chartTopCursoSemanaOptions: ChartOptions<'bar'> = {
         responsive: true,
@@ -147,12 +87,39 @@ export class CursosComponent implements OnInit, AfterViewInit {
             },
         },
     };
-
     public chartTopCursoSemanaLabels: string[] = [];
     public chartTopCursoSemanaLegend = false;
     public chartTopCursoSemanaType = 'bar' as const;
     public chartTopCursoSemanaData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartTopCursoSemanaLabels,
+        datasets: [{ data: [], label: 'Acessos' }],
+    };
+
+    public chartCursosMenosInscricoesOptions: ChartOptions<'bar'> = {
+        responsive: true,
+        scales: {
+            y: {
+                ticks: {
+                    stepSize: 1,
+                },
+            },
+        },
+        plugins: {
+            datalabels: {
+                display: (context) => {
+                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
+                },
+                color: '#fff',
+                anchor: 'end',
+                align: 'top',
+            },
+        },
+    };
+    public chartCursosMenosInscricoesLabels: string[] = [];
+    public chartCursosMenosInscricoesLegend = false;
+    public chartCursosMenosInscricoesType = 'bar' as const;
+    public chartCursosMenosInscricoesData: ChartConfiguration<'bar'>['data'] = {
+        labels: this.chartCursosMenosInscricoesLabels,
         datasets: [{ data: [], label: 'Acessos' }],
     };
 
@@ -174,9 +141,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
     }
 
     loadTopCursosSemana(): void {
-        this.cursosService
-            .getTopCursosMaisAcessadosSemana()
-            .subscribe(
+        this.cursosService.getTopCursosMaisAcessadosSemana().subscribe(
                 (data) => {
                     const updatedLabels = data.map((item: any) => (item[1]));  // Assumindo que o nome do curso está no índice 1
                     const updatedData = data.map((item: any) => item[2]);  // Assumindo que os acessos estão no índice 2
@@ -193,8 +158,8 @@ export class CursosComponent implements OnInit, AfterViewInit {
                         ],
                     };
 
-                    if (this.chartTopCursos) {
-                        this.chartTopCursos.chart?.update();
+                    if (this.chartTopCursoSemana) {
+                        this.chartTopCursoSemana.chart?.update();
                     }
                 },
                 (error) => {
@@ -206,23 +171,24 @@ export class CursosComponent implements OnInit, AfterViewInit {
     loadCursosMenosInscricoes(): void {
         this.cursosService.getCursosMenosInscricoes().subscribe(
             (data) => {
-                const updatedLabels = data.map((item: any) => item[1]); // Assumindo que o nome do curso está no índice 1
-                const updatedData = data.map((item: any) => item[2]); // Assumindo que os acessos estão no índice 2
+                console.log(data);
+                const updatedLabels = data.map((item: any) => (item[0]));  // Assumindo que o nome do curso está no índice 1
+                const updatedData = data.map((item: any) => item[1]);  // Assumindo que os acessos estão no índice 2
 
-                this.chartTopCursoSemanaLabels = [...updatedLabels];
-                this.chartTopCursoSemanaData = {
-                    ...this.chartTopCursoSemanaData,
+                this.chartCursosMenosInscricoesLabels = [...updatedLabels];
+                this.chartCursosMenosInscricoesData = {
+                    ...this.chartCursosMenosInscricoesData,
                     datasets: [
                         {
-                            ...this.chartTopCursoSemanaData.datasets[0], // Acessando o primeiro conjunto de dados
+                            ...this.chartCursosMenosInscricoesData.datasets[0],  // Acessando o primeiro conjunto de dados
                             data: [...updatedData],
-                            label: 'Acessos', // Adiciona o rótulo apropriado para a legenda
+                            label: 'Acessos',  // Adiciona o rótulo apropriado para a legenda
                         },
                     ],
                 };
 
-                if (this.chartTopCursoSemana) {
-                    this.chartTopCursoSemana.chart?.update();
+                if (this.chartCursosMenosInscricoes) {
+                    this.chartCursosMenosInscricoes.chart?.update();
                 }
             },
             (error) => {
@@ -234,18 +200,42 @@ export class CursosComponent implements OnInit, AfterViewInit {
         );
     }
 
-    formatDate(date: Date): string {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
+    loadDistribuicaoCursosAtivosData(): void {
+        this.cursosService.getDistribuicaoAlunosPorCurso().subscribe(
+            (data: any) => {
+                this.chartDistribuicaoCursosAtivosLabels = data.map(
+                    (curso: any) => curso.nome_curso
+                );
+                this.chartDistribuicaoCursosAtivosData = data.map(
+                    (curso: any) => curso.total_alunos
+                );
 
-    formatToDDMM(dateStr: string): string {
-        const date = new Date(dateStr);
-        const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        return `${day}/${month}`;
+                this.chartDistribuicaoCursosAtivosDataConfig = {
+                    labels: [...this.chartDistribuicaoCursosAtivosLabels],
+                    datasets: [
+                        {
+                            data: [...this.chartDistribuicaoCursosAtivosData],
+                            backgroundColor: [
+                                '#FF6384',
+                                '#36A2EB',
+                                '#FFCE56',
+                                '#4BC0C0',
+                                '#9966FF',
+                                '#FF9F40',
+                                '#C9CBCF',
+                            ],
+                        },
+                    ],
+                };
+
+                if (this.chartDistribuicao) {
+                    this.chartDistribuicao.update();
+                }
+            },
+            (error) => {
+                console.error('Erro ao carregar os dados dos cursos:', error);
+            }
+        );
     }
 
     ngAfterViewInit(): void {
@@ -299,43 +289,5 @@ export class CursosComponent implements OnInit, AfterViewInit {
         //     }
         //   }
         // }, 400);
-    }
-
-    loadDistribuicaoCursosAtivosData(): void {
-        this.cursosService.getDistribuicaoAlunosPorCurso().subscribe(
-            (data: any) => {
-                this.chartDistribuicaoCursosAtivosLabels = data.map(
-                    (curso: any) => curso.nome_curso
-                );
-                this.chartDistribuicaoCursosAtivosData = data.map(
-                    (curso: any) => curso.total_alunos
-                );
-
-                this.chartDistribuicaoCursosAtivosDataConfig = {
-                    labels: [...this.chartDistribuicaoCursosAtivosLabels],
-                    datasets: [
-                        {
-                            data: [...this.chartDistribuicaoCursosAtivosData],
-                            backgroundColor: [
-                                '#FF6384',
-                                '#36A2EB',
-                                '#FFCE56',
-                                '#4BC0C0',
-                                '#9966FF',
-                                '#FF9F40',
-                                '#C9CBCF',
-                            ],
-                        },
-                    ],
-                };
-
-                if (this.chartDistribuicao) {
-                    this.chartDistribuicao.update();
-                }
-            },
-            (error) => {
-                console.error('Erro ao carregar os dados dos cursos:', error);
-            }
-        );
     }
 }

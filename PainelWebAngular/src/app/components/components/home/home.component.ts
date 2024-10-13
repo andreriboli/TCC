@@ -132,9 +132,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadUltimosUsuariosLogados(): void {
-    this.userService
-      .ultimosUsuariosLogados(this.startDate, this.endDate)
-      .subscribe(
+    this.userService.getUltimosUsuariosLogados(this.startDate, this.endDate).subscribe(
         (data) => {
           const updatedLabels = data.map((item: any) => this.formatToDDMM(item[0]));
           const updatedData = data.map((item: any) => item[1]);

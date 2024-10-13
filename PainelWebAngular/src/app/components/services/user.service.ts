@@ -10,10 +10,10 @@ import { Observable } from 'rxjs';
 export class UserService extends BaseService<any> {
 
   constructor(http: HttpClient) {
-    super(http, 'usuarios');  // Define o caminho base do recurso /usuarios
+    super(http, 'usuarios');
   }
 
-  ultimosUsuariosLogados(startDate: string, endDate: string): Observable<any> {
+  getUltimosUsuariosLogados(startDate: string, endDate: string): Observable<any> {
     let params = new HttpParams()
       .set('startDate', startDate)
       .set('endDate', endDate);
@@ -21,5 +21,12 @@ export class UserService extends BaseService<any> {
     return this.get('/logados', params);
   }
 
-  // Outros métodos como getAllUsers, getUserById, etc.
+  getAlunosMenosEngajados(startDate: string, endDate: string): Observable<any> {
+    let params = new HttpParams()
+      .set('startDate', startDate)
+      .set('endDate', endDate);
+
+    return this.get('/logados', params);
+  }
+
 }

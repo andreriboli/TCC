@@ -1,1 +1,74 @@
-<p>alunos works!</p>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Top cursos com mais inscrições</h5>
+        <!-- <canvas
+                  baseChart [data]="chartDistribuicaoCursosAtivosDataConfig"
+                  [type]="chartDistribuicaoCursosAtivosType"
+                  [options]="chartDistribuicaoCursosAtivosOptions">
+              </canvas> -->
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Top cursos mais acessados da última semana</h5>
+        <!-- <canvas
+                  baseChart [datasets]="chartTopCursoSemanaData.datasets"
+                  [labels]="chartTopCursoSemanaLabels"
+                  [type]="chartTopCursoSemanaType"
+                  [legend]="false"
+                  [options]="chartTopCursoSemanaOptions">
+            </canvas> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-3">
+      <div class="card text-center p-3">
+        <h5>Gráfico 3</h5>
+        <div style="display: block"></div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-4 mb-4">
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <label for="startDate">Data Inicial:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="startDate"
+              [(ngModel)]="startDate"
+              (ngModelChange)="onChangeDate()"
+            />
+          </div>
+          <div class="col-md-3">
+            <label for="endDate">Data Final:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="endDate"
+              [(ngModel)]="endDate"
+              (ngModelChange)="onChangeDate()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card text-center p-3">
+        <h5>Top cursos com menos inscrições</h5>
+        <canvas
+          baseChart
+          [datasets]="chartAlunosMenosEngajadosData.datasets"
+          [labels]="chartAlunosMenosEngajadosLabels"
+          [type]="chartAlunosMenosEngajadosType"
+          [legend]="chartAlunosMenosEngajadosLegend"
+          [options]="chartAlunosMenosEngajadosOptions"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
