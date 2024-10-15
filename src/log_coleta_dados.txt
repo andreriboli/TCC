@@ -3776,3 +3776,11 @@ AttributeError: 'DatabaseOperations' object has no attribute 'database_operation
 2024-10-14 21:15:39,440 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
 2024-10-14 21:15:39,440 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
 2024-10-14 21:15:46,221 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:46] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-15 19:27:01,226 - INFO - 127.0.0.1 - - [15/Oct/2024 19:27:01] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-15 19:27:01,229 - INFO - 127.0.0.1 - - [15/Oct/2024 19:27:01] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-15 19:27:01,229 - INFO - 127.0.0.1 - - [15/Oct/2024 19:27:01] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-15 19:27:01,230 - INFO - 127.0.0.1 - - [15/Oct/2024 19:27:01] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-15 19:30:46,819 - INFO - 127.0.0.1 - - [15/Oct/2024 19:30:46] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-15 19:30:46,849 - INFO - 127.0.0.1 - - [15/Oct/2024 19:30:46] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-15 19:30:46,866 - INFO - 127.0.0.1 - - [15/Oct/2024 19:30:46] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-15 19:30:46,870 - INFO - 127.0.0.1 - - [15/Oct/2024 19:30:46] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
