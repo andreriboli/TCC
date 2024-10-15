@@ -32,13 +32,7 @@ class CursoService:
             
         @app.route('/api/cursos/criados-por-semestre', methods=['GET'])
         def get_cursos_criados_por_semestre():
-            mes = request.args.get('mes')
-            ano = request.args.get('ano')
-
-            if not mes or not ano:
-                return jsonify({"error": "Por favor, forneça o mês e o ano no formato mm/yyyy."}), 400
-
-            result = db_operations.get_cursos_por_semestre(ano, mes)
+            result = db_operations.get_cursos_por_semestre()
 
             if result:
                 return jsonify(result)

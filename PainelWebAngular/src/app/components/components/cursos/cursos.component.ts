@@ -15,6 +15,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
   @ViewChild(BaseChartDirective) chartDistribuicao: | BaseChartDirective | undefined;
   @ViewChild(BaseChartDirective) chartTopCursoSemana: | BaseChartDirective | undefined;
   @ViewChild(BaseChartDirective) chartCursosMenosInscricoes: | BaseChartDirective | undefined;
+  @ViewChild(BaseChartDirective) chartCursosPorSemestre: | BaseChartDirective | undefined;
 
   mesAno: string = '';
 
@@ -126,45 +127,50 @@ export class CursosComponent implements OnInit, AfterViewInit {
     };
 
 
-    public chartCursosPorSemestreType = 'bar' as const;
-    public chartCursosPorSemestreOptions: ChartOptions<'bar'> = {
+    public chartCursosPorSemestreType = 'line' as const;
+    public chartCursosPorSemestreOptions: ChartOptions<'line'> = {
         responsive: true,
-        indexAxis: 'y',  // Isso transforma o gráfico em barras horizontais
-        plugins: {
-            legend: {
-                display: false,  // Podemos desativar a legenda se não for necessária
-            },
-            tooltip: {
-                callbacks: {
-                    label: (context) => {
-                        const label = context.label || '';
-                        const value = context.raw || 0;
-                        return `${label}: ${value}`;
-                    }
-                }
-            }
-        },
         scales: {
-            x: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Data de Criação',
-                },
-            },
-        }
-    };
-
-    public chartCursosPorSemestreLabels: string[] = [];  // Aqui os nomes dos cursos
-    public chartCursosPorSemestreData: ChartConfiguration<'bar'>['data'] = {
-        labels: this.chartCursosPorSemestreLabels,
-        datasets: [
-            {
-                data: [],  // Aqui as datas dos cursos, formatadas para serem visualizadas
-                backgroundColor: '#36A2EB',
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Total de Cursos',
             }
-        ]
-    };
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Ano - Semestre',
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            callbacks: {
+              label: (context) => {
+                const label = context.label || '';
+                const value = context.raw || 0;
+                return `${label}: ${value} cursos`;
+              }
+            }
+          }
+        }
+      };
+
+      public chartCursosPorSemestreLabels: string[] = [];
+      public chartCursosPorSemestreData: ChartConfiguration<'line'>['data'] = {
+        labels: this.chartCursosPorSemestreLabels,
+        datasets: [{
+          label: 'Cursos por Semestre',
+          data: [],
+          borderColor: '#36A2EB',
+          fill: false,
+        }]
+      };
 
 
 
@@ -200,15 +206,17 @@ export class CursosComponent implements OnInit, AfterViewInit {
     }
 
     loadCursosPorSemestre(ano: string, mes: string) {
-        ano = '2023';
-        this.cursosService.getCursosCriadosPorSemestre(mes, ano).subscribe(
-            (data) => {
-                console.log("data", data);
-            },
-            (error) => {
-                console.error('Erro ao carregar os cursos criados por semestre:', error);
+        this.cursosService.getCursosCriadosPorSemestre(mes, ano).subscribe((data: any) => {
+            console.log(data);
+            this.chartCursosPorSemestreLabels = data.map((item: any) => item[0]);  // Acessando diretamente o semestre ("2021 - 1", "2021 - 2", etc.)
+            this.chartCursosPorSemestreData.datasets[0].data = data.map((item: any) => item[1]);  // Acessando a quantidade de cursos
+            
+
+            console.log("chartCursosPorSemestre", this.chartCursosPorSemestre);
+            if (this.chartCursosPorSemestre) {
+                this.chartCursosPorSemestre.update();  // Atualiza o gráfico com os novos dados
             }
-        );
+        });
     }
 
     loadTopCursosSemana(): void {
@@ -243,17 +251,17 @@ export class CursosComponent implements OnInit, AfterViewInit {
         this.cursosService.getCursosMenosInscricoes().subscribe(
             (data) => {
                 console.log(data);
-                const updatedLabels = data.map((item: any) => (item[0]));  // Assumindo que o nome do curso está no índice 1
-                const updatedData = data.map((item: any) => item[1]);  // Assumindo que os acessos estão no índice 2
+                const updatedLabels = data.map((item: any) => (item[0]));
+                const updatedData = data.map((item: any) => item[1]);
 
                 this.chartCursosMenosInscricoesLabels = [...updatedLabels];
                 this.chartCursosMenosInscricoesData = {
                     ...this.chartCursosMenosInscricoesData,
                     datasets: [
                         {
-                            ...this.chartCursosMenosInscricoesData.datasets[0],  // Acessando o primeiro conjunto de dados
+                            ...this.chartCursosMenosInscricoesData.datasets[0],
                             data: [...updatedData],
-                            label: 'Acessos',  // Adiciona o rótulo apropriado para a legenda
+                            label: 'Acessos',
                         },
                     ],
                 };
@@ -263,10 +271,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
                 }
             },
             (error) => {
-                console.error(
-                    'Erro ao carregar os dados dos cursos mais acessados',
-                    error
-                );
+                console.error('Erro ao carregar os dados dos cursos mais acessados', error);
             }
         );
     }
@@ -314,7 +319,6 @@ export class CursosComponent implements OnInit, AfterViewInit {
           const [ano, mes] = this.mesAno.split('-'); // Separa a data em ano e mês
           this.cursosService.getCursosCriadosPorSemestre(mes, ano).subscribe(
             (data) => {
-              console.log("data", data);
             },
             (error) => {
               console.error('Erro ao carregar os cursos criados por semestre:', error);

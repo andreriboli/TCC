@@ -575,33 +575,31 @@ class DatabaseOperations:
             print(f"Erro ao buscar alunos que menos logaram: {e}")
             return None
         
-    def get_cursos_por_semestre(self, ano, mes):
-        if int(mes) <= 6:
-            semestre = '1º Semestre'
-        else:
-            semestre = '2º Semestre'
-
+    def get_cursos_por_semestre(self):
         query = """
             SELECT
-                c.nome_curso,
-                TO_CHAR(c.data_inicio, 'MM/YYYY') AS mes_criacao
+                CONCAT(EXTRACT(YEAR FROM c.data_inicio), ' - ', 
+                    CASE
+                        WHEN EXTRACT(MONTH FROM c.data_inicio) <= 6 THEN '1'
+                        ELSE '2'
+                    END) AS ano_semestre,
+                COUNT(*) AS total_cursos
             FROM
                 cursos c
-            WHERE
-                EXTRACT(YEAR FROM c.data_inicio) = %s
-                AND CASE
-                        WHEN %s <= 6 THEN EXTRACT(MONTH FROM c.data_inicio) <= 6
-                        ELSE EXTRACT(MONTH FROM c.data_inicio) > 6
-                    END
+            WHERE EXTRACT(YEAR FROM c.data_inicio) > 1970
+            GROUP BY
+                EXTRACT(YEAR FROM c.data_inicio),
+                CASE
+                    WHEN EXTRACT(MONTH FROM c.data_inicio) <= 6 THEN '1'
+                    ELSE '2'
+                END
             ORDER BY
-                c.data_inicio;
+                EXTRACT(YEAR FROM c.data_inicio), ano_semestre;
         """
-
-        params = (ano, mes)
 
         try:
             with self.db_util.conn.cursor() as cursor:
-                cursor.execute(query, params)
+                cursor.execute(query)
                 result = cursor.fetchall()
                 return result
         except Exception as e:
