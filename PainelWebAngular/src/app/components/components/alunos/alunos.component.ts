@@ -42,6 +42,35 @@ export class AlunosComponent implements OnInit {
         datasets: [{ data: [], label: 'Acessos' }],
     };
 
+    @ViewChild(BaseChartDirective) chartAlunosMaisEngajados: | BaseChartDirective | undefined;
+    public chartAlunosMaisEngajadosOptions: ChartOptions<'bar'> = {
+        responsive: true,
+        scales: {
+            y: {
+                ticks: {
+                    stepSize: 1,
+                },
+            },
+        },
+        plugins: {
+            datalabels: {
+                display: (context) => {
+                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
+                },
+                color: '#fff',
+                anchor: 'end',
+                align: 'top',
+            },
+        },
+    };
+    public chartAlunosMaisEngajadosLabels: string[] = [];
+    public chartAlunosMaisEngajadosLegend = false;
+    public chartAlunosMaisEngajadosType = 'bar' as const;
+    public chartAlunosMaisEngajadosData: ChartConfiguration<'bar'>['data'] = {
+        labels: this.chartAlunosMaisEngajadosLabels,
+        datasets: [{ data: [], label: 'Acessos' }],
+    };
+
     private originalData: number[] = [];
     constructor(private userService: UserService) { }
 
@@ -57,13 +86,37 @@ export class AlunosComponent implements OnInit {
             align: 'top',
         });
 
-        this.loadCursosMenosInscricoes();
+        this.ajustaData();
+        this.loadAlunosMenosEngajados();
+        this.loadAlunosMaisEngajados();
     }
 
-    loadCursosMenosInscricoes(): void {
+    ajustaData() {
+      const today = new Date();
+      this.endDate = this.formatDate(today);
+
+      const sevenDaysAgo = new Date();
+      sevenDaysAgo.setDate(today.getDate() - 30);
+      this.startDate = this.formatDate(sevenDaysAgo);
+    }
+
+    formatDate(date: Date): string {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    formatToDDMM(dateStr: string): string {
+        const date = new Date(dateStr);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        return `${day}/${month}`;
+    }
+
+    loadAlunosMenosEngajados(): void {
         this.userService.getAlunosMenosEngajados(this.startDate!, this.endDate!).subscribe(
             (data) => {
-                console.log(data);
                 const updatedLabels = data.map((item: any) => item[0]); // Assumindo que o nome do curso está no índice 1
                 const updatedData = data.map((item: any) => item[1]); // Assumindo que os acessos estão no índice 2
 
@@ -90,5 +143,36 @@ export class AlunosComponent implements OnInit {
                 );
             }
         );
+    }
+
+    loadAlunosMaisEngajados(): void {
+        this.userService.getAlunosMaisEngajados(this.startDate!, this.endDate!).subscribe(
+            (data) => {
+                const updatedLabels = data.map((item: any) => item[0]); // Assumindo que o nome do curso está no índice 1
+                const updatedData = data.map((item: any) => item[1]); // Assumindo que os acessos estão no índice 2
+
+                this.chartAlunosMaisEngajadosLabels = [...updatedLabels];
+                this.chartAlunosMaisEngajadosData = {
+                    ...this.chartAlunosMaisEngajadosData,
+                    datasets: [
+                        {
+                            ...this.chartAlunosMaisEngajadosData.datasets[0], // Acessando o primeiro conjunto de dados
+                            data: [...updatedData],
+                            label: 'Acessos', // Adiciona o rótulo apropriado para a legenda
+                        },
+                    ],
+                };
+            },
+            (error) => {
+                console.error(
+                    'Erro ao carregar os dados dos cursos mais acessados',
+                    error
+                );
+            }
+        );
+    }
+
+    onChangeDate() {
+        this.loadAlunosMenosEngajados();
     }
 }

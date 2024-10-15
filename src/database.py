@@ -522,3 +522,88 @@ class DatabaseOperations:
         except Exception as e:
             print(f"Erro ao obter cursos com menos inscrições: {e}")
             return None
+        
+    def get_alunos_menos_engajados(self, start_date: str, end_date: str):
+        query = """
+        SELECT 
+            u.nome, 
+            COUNT(i.id_usuario) AS total_logins
+        FROM 
+            usuarios u
+        JOIN 
+            inscricoes i ON u.moodle_id = i.id_usuario
+        WHERE 
+            i.data_ultimo_acesso BETWEEN %s AND %s
+        GROUP BY 
+            u.nome
+        ORDER BY 
+            total_logins ASC
+        LIMIT 10;
+        """
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, (start_date, end_date))
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao buscar alunos que menos logaram: {e}")
+            return None
+
+    def get_alunos_mais_engajados(self, start_date: str, end_date: str):
+        query = """
+        SELECT 
+            u.nome, 
+            COUNT(i.id_usuario) AS total_logins
+        FROM 
+            usuarios u
+        JOIN 
+            inscricoes i ON u.moodle_id = i.id_usuario
+        WHERE 
+            i.data_ultimo_acesso BETWEEN %s AND %s
+        GROUP BY 
+            u.nome
+        ORDER BY 
+            total_logins DESC
+        LIMIT 10;
+        """
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, (start_date, end_date))
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao buscar alunos que menos logaram: {e}")
+            return None
+        
+    def get_cursos_por_semestre(self, ano, mes):
+        if int(mes) <= 6:
+            semestre = '1º Semestre'
+        else:
+            semestre = '2º Semestre'
+
+        query = """
+            SELECT
+                c.nome_curso,
+                TO_CHAR(c.data_inicio, 'MM/YYYY') AS mes_criacao
+            FROM
+                cursos c
+            WHERE
+                EXTRACT(YEAR FROM c.data_inicio) = %s
+                AND CASE
+                        WHEN %s <= 6 THEN EXTRACT(MONTH FROM c.data_inicio) <= 6
+                        ELSE EXTRACT(MONTH FROM c.data_inicio) > 6
+                    END
+            ORDER BY
+                c.data_inicio;
+        """
+
+        params = (ano, mes)
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, params)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao buscar os cursos e mês de criação: {e}")
+            return None

@@ -16,6 +16,8 @@ export class CursosComponent implements OnInit, AfterViewInit {
   @ViewChild(BaseChartDirective) chartTopCursoSemana: | BaseChartDirective | undefined;
   @ViewChild(BaseChartDirective) chartCursosMenosInscricoes: | BaseChartDirective | undefined;
 
+  mesAno: string = '';
+
     public chartDistribuicaoCursosAtivosLabels: string[] = [];
     public chartDistribuicaoCursosAtivosData: number[] = [];
     public chartDistribuicaoCursosAtivosOptions: ChartOptions<'pie'> = {
@@ -123,6 +125,49 @@ export class CursosComponent implements OnInit, AfterViewInit {
         datasets: [{ data: [], label: 'Acessos' }],
     };
 
+
+    public chartCursosPorSemestreType = 'bar' as const;
+    public chartCursosPorSemestreOptions: ChartOptions<'bar'> = {
+        responsive: true,
+        indexAxis: 'y',  // Isso transforma o gráfico em barras horizontais
+        plugins: {
+            legend: {
+                display: false,  // Podemos desativar a legenda se não for necessária
+            },
+            tooltip: {
+                callbacks: {
+                    label: (context) => {
+                        const label = context.label || '';
+                        const value = context.raw || 0;
+                        return `${label}: ${value}`;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Data de Criação',
+                },
+            },
+        }
+    };
+
+    public chartCursosPorSemestreLabels: string[] = [];  // Aqui os nomes dos cursos
+    public chartCursosPorSemestreData: ChartConfiguration<'bar'>['data'] = {
+        labels: this.chartCursosPorSemestreLabels,
+        datasets: [
+            {
+                data: [],  // Aqui as datas dos cursos, formatadas para serem visualizadas
+                backgroundColor: '#36A2EB',
+            }
+        ]
+    };
+
+
+
     private originalData: number[] = [];
     constructor(private cursosService: CursosService) { }
 
@@ -135,9 +180,35 @@ export class CursosComponent implements OnInit, AfterViewInit {
             align: 'top',
         });
 
+        this.ajustaData();
         this.loadDistribuicaoCursosAtivosData();
         this.loadTopCursosSemana();
         this.loadCursosMenosInscricoes();
+    }
+
+    ajustaData(): void {
+        const today = new Date();
+        const mes = (today.getMonth() + 1).toString().padStart(2, '0');
+        const ano = today.getFullYear().toString();
+        this.mesAno = `${ano}-${mes}`;
+        this.loadCursosPorSemestre(ano, mes);
+    }
+
+    onMesAnoChange(event: any): void {
+        const [ano, mes] = event.target.value.split('-');
+        this.loadCursosPorSemestre(ano, mes);
+    }
+
+    loadCursosPorSemestre(ano: string, mes: string) {
+        ano = '2023';
+        this.cursosService.getCursosCriadosPorSemestre(mes, ano).subscribe(
+            (data) => {
+                console.log("data", data);
+            },
+            (error) => {
+                console.error('Erro ao carregar os cursos criados por semestre:', error);
+            }
+        );
     }
 
     loadTopCursosSemana(): void {
@@ -236,6 +307,19 @@ export class CursosComponent implements OnInit, AfterViewInit {
                 console.error('Erro ao carregar os dados dos cursos:', error);
             }
         );
+    }
+
+    onChangeDate() {
+        if (this.mesAno) {
+          const [ano, mes] = this.mesAno.split('-'); // Separa a data em ano e mês
+          this.cursosService.getCursosCriadosPorSemestre(mes, ano).subscribe(
+            (data) => {
+              console.log("data", data);
+            },
+            (error) => {
+              console.error('Erro ao carregar os cursos criados por semestre:', error);
+            });
+        }
     }
 
     ngAfterViewInit(): void {

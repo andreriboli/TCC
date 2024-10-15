@@ -134,7 +134,8 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                     for atividade in atividades_concluidas:
                         database_operations.inserir_atividade_concluida(moodle_id, curso['id'], atividade)
 
-
+def start_api_in_thread(database_operations):
+    start_api(database_operations)
 
 if __name__ == "__main__":
     config = Config()
@@ -155,12 +156,23 @@ if __name__ == "__main__":
         port=config.DB_PORT
     )
     
+    database_operations_api = DatabaseOperations(db_util_api, config)
+    api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
+    api_thread.start()  # Inicia a thread da API Flask
+
+    # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
+    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    # coleta_thread.start()  # Inicia a thread da coleta de dados
+
+    api_thread.join()
+    # coleta_thread.join()
+
+
+
+
     # database_operations = DatabaseOperations(db_util_coleta, config)
     # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
     # coleta_thread.start()
-    
-    database_operations_api = DatabaseOperations(db_util_api, config)
-    start_api(database_operations_api)
 
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 

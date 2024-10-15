@@ -26,7 +26,16 @@ export class UserService extends BaseService<any> {
       .set('startDate', startDate)
       .set('endDate', endDate);
 
-    return this.get('/logados', params);
+    return this.get('/menos-engajados', params);
   }
+
+  getAlunosMaisEngajados(startDate: string, endDate: string): Observable<any> {
+    let params = new HttpParams()
+      .set('startDate', startDate)
+      .set('endDate', endDate);
+
+    return this.get('/mais-engajados', params);
+  }
+
 
 }

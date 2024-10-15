@@ -3092,3 +3092,687 @@
 2024-10-13 19:58:50,759 - INFO - 127.0.0.1 - - [13/Oct/2024 19:58:50] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
 2024-10-13 19:58:51,068 - INFO - 127.0.0.1 - - [13/Oct/2024 19:58:51] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
 2024-10-13 19:58:51,068 - INFO - 127.0.0.1 - - [13/Oct/2024 19:58:51] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 19:35:28,766 - INFO - 127.0.0.1 - - [14/Oct/2024 19:35:28] "[33mGET /api/usuarios/logados?startDate=undefined&endDate=undefined HTTP/1.1[0m" 404 -
+2024-10-14 19:35:36,597 - INFO - 127.0.0.1 - - [14/Oct/2024 19:35:36] "[33mGET /api/usuarios/logados?startDate=2024-10-14&endDate=undefined HTTP/1.1[0m" 404 -
+2024-10-14 19:35:38,616 - INFO - 127.0.0.1 - - [14/Oct/2024 19:35:38] "[33mGET /api/usuarios/logados?startDate=2024-10-14&endDate=2024-10-24 HTTP/1.1[0m" 404 -
+2024-10-14 19:37:03,555 - INFO - 127.0.0.1 - - [14/Oct/2024 19:37:03] "[33mGET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:37:12,711 - INFO - 127.0.0.1 - - [14/Oct/2024 19:37:12] "[33mGET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:37:28,296 - INFO - 127.0.0.1 - - [14/Oct/2024 19:37:28] "[33mGET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:38:06,576 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:06] "[33mGET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:38:13,335 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:13] "[33mGET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:38:18,250 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:18] "[33mGET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:38:18,576 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:18] "[33mGET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:38:34,140 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 19:38:34,140 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 19:38:42,205 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:42] "GET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:38:42,218 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:42] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:38:46,067 - INFO - 127.0.0.1 - - [14/Oct/2024 19:38:46] "GET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:39:28,106 - INFO - 127.0.0.1 - - [14/Oct/2024 19:39:28] "GET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:39:37,914 - INFO - 127.0.0.1 - - [14/Oct/2024 19:39:37] "GET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:40:18,170 - INFO - 127.0.0.1 - - [14/Oct/2024 19:40:18] "GET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:40:18,238 - INFO - 127.0.0.1 - - [14/Oct/2024 19:40:18] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:40:23,059 - INFO - 127.0.0.1 - - [14/Oct/2024 19:40:23] "GET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:51:38,193 - INFO - 127.0.0.1 - - [14/Oct/2024 19:51:38] "[33mGET /api/usuarios/menos-logins?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:51:58,257 - INFO - 127.0.0.1 - - [14/Oct/2024 19:51:58] "[33mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 19:53:01,379 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 19:53:01,379 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 19:54:23,173 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:54:23,220 - INFO - 127.0.0.1 - - [14/Oct/2024 19:54:23] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:54:28,733 - INFO - 127.0.0.1 - - [14/Oct/2024 19:54:28] "GET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:54:29,037 - INFO - 127.0.0.1 - - [14/Oct/2024 19:54:29] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 19:54:30,664 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:54:30,666 - INFO - 127.0.0.1 - - [14/Oct/2024 19:54:30] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:55:16,681 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:55:16,682 - INFO - 127.0.0.1 - - [14/Oct/2024 19:55:16] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:55:16,971 - INFO - 127.0.0.1 - - [14/Oct/2024 19:55:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-14 19:55:26,864 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:55:26,866 - INFO - 127.0.0.1 - - [14/Oct/2024 19:55:26] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:56:11,626 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 19:56:11,627 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 19:56:17,335 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:56:17,338 - INFO - 127.0.0.1 - - [14/Oct/2024 19:56:17] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:56:18,472 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:56:18,473 - INFO - 127.0.0.1 - - [14/Oct/2024 19:56:18] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 19:56:31,862 - INFO - 127.0.0.1 - - [14/Oct/2024 19:56:31] "[33mGET /api/usuarios/logados HTTP/1.1[0m" 404 -
+2024-10-14 19:57:34,686 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 19:57:34,686 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 19:57:35,759 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:57:35,763 - INFO - 127.0.0.1 - - [14/Oct/2024 19:57:35] "[35m[1mGET /api/usuarios/menos-engajados HTTP/1.1[0m" 500 -
+2024-10-14 19:57:49,180 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 19:57:49,180 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 19:57:50,630 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:57:50,633 - INFO - 127.0.0.1 - - [14/Oct/2024 19:57:50] "[35m[1mGET /api/usuarios/menos-engajados HTTP/1.1[0m" 500 -
+2024-10-14 19:57:51,774 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:57:51,776 - INFO - 127.0.0.1 - - [14/Oct/2024 19:57:51] "[35m[1mGET /api/usuarios/menos-engajados HTTP/1.1[0m" 500 -
+2024-10-14 19:58:04,474 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 19:58:04,476 - INFO - 127.0.0.1 - - [14/Oct/2024 19:58:04] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:00:14,726 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:00:14,726 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:00:23,984 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 20:00:23,987 - INFO - 127.0.0.1 - - [14/Oct/2024 20:00:23] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:00:25,164 - ERROR - Exception on /api/usuarios/menos-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 20:00:25,166 - INFO - 127.0.0.1 - - [14/Oct/2024 20:00:25] "[35m[1mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:00:33,705 - INFO - 127.0.0.1 - - [14/Oct/2024 20:00:33] "[33mGET /api/usuarios/logados HTTP/1.1[0m" 404 -
+2024-10-14 20:00:42,546 - INFO - 127.0.0.1 - - [14/Oct/2024 20:00:42] "GET /api/usuarios/logados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:00:59,330 - ERROR - Exception on /api/usuarios/mais-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_mais_engajados() missing 1 required positional argument: 'self'
+2024-10-14 20:00:59,332 - INFO - 127.0.0.1 - - [14/Oct/2024 20:00:59] "[35m[1mGET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:01:19,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:01:19,760 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:01:28,601 - ERROR - Exception on /api/usuarios/mais-engajados [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_mais_engajados() missing 1 required positional argument: 'self'
+2024-10-14 20:01:28,603 - INFO - 127.0.0.1 - - [14/Oct/2024 20:01:28] "[35m[1mGET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:02:02,557 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:02:02,557 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:02:07,744 - ERROR - Exception on /api/usuarios/menos [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserService.__init__.<locals>.get_alunos_menos_engajados() missing 1 required positional argument: 'self'
+2024-10-14 20:02:07,748 - INFO - 127.0.0.1 - - [14/Oct/2024 20:02:07] "[35m[1mGET /api/usuarios/menos?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 500 -
+2024-10-14 20:03:46,864 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:03:46,864 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:03:58,431 - INFO - 127.0.0.1 - - [14/Oct/2024 20:03:58] "GET /api/usuarios/menos?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:04:19,473 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:04:19,474 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:04:41,045 - INFO - 127.0.0.1 - - [14/Oct/2024 20:04:41] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:05:28,590 - INFO - 127.0.0.1 - - [14/Oct/2024 20:05:28] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:05:39,082 - INFO - 127.0.0.1 - - [14/Oct/2024 20:05:39] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:07:15,783 - INFO - 127.0.0.1 - - [14/Oct/2024 20:07:15] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:07:18,446 - INFO - 127.0.0.1 - - [14/Oct/2024 20:07:18] "GET /api/usuarios/menos-engajados?startDate=2024-08-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:07:19,791 - INFO - 127.0.0.1 - - [14/Oct/2024 20:07:19] "GET /api/usuarios/menos-engajados?startDate=2024-07-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:09:18,022 - INFO - 127.0.0.1 - - [14/Oct/2024 20:09:18] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:11:05,958 - INFO - 127.0.0.1 - - [14/Oct/2024 20:11:05] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:14:17,777 - INFO - 127.0.0.1 - - [14/Oct/2024 20:14:17] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:14:17,778 - INFO - 127.0.0.1 - - [14/Oct/2024 20:14:17] "[33mGET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:14:40,140 - INFO - 127.0.0.1 - - [14/Oct/2024 20:14:40] "[33mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:14:40,466 - INFO - 127.0.0.1 - - [14/Oct/2024 20:14:40] "[33mGET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:15:17,594 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:15:17,594 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:16:25,871 - INFO - 127.0.0.1 - - [14/Oct/2024 20:16:25] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:16:25,885 - INFO - 127.0.0.1 - - [14/Oct/2024 20:16:25] "GET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:16:53,747 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:16:53,748 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:17:00,884 - INFO - Iniciando coleta de dados às 2024-10-14 20:17:00.884306
+2024-10-14 20:17:01,070 - INFO - Cursos coletados com sucesso.
+2024-10-14 20:17:01,070 - INFO - Iniciando inserção de categorias.
+2024-10-14 20:17:01,129 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-14 20:17:01,130 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-14 20:17:01,131 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-14 20:17:01,131 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-14 20:17:01,132 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-14 20:17:01,132 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-14 20:17:01,132 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-14 20:17:01,132 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-14 20:17:01,133 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-14 20:17:01,133 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-14 20:17:01,133 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-14 20:17:01,134 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-14 20:17:01,134 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-14 20:17:01,134 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-14 20:17:01,135 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-14 20:17:01,135 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-14 20:17:01,135 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-14 20:17:01,135 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-14 20:17:01,136 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-14 20:17:01,136 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-14 20:17:01,136 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-14 20:17:01,136 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-14 20:17:01,137 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-14 20:17:01,137 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-14 20:17:01,137 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-14 20:17:01,138 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-14 20:17:01,138 - INFO - Inserção de categorias concluída.
+2024-10-14 20:17:01,138 - INFO - Iniciando inserção de cursos.
+2024-10-14 20:17:01,140 - INFO - Curso E-Learning inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Análise Competitiva inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Kubernetes #01 inserido.
+2024-10-14 20:17:01,141 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-14 20:17:01,143 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-14 20:17:01,143 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-14 20:17:01,143 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-14 20:17:01,143 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-14 20:17:01,144 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-14 20:17:01,144 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-14 20:17:01,144 - INFO - Curso Test Driven Development inserido.
+2024-10-14 20:17:01,144 - INFO - Curso Engenharia de Computação inserido.
+2024-10-14 20:17:01,144 - INFO - Curso Sistemas de Informação inserido.
+2024-10-14 20:17:01,145 - INFO - Curso Ciências Contábeis inserido.
+2024-10-14 20:17:01,145 - INFO - Curso Administração inserido.
+2024-10-14 20:17:01,145 - INFO - Curso Gestão da Inovação inserido.
+2024-10-14 20:17:01,145 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-14 20:17:01,145 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-14 20:17:01,146 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-14 20:17:01,146 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-14 20:17:01,146 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-14 20:17:01,146 - INFO - Curso MATLAB inserido.
+2024-10-14 20:17:01,147 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-14 20:17:01,147 - INFO - Inserção de cursos concluída.
+2024-10-14 20:17:01,147 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-14 20:19:35,694 - INFO - Iniciando coleta de dados às 2024-10-14 20:19:35.694201
+2024-10-14 20:19:35,713 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:19:35,713 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:19:35,838 - INFO - Cursos coletados com sucesso.
+2024-10-14 20:19:35,838 - INFO - Iniciando inserção de categorias.
+2024-10-14 20:19:35,941 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-14 20:19:35,941 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-14 20:19:35,942 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-14 20:19:35,942 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-14 20:19:35,942 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-14 20:19:35,943 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-14 20:19:35,943 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-14 20:19:35,944 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-14 20:19:35,944 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-14 20:19:35,944 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-14 20:19:35,944 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-14 20:19:35,945 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-14 20:19:35,945 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-14 20:19:35,945 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-14 20:19:35,945 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-14 20:19:35,946 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-14 20:19:35,946 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-14 20:19:35,946 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-14 20:19:35,947 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-14 20:19:35,947 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-14 20:19:35,947 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-14 20:19:35,948 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-14 20:19:35,948 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-14 20:19:35,948 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-14 20:19:35,949 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-14 20:19:35,949 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-14 20:19:35,949 - INFO - Inserção de categorias concluída.
+2024-10-14 20:19:35,949 - INFO - Iniciando inserção de cursos.
+2024-10-14 20:19:35,951 - INFO - Curso E-Learning inserido.
+2024-10-14 20:19:35,951 - INFO - Curso Análise Competitiva inserido.
+2024-10-14 20:19:35,951 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-14 20:19:35,952 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-14 20:19:35,952 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-14 20:19:35,952 - INFO - Curso Kubernetes #01 inserido.
+2024-10-14 20:19:35,952 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-14 20:19:35,953 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-14 20:19:35,953 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-14 20:19:35,954 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-14 20:19:35,954 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-14 20:19:35,954 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-14 20:19:35,954 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-14 20:19:35,954 - INFO - Curso Test Driven Development inserido.
+2024-10-14 20:19:35,954 - INFO - Curso Engenharia de Computação inserido.
+2024-10-14 20:19:35,955 - INFO - Curso Sistemas de Informação inserido.
+2024-10-14 20:19:35,955 - INFO - Curso Ciências Contábeis inserido.
+2024-10-14 20:19:35,956 - INFO - Curso Administração inserido.
+2024-10-14 20:19:35,956 - INFO - Curso Gestão da Inovação inserido.
+2024-10-14 20:19:35,956 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-14 20:19:35,956 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-14 20:19:35,956 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-14 20:19:35,957 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-14 20:19:35,957 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-14 20:19:35,957 - INFO - Curso MATLAB inserido.
+2024-10-14 20:19:35,957 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-14 20:19:35,957 - INFO - Inserção de cursos concluída.
+2024-10-14 20:19:35,957 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-14 20:19:40,379 - INFO - 127.0.0.1 - - [14/Oct/2024 20:19:40] "[33mGET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:19:40,408 - INFO - 127.0.0.1 - - [14/Oct/2024 20:19:40] "[33mGET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:19:43,555 - INFO - 127.0.0.1 - - [14/Oct/2024 20:19:43] "[33mGET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:19:43,884 - INFO - 127.0.0.1 - - [14/Oct/2024 20:19:43] "[33mGET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:19:51,298 - INFO - 127.0.0.1 - - [14/Oct/2024 20:19:51] "[33mGET /api/usuarios/menos?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1[0m" 404 -
+2024-10-14 20:21:49,931 - INFO - Iniciando coleta de dados às 2024-10-14 20:21:49.931505
+2024-10-14 20:21:49,956 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:21:49,956 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:21:50,074 - INFO - Cursos coletados com sucesso.
+2024-10-14 20:21:50,075 - INFO - Iniciando inserção de categorias.
+2024-10-14 20:21:50,131 - INFO - Categoria 0 inserida para o curso E-Learning
+2024-10-14 20:21:50,132 - INFO - Categoria 9 inserida para o curso Análise Competitiva
+2024-10-14 20:21:50,132 - INFO - Categoria 2 inserida para o curso Aprenda a fotografar com seu celular
+2024-10-14 20:21:50,132 - INFO - Categoria 4 inserida para o curso Regularização Fundiária Urbana #01
+2024-10-14 20:21:50,133 - INFO - Categoria 8 inserida para o curso Modelagem de Equações Estruturais com uso do SmartPLS3
+2024-10-14 20:21:50,134 - INFO - Categoria 9 inserida para o curso Kubernetes #01
+2024-10-14 20:21:50,134 - INFO - Categoria 9 inserida para o curso Implantação de Processos de Inovação
+2024-10-14 20:21:50,135 - INFO - Categoria 9 inserida para o curso IRPF 2022 na Prática
+2024-10-14 20:21:50,135 - INFO - Categoria 9 inserida para o curso Valuation por Multiplos
+2024-10-14 20:21:50,136 - INFO - Categoria 9 inserida para o curso Linux - Terminal no dia a dia
+2024-10-14 20:21:50,136 - INFO - Categoria 9 inserida para o curso  Capacitação para Pesquisa Ciêntifica
+2024-10-14 20:21:50,136 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 1 (Ambiance)
+2024-10-14 20:21:50,137 - INFO - Categoria 9 inserida para o curso Gestão de Projetos #01
+2024-10-14 20:21:50,137 - INFO - Categoria 9 inserida para o curso Test Driven Development
+2024-10-14 20:21:50,137 - INFO - Categoria 10 inserida para o curso Engenharia de Computação
+2024-10-14 20:21:50,138 - INFO - Categoria 10 inserida para o curso Sistemas de Informação
+2024-10-14 20:21:50,138 - INFO - Categoria 10 inserida para o curso Ciências Contábeis
+2024-10-14 20:21:50,138 - INFO - Categoria 10 inserida para o curso Administração
+2024-10-14 20:21:50,139 - INFO - Categoria 9 inserida para o curso Gestão da Inovação
+2024-10-14 20:21:50,139 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 2 (Average)
+2024-10-14 20:21:50,140 - INFO - Categoria 7 inserida para o curso HP 12C - Nível 3 (Advanced)
+2024-10-14 20:21:50,140 - INFO - Categoria 3 inserida para o curso Controle de Versão com Git
+2024-10-14 20:21:50,141 - INFO - Categoria 9 inserida para o curso Epistemologias do Sul e Cultura Jurídica
+2024-10-14 20:21:50,141 - INFO - Categoria 9 inserida para o curso LATEX com Overleaf para Artigos
+2024-10-14 20:21:50,142 - INFO - Categoria 9 inserida para o curso MATLAB
+2024-10-14 20:21:50,142 - INFO - Categoria 9 inserida para o curso Engenharia de Software com Ênfase em UML
+2024-10-14 20:21:50,142 - INFO - Inserção de categorias concluída.
+2024-10-14 20:21:50,142 - INFO - Iniciando inserção de cursos.
+2024-10-14 20:21:50,144 - INFO - Curso E-Learning inserido.
+2024-10-14 20:21:50,145 - INFO - Curso Análise Competitiva inserido.
+2024-10-14 20:21:50,145 - INFO - Curso Aprenda a fotografar com seu celular inserido.
+2024-10-14 20:21:50,146 - INFO - Curso Regularização Fundiária Urbana #01 inserido.
+2024-10-14 20:21:50,146 - INFO - Curso Modelagem de Equações Estruturais com uso do SmartPLS3 inserido.
+2024-10-14 20:21:50,147 - INFO - Curso Kubernetes #01 inserido.
+2024-10-14 20:21:50,147 - INFO - Curso Implantação de Processos de Inovação inserido.
+2024-10-14 20:21:50,148 - INFO - Curso IRPF 2022 na Prática inserido.
+2024-10-14 20:21:50,148 - INFO - Curso Valuation por Multiplos inserido.
+2024-10-14 20:21:50,149 - INFO - Curso Linux - Terminal no dia a dia inserido.
+2024-10-14 20:21:50,149 - INFO - Curso  Capacitação para Pesquisa Ciêntifica inserido.
+2024-10-14 20:21:50,149 - INFO - Curso HP 12C - Nível 1 (Ambiance) inserido.
+2024-10-14 20:21:50,150 - INFO - Curso Gestão de Projetos #01 inserido.
+2024-10-14 20:21:50,150 - INFO - Curso Test Driven Development inserido.
+2024-10-14 20:21:50,150 - INFO - Curso Engenharia de Computação inserido.
+2024-10-14 20:21:50,151 - INFO - Curso Sistemas de Informação inserido.
+2024-10-14 20:21:50,151 - INFO - Curso Ciências Contábeis inserido.
+2024-10-14 20:21:50,152 - INFO - Curso Administração inserido.
+2024-10-14 20:21:50,152 - INFO - Curso Gestão da Inovação inserido.
+2024-10-14 20:21:50,152 - INFO - Curso HP 12C - Nível 2 (Average) inserido.
+2024-10-14 20:21:50,153 - INFO - Curso HP 12C - Nível 3 (Advanced) inserido.
+2024-10-14 20:21:50,153 - INFO - Curso Controle de Versão com Git inserido.
+2024-10-14 20:21:50,153 - INFO - Curso Epistemologias do Sul e Cultura Jurídica inserido.
+2024-10-14 20:21:50,153 - INFO - Curso LATEX com Overleaf para Artigos inserido.
+2024-10-14 20:21:50,154 - INFO - Curso MATLAB inserido.
+2024-10-14 20:21:50,154 - INFO - Curso Engenharia de Software com Ênfase em UML inserido.
+2024-10-14 20:21:50,154 - INFO - Inserção de cursos concluída.
+2024-10-14 20:21:50,154 - INFO - Iniciando inserção de usuários e inscrições.
+2024-10-14 20:22:18,505 - INFO - 127.0.0.1 - - [14/Oct/2024 20:22:18] "GET /api/usuarios/logados?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:22:18,506 - INFO - 127.0.0.1 - - [14/Oct/2024 20:22:18] "GET /api/categorias/distribuicao-cursos-ativos-by-category?startDate=2024-10-07&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:22:21,979 - INFO - 127.0.0.1 - - [14/Oct/2024 20:22:21] "GET /api/usuarios/menos-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:22:22,368 - INFO - 127.0.0.1 - - [14/Oct/2024 20:22:22] "GET /api/usuarios/mais-engajados?startDate=2024-09-14&endDate=2024-10-14 HTTP/1.1" 200 -
+2024-10-14 20:25:41,269 - INFO - Inserção de usuários e inscrições concluída.
+2024-10-14 20:25:41,269 - INFO - Coleta e armazenamento concluídos às 2024-10-14 20:25:41.269868
+2024-10-14 20:32:04,059 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:04] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:32:04,060 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:04] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:32:04,060 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:04] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 20:32:57,033 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:57] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:32:57,358 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:57] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:32:57,364 - INFO - 127.0.0.1 - - [14/Oct/2024 20:32:57] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 20:33:13,630 - INFO - 127.0.0.1 - - [14/Oct/2024 20:33:13] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:33:13,653 - INFO - 127.0.0.1 - - [14/Oct/2024 20:33:13] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:33:13,654 - INFO - 127.0.0.1 - - [14/Oct/2024 20:33:13] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 20:35:50,498 - INFO - 127.0.0.1 - - [14/Oct/2024 20:35:50] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:35:50,501 - INFO - 127.0.0.1 - - [14/Oct/2024 20:35:50] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:35:50,505 - INFO - 127.0.0.1 - - [14/Oct/2024 20:35:50] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 20:49:44,539 - INFO - 127.0.0.1 - - [14/Oct/2024 20:49:44] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:49:44,539 - INFO - 127.0.0.1 - - [14/Oct/2024 20:49:44] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:49:44,540 - INFO - 127.0.0.1 - - [14/Oct/2024 20:49:44] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 20:50:46,529 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:50:46,529 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:50:52,634 - ERROR - Exception on /api/cursos/criados-por-semestre [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\src\services\curso_service.py", line 41, in get_cursos_criados_por_semestre
+    result = self.database_operations.get_cursos_por_semestre(ano, mes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CursoService' object has no attribute 'database_operations'
+2024-10-14 20:50:52,638 - INFO - 127.0.0.1 - - [14/Oct/2024 20:50:52] "[35m[1mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 500 -
+2024-10-14 20:51:31,341 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:51:31,341 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:51:36,422 - ERROR - Exception on /api/cursos/criados-por-semestre [GET]
+Traceback (most recent call last):
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Andre\Documents\Faculdade\TCC ANDRÉ\projeto\src\services\curso_service.py", line 41, in get_cursos_criados_por_semestre
+    result = db_operations.database_operations.get_cursos_por_semestre(ano, mes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DatabaseOperations' object has no attribute 'database_operations'
+2024-10-14 20:51:36,422 - INFO - 127.0.0.1 - - [14/Oct/2024 20:51:36] "[35m[1mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 500 -
+2024-10-14 20:52:04,920 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:52:04,920 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:52:07,641 - INFO - 127.0.0.1 - - [14/Oct/2024 20:52:07] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 20:52:13,184 - INFO - 127.0.0.1 - - [14/Oct/2024 20:52:13] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1[0m" 404 -
+2024-10-14 20:55:08,078 - INFO - 127.0.0.1 - - [14/Oct/2024 20:55:08] "[33mGET /api/cursos/criados-por-semestre?mes=06&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 20:55:11,301 - INFO - 127.0.0.1 - - [14/Oct/2024 20:55:11] "[33mGET /api/cursos/criados-por-semestre?mes=11&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 20:56:16,916 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:56:16,916 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:56:18,966 - INFO - 127.0.0.1 - - [14/Oct/2024 20:56:18] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 20:59:21,802 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-14 20:59:21,802 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-14 20:59:34,240 - INFO - 127.0.0.1 - - [14/Oct/2024 20:59:34] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 20:59:41,379 - INFO - 127.0.0.1 - - [14/Oct/2024 20:59:41] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 20:59:41,389 - INFO - 127.0.0.1 - - [14/Oct/2024 20:59:41] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 20:59:41,389 - INFO - 127.0.0.1 - - [14/Oct/2024 20:59:41] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:00:27,880 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:27] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:00:28,207 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:28] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:00:28,208 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:28] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:00:33,442 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:33] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:00:33,749 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:33] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:00:33,752 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:33] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:00:46,095 - INFO - 127.0.0.1 - - [14/Oct/2024 21:00:46] "GET /api/cursos/criados-por-semestre?mes=06&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:06:54,138 - INFO - 127.0.0.1 - - [14/Oct/2024 21:06:54] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:06:54,139 - INFO - 127.0.0.1 - - [14/Oct/2024 21:06:54] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:06:54,185 - INFO - 127.0.0.1 - - [14/Oct/2024 21:06:54] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:06:54,186 - INFO - 127.0.0.1 - - [14/Oct/2024 21:06:54] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:07:15,404 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:15] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:07:27,731 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:27] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:07:40,663 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:40] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:07:40,670 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:40] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:07:40,671 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:40] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:07:40,675 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:40] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:07:52,631 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:52] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024%0A HTTP/1.1[0m" 404 -
+2024-10-14 21:07:55,891 - INFO - 127.0.0.1 - - [14/Oct/2024 21:07:55] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:08:00,181 - INFO - 127.0.0.1 - - [14/Oct/2024 21:08:00] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:08:16,189 - INFO - 127.0.0.1 - - [14/Oct/2024 21:08:16] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:08:16,530 - INFO - 127.0.0.1 - - [14/Oct/2024 21:08:16] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:08:16,530 - INFO - 127.0.0.1 - - [14/Oct/2024 21:08:16] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:08:16,531 - INFO - 127.0.0.1 - - [14/Oct/2024 21:08:16] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:11:57,577 - INFO - 127.0.0.1 - - [14/Oct/2024 21:11:57] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:11:57,700 - INFO - 127.0.0.1 - - [14/Oct/2024 21:11:57] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:11:57,701 - INFO - 127.0.0.1 - - [14/Oct/2024 21:11:57] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:11:57,701 - INFO - 127.0.0.1 - - [14/Oct/2024 21:11:57] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:12:25,841 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:25] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:12:26,159 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:26] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:12:26,161 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:26] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:12:26,162 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:26] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:12:29,767 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:29] "[33mGET /api/cursos/criados-por-semestre?mes=10&ano=2024 HTTP/1.1[0m" 404 -
+2024-10-14 21:12:29,773 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:29] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:12:29,812 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:29] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:12:29,830 - INFO - 127.0.0.1 - - [14/Oct/2024 21:12:29] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:13:09,235 - INFO - 127.0.0.1 - - [14/Oct/2024 21:13:09] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:13:09,555 - INFO - 127.0.0.1 - - [14/Oct/2024 21:13:09] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:13:09,555 - INFO - 127.0.0.1 - - [14/Oct/2024 21:13:09] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:13:09,564 - INFO - 127.0.0.1 - - [14/Oct/2024 21:13:09] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:15:39,437 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/distribuicao-alunos HTTP/1.1" 200 -
+2024-10-14 21:15:39,439 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -
+2024-10-14 21:15:39,440 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/mais-acessados-semana HTTP/1.1" 200 -
+2024-10-14 21:15:39,440 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:39] "GET /api/cursos/menos-inscricoes HTTP/1.1" 200 -
+2024-10-14 21:15:46,221 - INFO - 127.0.0.1 - - [14/Oct/2024 21:15:46] "GET /api/cursos/criados-por-semestre?mes=10&ano=2023 HTTP/1.1" 200 -

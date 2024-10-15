@@ -173,7 +173,6 @@ export class HomeComponent implements OnInit {
   }
 
   onChangeDate() {
-    console.log("onChangeDate");
     this.loadUltimosUsuariosLogados();
     this.loadCategoriaUsuariosData();
   }
