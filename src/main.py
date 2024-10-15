@@ -71,14 +71,30 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
         if curso['id'] == 1:
             continue
 
-        usuarios = coletar_usuarios_do_curso(config, curso['id']) 
+        usuarios = coletar_usuarios_do_curso(config, curso['id'])
         if usuarios:
             for usuario in usuarios:
                 if usuario['id'] == 1 or usuario['username'] == 'guest':
                     continue
-                
+
                 moodle_id = usuario['id']
 
+                # Verificar se o usuário é professor
+                is_teacher = False
+
+                for role in usuario['roles']:
+                    if role['shortname'] in ['editingteacher', 'teacher']:
+                        is_teacher = True
+                        break
+
+                # Se for professor, gravar na tabela de professores_curso
+                if is_teacher:
+                    print(f"Professor encontrado: {usuario['fullname']}")
+                    
+                    # Inserir no banco de dados o id do professor e o id do curso
+                    database_operations.inserir_professor(moodle_id, curso['id'])
+
+                # Continue com a lógica existente para os outros usuários
                 detalhes_usuario = coletar_detalhes_usuario_do_curso(config, curso['id'], moodle_id)
                 
                 progresso = detalhes_usuario.get('progress') if detalhes_usuario else 0
@@ -96,17 +112,20 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                     tempo_medio_conclusao = timedelta(0)
 
                 print(f"Inserindo usuário {usuario['fullname']} com progresso {progresso}, "
-                      f"primeiro acesso {data_primeiro_acesso}, último acesso {data_ultimo_acesso}, "
-                      f"tempo médio de conclusão: {tempo_medio_conclusao}")
+                    f"primeiro acesso {data_primeiro_acesso}, último acesso {data_ultimo_acesso}, "
+                    f"tempo médio de conclusão: {tempo_medio_conclusao}")
 
                 database_operations.inserir_usuario(usuario)
+
+                if detalhes_usuario is None:
+                    print(f"Detalhes do usuário {usuario['fullname']} não encontrados.")
+                    continue
 
                 database_operations.inserir_inscricao(
                     moodle_id=moodle_id,
                     curso_id=curso['id'],
                     progresso=progresso,
-                    # tempo_medio_conclusao=tempo_medio_conclusao,
-                    detalhes_usuario = detalhes_usuario,
+                    detalhes_usuario=detalhes_usuario,
                     usuario=usuario
                 )
 
@@ -114,8 +133,9 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                 if atividades_concluidas:
                     for atividade in atividades_concluidas:
                         database_operations.inserir_atividade_concluida(moodle_id, curso['id'], atividade)
-        else:
-            print(f"Nenhum usuário encontrado para o curso {curso['fullname']}")
+
+def start_api_in_thread(database_operations):
+    start_api(database_operations)
 
 if __name__ == "__main__":
     config = Config()
@@ -135,13 +155,25 @@ if __name__ == "__main__":
         host=config.DB_HOST,
         port=config.DB_PORT
     )
+    
+    database_operations_api = DatabaseOperations(db_util_api, config)
+    api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
+    api_thread.start()  # Inicia a thread da API Flask
+
+    # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
+    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    # coleta_thread.start()  # Inicia a thread da coleta de dados
+
+    api_thread.join()
+    # coleta_thread.join()
+
+
+
 
     # database_operations = DatabaseOperations(db_util_coleta, config)
     # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
     # coleta_thread.start()
 
-    database_operations_api = DatabaseOperations(db_util_api, config)
-    start_api(database_operations_api)
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 
     # vimeo_scraper.login()

@@ -4,24 +4,37 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CursosService extends BaseService<any> {
-  constructor(http: HttpClient) {
-    super(http, 'cursos');
-  }
+    constructor(http: HttpClient) {
+        super(http, 'cursos');
+    }
 
-  getDistribuicaoAlunosPorCurso(): Observable<any> {
-    let params = new HttpParams()
+    getDistribuicaoAlunosPorCurso(): Observable<any> {
+        let params = new HttpParams()
 
-    return this.get('/distribuicao-alunos', params);
-  }
+        return this.get('/distribuicao-alunos', params);
+    }
 
-  getTopCursosMaisAcessadosSemana(): Observable<any> {
-    let params = new HttpParams()
+    getTopCursosMaisAcessadosSemana(): Observable<any> {
+        let params = new HttpParams()
 
-    return this.get('/mais-acessados-semana', params);
-  }
+        return this.get('/mais-acessados-semana', params);
+    }
 
+    getCursosMenosInscricoes(): Observable<any> {
+        let params = new HttpParams()
+
+        return this.get('/menos-inscricoes', params);
+    }
+
+    getCursosCriadosPorSemestre(mes: string, ano: string): Observable<any> {
+        let params = new HttpParams()
+            .set('mes', mes)
+            .set('ano', ano);
+
+        return this.get('/criados-por-semestre', params);
+    }
 
 }

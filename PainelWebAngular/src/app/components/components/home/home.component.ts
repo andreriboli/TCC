@@ -11,7 +11,7 @@ import { CategoryService } from '../../services/category.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-[x: string]: any;
+
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
   public chartUltimosUsuariosLogadosOptions: ChartOptions<'bar'> = {
@@ -132,9 +132,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadUltimosUsuariosLogados(): void {
-    this.userService
-      .ultimosUsuariosLogados(this.startDate, this.endDate)
-      .subscribe(
+    this.userService.getUltimosUsuariosLogados(this.startDate, this.endDate).subscribe(
         (data) => {
           const updatedLabels = data.map((item: any) => this.formatToDDMM(item[0]));
           const updatedData = data.map((item: any) => item[1]);
@@ -175,7 +173,6 @@ export class HomeComponent implements OnInit {
   }
 
   onChangeDate() {
-    console.log("onChangeDate");
     this.loadUltimosUsuariosLogados();
     this.loadCategoriaUsuariosData();
   }
