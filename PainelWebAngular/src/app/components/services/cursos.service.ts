@@ -29,10 +29,8 @@ export class CursosService extends BaseService<any> {
         return this.get('/menos-inscricoes', params);
     }
 
-    getCursosCriadosPorSemestre(mes: string, ano: string): Observable<any> {
+    getCursosCriadosPorSemestre(): Observable<any> {
         let params = new HttpParams()
-            .set('mes', mes)
-            .set('ano', ano);
 
         return this.get('/criados-por-semestre', params);
     }

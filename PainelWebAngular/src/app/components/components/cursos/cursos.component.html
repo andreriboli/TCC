@@ -2,9 +2,13 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Top cursos com mais inscrições</h5>
-                <canvas baseChart [data]="chartDistribuicaoCursosAtivosDataConfig"
-                    [type]="chartDistribuicaoCursosAtivosType" [options]="chartDistribuicaoCursosAtivosOptions">
+                <h5>Top Cursos com Menos Inscrições</h5>
+                <canvas baseChart
+                    [datasets]="chartCursosMenosInscricoesData.datasets"
+                    [labels]="chartCursosMenosInscricoesLabels"
+                    [type]="chartCursosMenosInscricoesType"
+                    [legend]="chartCursosMenosInscricoesLegend"
+                    [options]="chartCursosMenosInscricoesOptions">
                 </canvas>
             </div>
         </div>
@@ -12,8 +16,12 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
                 <h5>Top cursos mais acessados da última semana</h5>
-                <canvas baseChart [datasets]="chartTopCursoSemanaData.datasets" [labels]="chartTopCursoSemanaLabels"
-                    [type]="chartTopCursoSemanaType" [legend]="false" [options]="chartTopCursoSemanaOptions">
+                <canvas baseChart
+                    [datasets]="chartTopCursoSemanaData.datasets"
+                    [labels]="chartTopCursoSemanaLabels"
+                    [type]="chartTopCursoSemanaType"
+                    [legend]="false"
+                    [options]="chartTopCursoSemanaOptions">
                 </canvas>
             </div>
         </div>
@@ -22,13 +30,13 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Cursos Criados por Semestre</h5>
+                <h5>Nº Cursos Criados por Semestre</h5>
                 <div style="display: block;">
                     <!-- Seletor de Mês e Ano -->
                     <div class="row justify-content-center">
-                        <canvas 
-                            baseChart [datasets]="chartCursosPorSemestreData.datasets"
-                            [labels]="chartCursosPorSemestreData.labels" 
+                        <canvas baseChart
+                            [datasets]="chartCursosPorSemestreData.datasets"
+                            [labels]="chartCursosPorSemestreData.labels"
                             [type]="chartCursosPorSemestreType"
                             [options]="chartCursosPorSemestreOptions">
                         </canvas>
@@ -39,13 +47,11 @@
 
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Top Cursos com Menos Inscrições</h5>
-                <canvas baseChart 
-                    [datasets]="chartCursosMenosInscricoesData.datasets"
-                    [labels]="chartCursosMenosInscricoesLabels" 
-                    [type]="chartCursosMenosInscricoesType"
-                    [legend]="chartCursosMenosInscricoesLegend" 
-                    [options]="chartCursosMenosInscricoesOptions">
+                <h5>Top cursos com mais inscrições</h5>
+                <canvas baseChart
+                    [data]="chartDistribuicaoCursosAtivosDataConfig"
+                    [type]="chartDistribuicaoCursosAtivosType"
+                    [options]="chartDistribuicaoCursosAtivosOptions">
                 </canvas>
             </div>
         </div>
