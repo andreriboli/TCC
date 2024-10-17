@@ -1,6 +1,5 @@
 import threading
 import time
-import logging
 from datetime import datetime, timedelta
 
 import pandas as pd
@@ -11,12 +10,6 @@ from db_util import DBUtil
 from config import Config
 from scrap_vimeo import VimeoScraper
 
-logging.basicConfig(
-    filename='log_coleta_dados.txt',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-)
-
 def executar_coleta_diaria(config, db_util):
 
     try:
@@ -25,32 +18,32 @@ def executar_coleta_diaria(config, db_util):
         database_operations = DatabaseOperations(db_util, config)
 
         now = datetime.now()
-        logging.info(f"Iniciando coleta de dados às {now}")
+        print(f"Iniciando coleta de dados às {now}")
 
         # Coletar todos os cursos
         cursos = coletar_todos_os_cursos(config)
         if cursos:
-            logging.info("Cursos coletados com sucesso.")
+            print("Cursos coletados com sucesso.")
             
             # Inserir categorias
-            logging.info("Iniciando inserção de categorias.")
+            print("Iniciando inserção de categorias.")
             inserir_categorias(cursos, database_operations)
-            logging.info("Inserção de categorias concluída.")
+            print("Inserção de categorias concluída.")
 
             # # Inserir cursos
-            logging.info("Iniciando inserção de cursos.")
+            print("Iniciando inserção de cursos.")
             inserir_cursos(cursos, database_operations)
-            logging.info("Inserção de cursos concluída.")
+            print("Inserção de cursos concluída.")
 
             # Inserir usuários e inscrições
-            logging.info("Iniciando inserção de usuários e inscrições.")
+            print("Iniciando inserção de usuários e inscrições.")
             inserir_usuarios_e_inscricoes(cursos, database_operations, config)
-            logging.info("Inserção de usuários e inscrições concluída.")
+            print("Inserção de usuários e inscrições concluída.")
 
-        logging.info(f"Coleta e armazenamento concluídos às {datetime.now()}")
+        print(f"Coleta e armazenamento concluídos às {datetime.now()}")
 
     except Exception as e:
-        logging.error(f"Erro durante a coleta de dados: {e}")
+        print(f"Erro durante a coleta de dados: {e}")
     finally:
         # Garantir que a conexão com o banco de dados seja encerrada
         db_util.disconnect()
@@ -59,12 +52,12 @@ def inserir_categorias(cursos, database_operations):
     for curso in cursos:
         id_categoria = curso['categoryid']
         database_operations.inserir_categoria_por_id(id_categoria)
-        logging.info(f"Categoria {id_categoria} inserida para o curso {curso['fullname']}")
+        print(f"Categoria {id_categoria} inserida para o curso {curso['fullname']}")
 
 def inserir_cursos(cursos, database_operations):
     for curso in cursos:
         database_operations.inserir_curso(curso)
-        logging.info(f"Curso {curso['fullname']} inserido.")
+        print(f"Curso {curso['fullname']} inserido.")
 
 def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
     for curso in cursos:
@@ -226,7 +219,7 @@ if __name__ == "__main__":
 
     #             try:
     #                 db_util.connect()
-    #                 logging.info("Conectado ao banco de dados com sucesso.")
+    #                 print("Conectado ao banco de dados com sucesso.")
 
     #                 database_operations.salvar_dados_vimeo(df)
 
@@ -235,7 +228,7 @@ if __name__ == "__main__":
                 
     #             finally:
     #                 db_util.disconnect()
-    #                 logging.info("Desconectado do banco de dados.")
+    #                 print("Desconectado do banco de dados.")
 
     #         else:
     #             logging.error("O link do CSV não foi capturado com sucesso.")

@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-import logging
 import pandas as pd
 import requests
 import urllib3
@@ -84,7 +83,7 @@ class DatabaseOperations:
                     cursor.execute(query, params)
                 self.db_util.conn.commit()
         except Exception as e:
-            logging.error(f"Erro ao inserir curso com ID {curso['id']}: {e}")
+            print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
     def top_cursos_mais_acessados_semana(self):
         query = """
@@ -169,7 +168,6 @@ class DatabaseOperations:
 
         except Exception as e:
             print(f"Erro ao inserir inscrição: {e}")
-            logging.error(f"Erro ao inserir inscrição: {e}")
 
     def inserir_dados_usuario(self, dados_usuarios):
         for dados_usuario in dados_usuarios:
@@ -223,7 +221,7 @@ class DatabaseOperations:
         except requests.exceptions.RequestException as req_err:
             return None
         except Exception as e:
-            logging.error(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
+            print(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
         return None
     
     def distribuicao_cursos_ativos(self):
@@ -426,12 +424,10 @@ class DatabaseOperations:
                     row['metadata.connections.video.created_time'], row['metadata.connections.video.likes'],
                     row['metadata.connections.video.comments']
                 )
-            logging.info("Dados do Vimeo inseridos no banco de dados.")
         except Exception as e:
-            logging.error(f"Erro ao salvar os dados do Vimeo: {e}")
+            print(f"Erro ao salvar os dados do Vimeo: {e}")
         finally:
             db_util.disconnect()
-            logging.info("Desconectado do banco de dados.")
 
     def inserir_atividade_concluida(self, moodle_id, curso_id, atividade):
         try:
@@ -455,7 +451,6 @@ class DatabaseOperations:
 
         except Exception as e:
             print(f"Erro ao inserir atividade concluída: {e}")
-            logging.error(f"Erro ao inserir atividade concluída: {e}")
 
     def inserir_professor(self, id_usuario, id_curso):
         query = """
@@ -604,4 +599,32 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             print(f"Erro ao buscar os cursos e mês de criação: {e}")
+            return None
+
+    def get_inscricoes_sem_certificado(self):
+        query = """
+            SELECT 
+                COUNT(I.ID_CURSO) AS TOTAL_INSCRICOES_SEM_CERTIFICADO,
+                C.NOME_CURSO
+            FROM 
+                USUARIOS U
+            INNER JOIN INSCRICOES I ON U.MOODLE_ID = I.ID_USUARIO
+            INNER JOIN CURSOS C ON C.ID_CURSO = I.ID_CURSO
+            WHERE 
+                I.PROGRESSO = 100
+                AND I.COMPLETADO = FALSE
+            GROUP BY
+                I.ID_CURSO,
+                C.NOME_CURSO
+            ORDER BY 
+                TOTAL_INSCRICOES_SEM_CERTIFICADO DESC;
+        """
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            print(f"Erro ao buscar os usuarios sem certificado: {e}")
             return None

@@ -14,6 +14,8 @@ import { UserService } from '../../services/user.service';
 export class AlunosComponent implements OnInit {
 
     @ViewChild(BaseChartDirective) chartAlunosMenosEngajados: | BaseChartDirective | undefined;
+    @ViewChild(BaseChartDirective) chartAlunosMaisEngajados: | BaseChartDirective | undefined;
+    @ViewChild(BaseChartDirective) chartAlunosSemCertificado: | BaseChartDirective | undefined;
     public chartAlunosMenosEngajadosOptions: ChartOptions<'bar'> = {
         responsive: true,
         scales: {
@@ -26,7 +28,7 @@ export class AlunosComponent implements OnInit {
         plugins: {
             datalabels: {
                 display: (context) => {
-                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
+                    return context.dataset.data[context.dataIndex] !== 0;
                 },
                 color: '#fff',
                 anchor: 'end',
@@ -42,7 +44,6 @@ export class AlunosComponent implements OnInit {
         datasets: [{ data: [], label: 'Acessos' }],
     };
 
-    @ViewChild(BaseChartDirective) chartAlunosMaisEngajados: | BaseChartDirective | undefined;
     public chartAlunosMaisEngajadosOptions: ChartOptions<'bar'> = {
         responsive: true,
         scales: {
@@ -55,7 +56,7 @@ export class AlunosComponent implements OnInit {
         plugins: {
             datalabels: {
                 display: (context) => {
-                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
+                    return context.dataset.data[context.dataIndex] !== 0;
                 },
                 color: '#fff',
                 anchor: 'end',
@@ -68,6 +69,54 @@ export class AlunosComponent implements OnInit {
     public chartAlunosMaisEngajadosType = 'bar' as const;
     public chartAlunosMaisEngajadosData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartAlunosMaisEngajadosLabels,
+        datasets: [{ data: [], label: 'Acessos' }],
+    };
+
+
+    public chartAlunosSemCertificadoOptions: ChartOptions<'bar'> = {
+        responsive: true,
+  plugins: {
+    legend: {
+      display: false, // Você já não está usando a legenda, então pode remover
+    },
+    tooltip: {
+      enabled: true,
+    },
+    datalabels: {
+      color: '#000',
+      anchor: 'end',
+      align: 'top',
+      formatter: (value: any) => {
+        return value;
+      },
+    },
+  },
+  scales: {
+    x: {
+      ticks: {
+        font: {
+          size: 11,
+        },
+        autoSkip: false,
+        maxRotation: 45,
+        minRotation: 15,
+      },
+    },
+    y: {
+      ticks: {
+        font: {
+          size: 11,
+        },
+        stepSize: 3, // Ajusta o espaçamento do eixo Y para legibilidade
+      },
+    },
+  },
+};
+    public chartAlunosSemCertificadoLabels: string[] = [];
+    public chartAlunosSemCertificadoLegend = false;
+    public chartAlunosSemCertificadoType = 'bar' as const;
+    public chartAlunosSemCertificadoData: ChartConfiguration<'bar'>['data'] = {
+        labels: this.chartAlunosSemCertificadoLabels,
         datasets: [{ data: [], label: 'Acessos' }],
     };
 
@@ -89,6 +138,7 @@ export class AlunosComponent implements OnInit {
         this.ajustaData();
         this.loadAlunosMenosEngajados();
         this.loadAlunosMaisEngajados();
+        this.loadAlunosSemCertificado();
     }
 
     ajustaData() {
@@ -117,17 +167,17 @@ export class AlunosComponent implements OnInit {
     loadAlunosMenosEngajados(): void {
         this.userService.getAlunosMenosEngajados(this.startDate!, this.endDate!).subscribe(
             (data) => {
-                const updatedLabels = data.map((item: any) => item[0]); // Assumindo que o nome do curso está no índice 1
-                const updatedData = data.map((item: any) => item[1]); // Assumindo que os acessos estão no índice 2
+                const updatedLabels = data.map((item: any) => item[0]);
+                const updatedData = data.map((item: any) => item[1]);
 
                 this.chartAlunosMenosEngajadosLabels = [...updatedLabels];
                 this.chartAlunosMenosEngajadosData = {
                     ...this.chartAlunosMenosEngajadosData,
                     datasets: [
                         {
-                            ...this.chartAlunosMenosEngajadosData.datasets[0], // Acessando o primeiro conjunto de dados
+                            ...this.chartAlunosMenosEngajadosData.datasets[0],
                             data: [...updatedData],
-                            label: 'Acessos', // Adiciona o rótulo apropriado para a legenda
+                            label: 'Acessos',
                         },
                     ],
                 };
@@ -148,31 +198,54 @@ export class AlunosComponent implements OnInit {
     loadAlunosMaisEngajados(): void {
         this.userService.getAlunosMaisEngajados(this.startDate!, this.endDate!).subscribe(
             (data) => {
-                const updatedLabels = data.map((item: any) => item[0]); // Assumindo que o nome do curso está no índice 1
-                const updatedData = data.map((item: any) => item[1]); // Assumindo que os acessos estão no índice 2
+                const updatedLabels = data.map((item: any) => item[0]);
+                const updatedData = data.map((item: any) => item[1]);
 
                 this.chartAlunosMaisEngajadosLabels = [...updatedLabels];
                 this.chartAlunosMaisEngajadosData = {
                     ...this.chartAlunosMaisEngajadosData,
                     datasets: [
                         {
-                            ...this.chartAlunosMaisEngajadosData.datasets[0], // Acessando o primeiro conjunto de dados
+                            ...this.chartAlunosMaisEngajadosData.datasets[0],
                             data: [...updatedData],
-                            label: 'Acessos', // Adiciona o rótulo apropriado para a legenda
+                            label: 'Acessos',
                         },
                     ],
                 };
             },
             (error) => {
-                console.error(
-                    'Erro ao carregar os dados dos cursos mais acessados',
-                    error
-                );
+                console.error('Erro ao carregar os dados dos cursos mais acessados',error);
+            }
+        );
+    }
+
+    loadAlunosSemCertificado(): void {
+        this.userService.getAlunosSemCertificado().subscribe(
+            (data) => {
+                console.log("data", data);
+                const updatedLabels = data.map((item: any) => item[1]);
+                const updatedData = data.map((item: any) => item[0]);
+
+                this.chartAlunosSemCertificadoLabels = [...updatedLabels];
+                this.chartAlunosSemCertificadoData = {
+                    ...this.chartAlunosSemCertificadoData,
+                    datasets: [
+                        {
+                            ...this.chartAlunosSemCertificadoData.datasets[1],
+                            data: [...updatedData],
+                        },
+                    ],
+                };
+
+                if (this.chartAlunosSemCertificado) {
+                    this.chartAlunosSemCertificado.chart?.update();
+                }
             }
         );
     }
 
     onChangeDate() {
         this.loadAlunosMenosEngajados();
+        this.loadAlunosMaisEngajados();
     }
 }

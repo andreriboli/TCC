@@ -3,3 +3,6 @@ src/log_coleta_dados.txt
 src/services/__pycache__/curso_service.cpython-310.pyc
 log_coleta_dados.txt
 src/services/__pycache__/professor_service.cpython-310.pyc
+src/services/__pycache__/user_service.cpython-311.pyc
+*.pyc
+src/__pycache__/database.cpython-311.pyc

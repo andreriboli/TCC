@@ -16,12 +16,14 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Top cursos com mais inscrições</h5>
-                <!-- <canvas
-                  baseChart [data]="chartDistribuicaoCursosAtivosDataConfig"
-                  [type]="chartDistribuicaoCursosAtivosType"
-                  [options]="chartDistribuicaoCursosAtivosOptions">
-              </canvas> -->
+                <h5>Nº Usuários que concluíram o curso e não geraram certificado</h5>
+                <canvas baseChart
+                    [datasets]="chartAlunosSemCertificadoData.datasets"
+                    [labels]="chartAlunosSemCertificadoLabels"
+                    [type]="chartAlunosSemCertificadoType"
+                    [legend]="chartAlunosSemCertificadoLegend"
+                    [options]="chartAlunosSemCertificadoOptions">
+                </canvas>
             </div>
         </div>
 

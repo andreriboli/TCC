@@ -39,3 +39,13 @@ class UserService:
                 return jsonify(result), 200
             else:
                 return jsonify({"error": "Nenhum dado encontrado."}), 404
+            
+        @app.route('/api/usuarios/sem-certificado', methods=['GET'])
+        def get_inscricoes_sem_certificado():
+
+            result = self.db_operations.get_inscricoes_sem_certificado()
+            if result:
+                return jsonify(result), 200
+            else:
+                return jsonify({"error": "Nenhum dado encontrado."}), 404
+
