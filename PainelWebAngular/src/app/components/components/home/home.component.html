@@ -1,71 +1,84 @@
 <div class="container mt-4">
-  <div class="card p-4 mb-4">
+    <div class="card p-4 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <label for="startDate">Data Inicial:</label>
+                <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" (ngModelChange)="onChangeDate()">
+            </div>
+            <div class="col-md-3">
+                <label for="endDate">Data Final:</label>
+                <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate" (ngModelChange)="onChangeDate()">
+            </div>
+        </div>
+    </div>
+
     <div class="row justify-content-center">
-      <div class="col-md-3">
-        <label for="startDate">Data Inicial:</label>
-        <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" (ngModelChange)="onChangeDate()">
-      </div>
-      <div class="col-md-3">
-        <label for="endDate">Data Final:</label>
-        <input type="date" class="form-control" id="endDate" [(ngModel)]="endDate" (ngModelChange)="onChangeDate()">
-      </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-md-6 mb-3">
-      <div class="card text-center p-3">
-        <h5>Nº Usuários Logados nos Últimos 7 dias</h5>
-        <canvas baseChart [datasets]="chartUltimosUsuariosLogadosData.datasets"
-          [labels]="chartUltimosUsuariosLogadosLabels" [type]="chartUltimosUsuariosLogadosType"
-          [legend]="chartUltimosUsuariosLogadosLegend" [options]="chartUltimosUsuariosLogadosOptions">
-        </canvas>
-      </div>
-    </div>
-    <div class="col-md-6 mb-3">
-      <div class="card text-center p-3">
-        <h5>Nº Matrículas por Gategoria</h5>
-        <div style="display: block;">
-          <canvas
-            baseChart [datasets]="chartCursosByCategoriaData.datasets"
-            [labels]="chartCursosByCategoriaLabels"
-            [type]="chartCursosByCategoriaType"
-            [legend]="chartCursosByCategoriaLegend"
-            [options]="chartCursosByCategoriaOptions">
-          </canvas>
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Nº Usuários Logados nos Últimos 7 dias</h5>
+                <canvas baseChart
+                    [datasets]="chartUltimosUsuariosLogadosData.datasets"
+                    [labels]="chartUltimosUsuariosLogadosLabels"
+                    [type]="chartUltimosUsuariosLogadosType"
+                    [legend]="chartUltimosUsuariosLogadosLegend"
+                    [options]="chartUltimosUsuariosLogadosOptions">
+                </canvas>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-md-6 mb-3">
-      <div class="card text-center p-3">
-        <h5>Gráfico 3</h5>
-        <div style="display: block;">
-          <!-- <canvas baseChart
-                  [datasets]="barChartData.datasets"
-                  [labels]="barChartData.labels"
-                  [type]="barChartType"
-                  [legend]="barChartLegend"
-                  [options]="barChartOptions">''
-          </canvas> -->
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Nº Matrículas por Gategoria</h5>
+                <div style="display: block;">
+                    <canvas
+                        #chartCurso
+                        baseChart
+                        [datasets]="chartCursosByCategoriaData.datasets"
+                        [labels]="chartCursosByCategoriaLabels"
+                        [type]="chartCursosByCategoriaType"
+                        [legend]="chartCursosByCategoriaLegend"
+                        [options]="chartCursosByCategoriaOptions">
+                    </canvas>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="col-md-6 mb-3">
-      <div class="card text-center p-3">
-        <h5>Gráfico 4</h5>
-        <div style="display: block;">
-          <!-- <canvas baseChart
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Gráfico 3</h5>
+                <div style="display: block;">
+                    <!-- <canvas #scatterChartCanvas baseChart
+                        [datasets]="scatterChartData"
+                        [options]="scatterChartOptions"
+                        [type]="scatterChartType">
+                    </canvas> -->
+
+                    <canvas id="scatterChartCanvas"></canvas>
+
+                    <!-- <canvas baseChart
+                    [datasets]="chartVideosMaisEngajadosData.datasets"
+                    [labels]="chartVideosMaisEngajadosLabels"
+                    [type]="chartVideosMaisEngajadosType"
+                    [legend]="chartVideosMaisEngajadosLegend"
+                    [options]="chartVideosMaisEngajadosOptions">
+                </canvas> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Gráfico 4</h5>
+                <div style="display: block;">
+                    <!-- <canvas baseChart
                   [datasets]="barChartData.datasets"
                   [labels]="barChartData.labels"
                   [type]="barChartType"
                   [legend]="barChartLegend"
                   [options]="barChartOptions">
           </canvas> -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

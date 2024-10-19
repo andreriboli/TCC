@@ -2,10 +2,14 @@
   <div class="row justify-content-center">
       <div class="col-md-6 mb-3">
           <div class="card text-center p-3">
-              <h5>Número de Alunos por Curso</h5>
-              <!-- <canvas baseChart [data]="chartDistribuicaoCursosAtivosDataConfig"
-                  [type]="chartDistribuicaoCursosAtivosType" [options]="chartDistribuicaoCursosAtivosOptions">
-              </canvas> -->
+              <h5>Média de atividades por curso para cada professor</h5>
+              <canvas
+                  baseChart [datasets]="chartProfessorMaisEngajadoData.datasets"
+                  [labels]="chartProfessorMaisEngajadoLabels"
+                  [type]="chartProfessorMaisEngajadoType"
+                  [legend]="chartProfessorMaisEngajadoLegend"
+                  [options]="chartProfessorMaisEngajadoOptions">
+            </canvas>
           </div>
       </div>
 

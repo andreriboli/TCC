@@ -166,3 +166,20 @@ def buscar_curso_por_id(config, id_curso):
     except Exception as e:
         print(f"Erro inesperado: {e}")
         return None
+    
+def coletar_atividades_do_curso(config, curso_id):
+    url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_course_get_contents&moodlewsrestformat=json&courseid={curso_id}"
+
+    print(f"URL para coletar atividades do curso {curso_id}: {url}")
+    response = requests.get(url, verify=False)
+    
+    if response.status_code == 200:
+        try:
+            atividades = response.json()
+            return atividades
+        except ValueError:
+            print("Erro ao converter resposta da API para JSON")
+    else:
+        print(f"Erro na API do Moodle: {response.json().get('message', 'Erro desconhecido')}")
+    
+    return []

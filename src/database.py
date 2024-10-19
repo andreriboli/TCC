@@ -534,7 +534,7 @@ class DatabaseOperations:
     def get_alunos_menos_engajados(self, start_date: str, end_date: str):
         query = """
         SELECT 
-            u.nome, 
+            LEFT(UPPER(u.nome), 15) AS nome_aluno,
             COUNT(i.id_usuario) AS total_logins
         FROM 
             usuarios u
@@ -561,7 +561,7 @@ class DatabaseOperations:
     def get_alunos_mais_engajados(self, start_date: str, end_date: str):
         query = """
         SELECT 
-            u.nome, 
+            LEFT(UPPER(u.nome), 15) AS nome_aluno,
             COUNT(i.id_usuario) AS total_logins
         FROM 
             usuarios u
@@ -621,7 +621,7 @@ class DatabaseOperations:
         query = """
             SELECT 
                 COUNT(I.ID_CURSO) AS TOTAL_INSCRICOES_SEM_CERTIFICADO,
-                C.NOME_CURSO
+                LEFT(UPPER(c.nome_curso), 15) AS nome_curso
             FROM 
                 USUARIOS U
             INNER JOIN INSCRICOES I ON U.MOODLE_ID = I.ID_USUARIO
@@ -645,3 +645,83 @@ class DatabaseOperations:
             self.db_util.conn.rollback()
             print(f"Erro ao buscar os usuarios sem certificado: {e}")
             return None
+    
+    def inserir_atividade(self, professor_id, curso_id, atividade):
+        query = """
+            INSERT INTO atividades_professor 
+                (professor_id, curso_id, nome_atividade, descricao, data_criacao)
+            VALUES (%s, %s, %s, %s, %s)
+            ON CONFLICT DO NOTHING;
+        """
+        
+        try:
+            nome_atividade = atividade.get('name')
+            descricao = atividade.get('intro')
+            data_criacao = atividade.get('timecreated', None)
+            
+            if data_criacao:
+                data_criacao = datetime.fromtimestamp(data_criacao)
+            else:
+                data_criacao = None
+            
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query, (professor_id, curso_id, nome_atividade, descricao, data_criacao))
+                self.db_util.conn.commit()
+                
+        except Exception as e:
+            print(f"Erro ao inserir atividade: {e}")
+
+    def get_professor_mais_engajado(self):
+        query = """
+            SELECT 
+                LEFT((u.nome),15) AS professor_nome,
+                COUNT(DISTINCT p.id_curso) AS numero_de_cursos,
+                COUNT(a.id_atividade_professor) AS total_atividades,
+                COUNT(a.id_atividade_professor) / COUNT(DISTINCT p.id_curso) AS engajamento_por_curso
+            FROM 
+                professor p
+            JOIN 
+                usuarios u ON p.id_usuario = u.moodle_id
+            JOIN 
+                atividades_professor a ON p.id_curso = a.curso_id
+            GROUP BY 
+                u.nome
+            ORDER BY 
+                engajamento_por_curso DESC;
+        """
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            self.db_util.conn.rollback()
+            print(f"Erro ao buscar os professores mais engajados: {e}")
+            return None
+        
+    def get_videos_mais_engajado(self):
+        query = """
+            SELECT 
+                title AS video_title,
+                views,
+                unique_viewers,
+                (unique_viewers::decimal / views) * 100 AS unique_viewers_percentage
+            FROM 
+                video_analytics
+            WHERE 
+                views > 10
+            ORDER BY 
+                unique_viewers_percentage DESC;
+        """
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            self.db_util.conn.rollback()
+            print(f"Erro ao buscar os videos mais engajados: {e}")
+            return None
+

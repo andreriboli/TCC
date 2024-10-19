@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 import pandas as pd
 from api import start_api
-from data_collection import coletar_atividades_concluidas_do_usuario, coletar_detalhes_usuario_do_curso, coletar_todos_os_cursos, coletar_usuarios_do_curso
+from data_collection import coletar_atividades_concluidas_do_usuario, coletar_detalhes_usuario_do_curso, coletar_todos_os_cursos, coletar_usuarios_do_curso, coletar_atividades_do_curso
 from database import DatabaseOperations
 from db_util import DBUtil
 from config import Config
@@ -72,20 +72,21 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
 
                 moodle_id = usuario['id']
 
-                # Verificar se o usuário é professor
                 is_teacher = False
-
                 for role in usuario['roles']:
                     if role['shortname'] in ['editingteacher', 'teacher']:
                         is_teacher = True
                         break
 
-                # Se for professor, gravar na tabela de professores_curso
                 if is_teacher:
                     print(f"Professor encontrado: {usuario['fullname']}")
-                    
-                    # Inserir no banco de dados o id do professor e o id do curso
                     database_operations.inserir_professor(moodle_id, curso['id'])
+
+                    atividades = coletar_atividades_do_curso(config, curso['id'])
+                    if atividades:
+                        for atividade in atividades:
+                            print(f"Inserindo atividade {atividade['name']} criada pelo professor {usuario['fullname']}")
+                            database_operations.inserir_atividade(moodle_id, curso['id'], atividade)
 
                 # Continue com a lógica existente para os outros usuários
                 detalhes_usuario = coletar_detalhes_usuario_do_curso(config, curso['id'], moodle_id)

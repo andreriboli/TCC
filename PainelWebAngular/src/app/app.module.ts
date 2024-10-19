@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './components/components/menu/menu.component';
 import { HomeComponent } from './components/components/home/home.component';
 import { GraficosComponent } from './components/components/graficos/graficos.component';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +18,6 @@ import { CursosComponent } from './components/components/cursos/cursos.component
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     HomeComponent,
     GraficosComponent,
     SidebarComponent,

@@ -13,3 +13,14 @@ class ProfessorService:
                 return jsonify(professor), 200
             else:
                 return jsonify({"error": "Nenhum usuário encontrado."}), 404
+        
+        
+        @app.route('/api/professor/mais-engajados', methods=['GET'])
+        def get_professor_mais_engajado():
+            result = self.db_operations.get_professor_mais_engajado()
+
+            if result:
+                return jsonify(result), 200
+            else:
+                return jsonify({"error": "Nenhum dado encontrado."}), 404
+        

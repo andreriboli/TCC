@@ -75,43 +75,41 @@ export class AlunosComponent implements OnInit {
 
     public chartAlunosSemCertificadoOptions: ChartOptions<'bar'> = {
         responsive: true,
-  plugins: {
-    legend: {
-      display: false, // Você já não está usando a legenda, então pode remover
-    },
-    tooltip: {
-      enabled: true,
-    },
-    datalabels: {
-      color: '#000',
-      anchor: 'end',
-      align: 'top',
-      formatter: (value: any) => {
-        return value;
-      },
-    },
-  },
-  scales: {
-    x: {
-      ticks: {
-        font: {
-          size: 11,
+        plugins: {
+            datalabels: {
+                display: (context) => {
+                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
+                },
+                color: '#fff', // Cor branca para se destacar dentro das barras
+                anchor: 'center', // Centraliza a label dentro da barra
+                align: 'center',  // Posiciona a label no centro da barra
+                font: {
+                    weight: 'bold',
+                    size: 14
+                }
+            }
         },
-        autoSkip: false,
-        maxRotation: 45,
-        minRotation: 15,
-      },
-    },
-    y: {
-      ticks: {
-        font: {
-          size: 11,
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        size: 11,
+                    },
+                    autoSkip: false,
+                    maxRotation: 45,
+                    minRotation: 15,
+                },
+            },
+            y: {
+                ticks: {
+                    font: {
+                        size: 11,
+                    },
+                    stepSize: 3,
+                },
+            },
         },
-        stepSize: 3, // Ajusta o espaçamento do eixo Y para legibilidade
-      },
-    },
-  },
-};
+    };
     public chartAlunosSemCertificadoLabels: string[] = [];
     public chartAlunosSemCertificadoLegend = false;
     public chartAlunosSemCertificadoType = 'bar' as const;

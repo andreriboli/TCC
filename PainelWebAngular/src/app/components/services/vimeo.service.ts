@@ -6,18 +6,12 @@ import { Observable } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
-export class ProfessorService extends BaseService<any> {
+export class VimeoService extends BaseService<any> {
     constructor(http: HttpClient) {
-        super(http, 'professor');
+        super(http, 'vimeo');
     }
 
-    getTopProfessores(): Observable<any> {
-        let params = new HttpParams()
-
-        return this.get('/top-professor', params);
-    }
-
-    getProfessorMaisEngajados(): Observable<any> {
+    getVideosMaisEngajados(): Observable<any> {
         let params = new HttpParams()
 
         return this.get('/mais-engajados', params);

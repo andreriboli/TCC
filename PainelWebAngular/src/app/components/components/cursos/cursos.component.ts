@@ -11,10 +11,10 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 })
 export class CursosComponent implements OnInit, AfterViewInit {
 
-    @ViewChild(BaseChartDirective) chartDistribuicao:| BaseChartDirective| undefined;
-    @ViewChild(BaseChartDirective) chartTopCursoSemana:| BaseChartDirective| undefined;
-    @ViewChild(BaseChartDirective) chartCursosMenosInscricoes:| BaseChartDirective| undefined;
-    @ViewChild(BaseChartDirective) chartCursosPorSemestre:| BaseChartDirective| undefined;
+    @ViewChild(BaseChartDirective) chartDistribuicao: | BaseChartDirective | undefined;
+    @ViewChild(BaseChartDirective) chartTopCursoSemana: | BaseChartDirective | undefined;
+    @ViewChild(BaseChartDirective) chartCursosMenosInscricoes: | BaseChartDirective | undefined;
+    @ViewChild(BaseChartDirective) chartCursosPorSemestre: | BaseChartDirective | undefined;
 
     public chartDistribuicaoCursosAtivosLabels: string[] = [];
     public chartDistribuicaoCursosAtivosData: number[] = [];
@@ -52,19 +52,11 @@ export class CursosComponent implements OnInit, AfterViewInit {
     public chartDistribuicaoCursosAtivosDataConfig: ChartConfiguration<'pie'>['data'] =
         {
             labels: this.chartDistribuicaoCursosAtivosLabels,
-            datasets: [
-                {
-                    data: this.chartDistribuicaoCursosAtivosData,
-                    backgroundColor: [
-                        '#FF6384',
-                        '#36A2EB',
-                        '#FFCE56',
-                        '#4BC0C0',
-                        '#9966FF',
-                        '#FF9F40',
-                        '#C9CBCF',
-                    ],
-                },
+            datasets: [{
+                data: this.chartDistribuicaoCursosAtivosData, backgroundColor: [
+                    '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
+                ],
+            },
             ],
         };
 
@@ -93,7 +85,11 @@ export class CursosComponent implements OnInit, AfterViewInit {
     public chartTopCursoSemanaType = 'bar' as const;
     public chartTopCursoSemanaData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartTopCursoSemanaLabels,
-        datasets: [{ data: [], label: 'Acessos' }],
+        datasets: [{
+            data: [], label: 'Acessos', backgroundColor: [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
+            ],
+        }],
     };
 
     public chartCursosMenosInscricoesOptions: ChartOptions<'bar'> = {
@@ -106,14 +102,14 @@ export class CursosComponent implements OnInit, AfterViewInit {
             },
         },
         plugins: {
-            datalabels: {
-                display: (context) => {
-                    return context.dataset.data[context.dataIndex] !== 0;
-                },
-                color: '#fff',
-                anchor: 'end',
-                align: 'top',
-            },
+            // datalabels: {
+                // display: (context) => {
+                //     return context.dataset.data[context.dataIndex] !== 0;
+                // },
+                // color: '#fff',
+                // anchor: 'end',
+                // align: 'top',
+            // },
         },
     };
     public chartCursosMenosInscricoesLabels: string[] = [];
@@ -121,7 +117,11 @@ export class CursosComponent implements OnInit, AfterViewInit {
     public chartCursosMenosInscricoesType = 'bar' as const;
     public chartCursosMenosInscricoesData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartCursosMenosInscricoesLabels,
-        datasets: [{ data: [], label: 'Acessos' }],
+        datasets: [{
+            data: [], label: 'Acessos', backgroundColor: [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
+            ],
+        }],
     };
 
     public chartCursosPorSemestreType = 'line' as const;
@@ -192,26 +192,28 @@ export class CursosComponent implements OnInit, AfterViewInit {
 
     loadCursosPorSemestre() {
         this.cursosService.getCursosCriadosPorSemestre().subscribe((data: any) => {
-                const updatedLabels = data.map((item: any) => item[0]);
-                const updatedData = data.map((item: any) => item[1]);
+            const updatedLabels = data.map((item: any) => item[0]);
+            const updatedData = data.map((item: any) => item[1]);
 
-                this.chartCursosPorSemestreLabels = [...updatedLabels];
-                this.chartCursosPorSemestreData = {
-                    ...this.chartCursosPorSemestreData,
-                    labels: this.chartCursosPorSemestreLabels,
-                    datasets: [
-                        {
-                            ...this.chartCursosPorSemestreData.datasets[0],
-                            data: [...updatedData],
-                            label: 'Acessos',
-                        },
-                    ],
-                };
+            this.chartCursosPorSemestreLabels = [...updatedLabels];
+            this.chartCursosPorSemestreData = {
+                ...this.chartCursosPorSemestreData,
+                labels: this.chartCursosPorSemestreLabels,
+                datasets: [
+                    {
+                        ...this.chartCursosPorSemestreData.datasets[0],
+                        data: [...updatedData],
+                        label: 'Acessos',
+                    },
+                ],
+            };
 
-                if (this.chartCursosPorSemestre) {
-                    this.chartCursosPorSemestre.update();
-                }
-            });
+            if (this.chartCursosPorSemestre) {
+                this.chartCursosPorSemestre.update();
+            }
+        });
+
+
     }
 
     loadTopCursosSemana(): void {
@@ -237,7 +239,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
                 }
             },
             (error) => {
-                console.error('Erro ao carregar os dados dos cursos mais acessados',error);
+                console.error('Erro ao carregar os dados dos cursos mais acessados', error);
             }
         );
     }
@@ -315,7 +317,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
         // this.ajustaGraficoCursosAtivos();
     }
 
-    ajustaGraficoCursosAtivos(): void {
+    // ajustaGraficoCursosAtivos(): void {
         // setTimeout(() => {
         //   if (this.chartDistribuicao && this.chartDistribuicao.chart) {
         //     const legendBox = this.chartDistribuicao.chart.boxes[0] as any;
@@ -362,5 +364,5 @@ export class CursosComponent implements OnInit, AfterViewInit {
         //     }
         //   }
         // }, 400);
-    }
+    // }
 }
