@@ -20,22 +20,18 @@ def executar_coleta_diaria(config, db_util):
         now = datetime.now()
         print(f"Iniciando coleta de dados às {now}")
 
-        # Coletar todos os cursos
         cursos = coletar_todos_os_cursos(config)
         if cursos:
             print("Cursos coletados com sucesso.")
             
-            # Inserir categorias
             print("Iniciando inserção de categorias.")
             inserir_categorias(cursos, database_operations)
             print("Inserção de categorias concluída.")
 
-            # # Inserir cursos
             print("Iniciando inserção de cursos.")
             inserir_cursos(cursos, database_operations)
             print("Inserção de cursos concluída.")
 
-            # Inserir usuários e inscrições
             print("Iniciando inserção de usuários e inscrições.")
             inserir_usuarios_e_inscricoes(cursos, database_operations, config)
             print("Inserção de usuários e inscrições concluída.")
@@ -45,7 +41,6 @@ def executar_coleta_diaria(config, db_util):
     except Exception as e:
         print(f"Erro durante a coleta de dados: {e}")
     finally:
-        # Garantir que a conexão com o banco de dados seja encerrada
         db_util.disconnect()
 
 def inserir_categorias(cursos, database_operations):
@@ -88,7 +83,6 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                             print(f"Inserindo atividade {atividade['name']} criada pelo professor {usuario['fullname']}")
                             database_operations.inserir_atividade(moodle_id, curso['id'], atividade)
 
-                # Continue com a lógica existente para os outros usuários
                 detalhes_usuario = coletar_detalhes_usuario_do_curso(config, curso['id'], moodle_id)
                 
                 progresso = detalhes_usuario.get('progress') if detalhes_usuario else 0
@@ -154,12 +148,12 @@ if __name__ == "__main__":
     api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
     api_thread.start()  # Inicia a thread da API Flask
 
-    # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
-    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
-    # coleta_thread.start()  # Inicia a thread da coleta de dados
+    database_operations_coleta = DatabaseOperations(db_util_coleta, config)
+    coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    coleta_thread.start()  # Inicia a thread da coleta de dados
+    coleta_thread.join()
 
     api_thread.join()
-    # coleta_thread.join()
 
 
 

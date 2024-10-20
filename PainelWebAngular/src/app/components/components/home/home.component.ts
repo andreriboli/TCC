@@ -11,7 +11,7 @@ import { VimeoService } from '../../services/vimeo.service';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 
     @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
     @ViewChild(BaseChartDirective, { static: false }) scatterChartCanvas: BaseChartDirective | undefined;
@@ -99,55 +99,54 @@ export class HomeComponent implements OnInit, AfterViewInit {
     public scatterChartOptions: ChartOptions = {
         responsive: true,
         scales: {
-          x: {
-            title: {
-              display: true,
-              text: 'Views',
+            x: {
+                title: {
+                    display: true,
+                    text: 'Views',
+                },
             },
-          },
-          y: {
-            title: {
-              display: true,
-              text: 'Unique Viewers Percentage',
-            },
-            ticks: {
-            //   beginAtZero: true,
-              callback: (value) => value + '%'
+            y: {
+                title: {
+                    display: true,
+                    text: 'Unique Viewers Percentage',
+                },
+                ticks: {
+                    callback: (value) => value + '%'
+                }
             }
-          }
         },
         plugins: {
-          datalabels: {
-            display: false  // Disable data labels for this scatter plot
-          },
-          tooltip: {
-            callbacks: {
-              label: function(tooltipItem) {
-                const raw = tooltipItem.raw as { x: number, y: number };
-                return `Views: ${raw.x}, Unique Viewer %: ${raw.y}`;
-              }
+            datalabels: {
+                display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        const raw = tooltipItem.raw as { x: number, y: number };
+                        return `Views: ${raw.x}, Unique Viewer %: ${raw.y}`;
+                    }
+                }
             }
-          }
         }
-      };
+    };
 
 
-    public scatterChartData: ChartDataset<'scatter', {x: number, y: number}[]>[] = [
+    public scatterChartData: ChartDataset<'scatter', { x: number, y: number }[]>[] = [
         {
-          label: 'Engagement',
-          data: [],
-          backgroundColor: 'rgba(75,192,192,1)',
-          borderColor: 'rgba(75,192,192,1)',
-          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-          pointHoverBorderColor: 'rgba(220,220,220,1)',
-          showLine: false
+            label: 'Engagement',
+            data: [],
+            backgroundColor: 'rgba(75,192,192,1)',
+            borderColor: 'rgba(75,192,192,1)',
+            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+            pointHoverBorderColor: 'rgba(220,220,220,1)',
+            showLine: false
         }
     ];
 
     scatterChart: Chart | undefined;
-    public scatterChartType: ChartType = 'scatter';
     startDate: string;
     endDate: string;
+    barChart:  Chart | undefined;
 
     constructor(
         private userService: UserService,
@@ -171,16 +170,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.startDate = this.formatDate(sevenDaysAgo);
     }
 
-    ngAfterViewInit(): void {
-        setTimeout(() => {
-          this.loadCursosMaisEngajados();
-        }, 1000);
-    }
-
     ngOnInit(): void {
         this.loadUltimosUsuariosLogados();
         this.loadCategoriaUsuariosData();
-        this.loadCursosMaisEngajados();
+        this.loadVideosComMelhorConclusao();
+        this.loadVideosMaisEngajados();
     }
 
     formatDate(date: Date): string {
@@ -230,9 +224,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
             this.chartCursosByCategoriaLabels = data.map((item: any) => item[1]);
             this.chartCursosByCategoriaData.datasets[0].data = data.map((item: any) => item[2]);
 
-            console.log("scatterChart", this.scatterChartCanvas);
-            console.log("chartCurso", this.chartCurso);
-
             if (this.scatterChartCanvas) {
                 this.scatterChartCanvas.update();
             }
@@ -242,19 +233,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
 
 
-    loadCursosMaisEngajados(): void {
-      setTimeout(() => {
-        this.vimeoService.getVideosMaisEngajados().subscribe((data: any) => {
-          const chartData = data.map((item: any) => ({
-            x: item[1],
-            y: parseFloat(item[3])
-        }));
+    loadVideosMaisEngajados(): void {
+        setTimeout(() => {
+            this.vimeoService.getVideosMaisEngajados().subscribe((data: any) => {
+                const chartData = data.map((item: any) => ({
+                    x: item[1],
+                    y: parseFloat(parseFloat(item[3]).toFixed(2))
+                }));
 
-        this.createScatterChart(chartData);
+                this.createScatterChart(chartData);
 
-          }, error => {
-              console.error('Erro ao carregar os vídeos mais engajados', error);
-          });
+            }, error => {
+                console.error('Erro ao carregar os vídeos mais engajados', error);
+            });
         }, 1000);
     }
 
@@ -263,55 +254,115 @@ export class HomeComponent implements OnInit, AfterViewInit {
         const ctx = canvas.getContext('2d');
 
         this.scatterChart = new Chart(ctx!, {
-          type: 'scatter',
-          data: {
-            datasets: [{
-              label: 'Engagement',
-              data: chartData,  // Usa os dados recebidos via API
-              backgroundColor: 'rgba(75, 192, 192, 1)',
-              borderColor: 'rgba(75, 192, 192, 1)',
-              pointHoverBackgroundColor: 'rgba(75, 192, 192, 1)',
-              pointHoverBorderColor: 'rgba(220, 220, 220, 1)',
-              showLine: false
-            }]
-          },
-          options: {
-            responsive: true,
-            scales: {
-              x: {
-                title: {
-                  display: true,
-                  text: 'Views'
-                }
-              },
-              y: {
-                title: {
-                  display: true,
-                  text: 'Unique Viewers Percentage'
-                },
-                ticks: {
-                  callback: (value) => value + '%'  // Adiciona '%' nos valores do eixo Y
-                }
-              }
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Engajamento',
+                    data: chartData,
+                    backgroundColor: 'rgba(121, 178, 233, 1)',
+                    borderColor: 'rgba(121, 178, 233, 1)',
+                    pointHoverBackgroundColor: 'rgba(121, 178, 233, 1)',
+                    pointHoverBorderColor: 'rgba(220, 220, 220, 1)',
+                    showLine: false
+                }]
             },
-            plugins: {
-              datalabels: {
-                display: false  // Desativa os DataLabels (essas são as escritas brancas)
-              },
-              tooltip: {
-                callbacks: {
-                  label: function (tooltipItem) {
-                    const raw = tooltipItem.raw as { x: number, y: number };
-                    return `Views: ${raw.x}, Unique Viewer %: ${raw.y}`;
-                  }
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Views'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Percentual de Visualizador Único'
+                        },
+                        ticks: {
+                            callback: (value) => value + '%'
+                        }
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                const raw = tooltipItem.raw as { x: number, y: number };
+                                return `Views: ${raw.x}, Visualizador Único %: ${raw.y}`;
+                            }
+                        }
+                    }
                 }
-              }
             }
-          }
         });
     }
 
+    loadVideosComMelhorConclusao(): void {
+        this.vimeoService.getVideosComMelhorConclusao().subscribe((data: any) => {
+            const chartData = data.map((item: any) => ({
+                video_title: item[0],
+                completion_rate: parseFloat(parseFloat(item[3]).toFixed(2))
+            }));
 
+            this.createBarChart(chartData);
+        });
+    }
+
+    createBarChart(chartData: any): void {
+        const canvas = <HTMLCanvasElement>document.getElementById('barChartCanvas');
+        const ctx = canvas.getContext('2d');
+
+        this.barChart = new Chart(ctx!, {
+            type: 'bar',
+            data: {
+                labels: chartData.map((item: any) => item.video_title),
+                datasets: [{
+                    label: 'Taxa de Conclusão (%)',
+                    data: chartData.map((item: any) => item.completion_rate),
+                    backgroundColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
+                    borderColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Taxa de Conclusão (%)'
+                        }
+                    }
+                },
+                plugins: {
+                    datalabels: {
+                        display: true,
+                        align: 'end',
+                        color: '#000'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                return `Taxa de Conclusão: ${tooltipItem.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    getPredefinedColor(index: number): string {
+        const predefinedColors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
+        return predefinedColors[index % predefinedColors.length];
+    }
 
     onChangeDate() {
         this.loadUltimosUsuariosLogados();

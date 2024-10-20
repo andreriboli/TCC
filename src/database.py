@@ -724,4 +724,59 @@ class DatabaseOperations:
             self.db_util.conn.rollback()
             print(f"Erro ao buscar os videos mais engajados: {e}")
             return None
+        
+
+    def get_videos_melhor_conclusao(self):
+        query = """
+            SELECT
+                title AS video_title,
+                views,
+                finishes,
+                (finishes::decimal / views) * 100 AS completion_rate
+            FROM
+                video_analytics
+            WHERE
+                views > 5
+            ORDER BY
+                completion_rate DESC
+            LIMIT 10;
+        """
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            self.db_util.conn.rollback()
+            print(f"Erro ao buscar os videos mais engajados: {e}")
+            return None
+        
+    def get_alunos_com_mais_atividades(self):
+        query = """
+            SELECT 
+                usuarios.moodle_id,
+                usuarios.nome,
+                LEFT((usuarios.nome), 15) AS usuarios,
+                COUNT(*) AS total_atividades_concluidas
+            FROM 
+                inscricoes
+            inner join usuarios on usuarios.moodle_id = inscricoes.id_usuario
+            GROUP BY 
+                usuarios.moodle_id,
+                usuarios.nome
+            ORDER BY 
+                total_atividades_concluidas DESC
+            LIMIT 10;
+        """
+
+        try:
+            with self.db_util.conn.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                return result
+        except Exception as e:
+            self.db_util.conn.rollback()
+            print(f"Erro ao buscar os videos mais engajados: {e}")
+            return None
 

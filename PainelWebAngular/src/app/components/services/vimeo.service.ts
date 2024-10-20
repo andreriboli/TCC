@@ -16,4 +16,10 @@ export class VimeoService extends BaseService<any> {
 
         return this.get('/mais-engajados', params);
     }
+
+    getVideosComMelhorConclusao(): Observable<any> {
+        let params = new HttpParams()
+
+        return this.get('/melhor-conclusao', params);
+    }
 }

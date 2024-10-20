@@ -43,5 +43,11 @@ export class UserService extends BaseService<any> {
         return this.get('/sem-certificado', params);
     }
 
+    getAlunosComMaisAtividades(): Observable<any> {
+        let params = new HttpParams();
+
+        return this.get('/mais-atividades', params);
+    }
+
 
 }

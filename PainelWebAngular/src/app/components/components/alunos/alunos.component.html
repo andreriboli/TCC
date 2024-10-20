@@ -17,13 +17,14 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
                 <h5>Nº de alunos que concluíram o curso e não geraram certificado</h5>
-                <canvas baseChart
+                <!-- <canvas baseChart
                     [datasets]="chartAlunosSemCertificadoData.datasets"
                     [labels]="chartAlunosSemCertificadoLabels"
                     [type]="chartAlunosSemCertificadoType"
                     [legend]="chartAlunosSemCertificadoLegend"
                     [options]="chartAlunosSemCertificadoOptions">
-                </canvas>
+                </canvas> -->
+                <canvas id="chartAlunosSemCertificadoCanvas"></canvas>
             </div>
         </div>
 
@@ -45,7 +46,9 @@
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
                 <h5>Gráfico 3</h5>
-                <div style="display: block"></div>
+                <div style="display: block">
+                  <canvas id="barChartCanvas"></canvas>
+                </div>
             </div>
         </div>
         <div class="col-md-6 mb-3">

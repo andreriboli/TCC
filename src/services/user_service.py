@@ -48,4 +48,13 @@ class UserService:
                 return jsonify(result), 200
             else:
                 return jsonify({"error": "Nenhum dado encontrado."}), 404
+            
+        @app.route('/api/usuarios/mais-atividades', methods=['GET'])
+        def get_alunos_com_mais_atividades():
+
+            result = self.db_operations.get_alunos_com_mais_atividades()
+            if result:
+                return jsonify(result), 200
+            else:
+                return jsonify({"error": "Nenhum dado encontrado."}), 404
 

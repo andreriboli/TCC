@@ -15,7 +15,10 @@ export class AlunosComponent implements OnInit {
 
     @ViewChild(BaseChartDirective) chartAlunosMenosEngajados: | BaseChartDirective | undefined;
     @ViewChild(BaseChartDirective) chartAlunosMaisEngajados: | BaseChartDirective | undefined;
-    @ViewChild(BaseChartDirective) chartAlunosSemCertificado: | BaseChartDirective | undefined;
+
+    barChart:  Chart | undefined;
+    chartAlunosSemCertificado:  Chart | undefined;
+
     public chartAlunosMenosEngajadosOptions: ChartOptions<'bar'> = {
         responsive: true,
         scales: {
@@ -41,7 +44,12 @@ export class AlunosComponent implements OnInit {
     public chartAlunosMenosEngajadosType = 'bar' as const;
     public chartAlunosMenosEngajadosData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartAlunosMenosEngajadosLabels,
-        datasets: [{ data: [], label: 'Acessos' }],
+        datasets: [{ data: [],
+            backgroundColor: [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
+            ],
+            label: 'Acessos'
+        }],
     };
 
     public chartAlunosMaisEngajadosOptions: ChartOptions<'bar'> = {
@@ -69,7 +77,12 @@ export class AlunosComponent implements OnInit {
     public chartAlunosMaisEngajadosType = 'bar' as const;
     public chartAlunosMaisEngajadosData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartAlunosMaisEngajadosLabels,
-        datasets: [{ data: [], label: 'Acessos' }],
+        datasets: [{ data: [],
+            backgroundColor: [
+                '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
+            ],
+            label: 'Acessos'
+        }],
     };
 
 
@@ -78,14 +91,7 @@ export class AlunosComponent implements OnInit {
         plugins: {
             datalabels: {
                 display: (context) => {
-                    return context.dataset.data[context.dataIndex] !== 0; // Oculta rótulos com valor zero
-                },
-                color: '#fff', // Cor branca para se destacar dentro das barras
-                anchor: 'center', // Centraliza a label dentro da barra
-                align: 'center',  // Posiciona a label no centro da barra
-                font: {
-                    weight: 'bold',
-                    size: 14
+                    return context.dataset.data[context.dataIndex] !== 0;
                 }
             }
         },
@@ -115,8 +121,13 @@ export class AlunosComponent implements OnInit {
     public chartAlunosSemCertificadoType = 'bar' as const;
     public chartAlunosSemCertificadoData: ChartConfiguration<'bar'>['data'] = {
         labels: this.chartAlunosSemCertificadoLabels,
-        datasets: [{ data: [], label: 'Acessos' }],
+        datasets: [{
+            data: [], // Os dados serão atualizados dinamicamente
+            backgroundColor: this.chartAlunosSemCertificadoLabels.map((_, index) => this.getPredefinedColor(index)),
+            label: 'Acessos'
+        }],
     };
+
 
     private originalData: number[] = [];
     constructor(private userService: UserService) { }
@@ -127,7 +138,7 @@ export class AlunosComponent implements OnInit {
     ngOnInit(): void {
         Chart.register(ChartDataLabels);
         Chart.defaults.set('plugins.datalabels', {
-            display: (context: any) => context.dataset.data[context.dataIndex] !== 0, // Oculta rótulos de valor zero
+            display: (context: any) => context.dataset.data[context.dataIndex] !== 0,
             color: '#fff',
             anchor: 'end',
             align: 'top',
@@ -137,6 +148,7 @@ export class AlunosComponent implements OnInit {
         this.loadAlunosMenosEngajados();
         this.loadAlunosMaisEngajados();
         this.loadAlunosSemCertificado();
+        this.loadAlunosComMaisAtividades();
     }
 
     ajustaData() {
@@ -219,27 +231,131 @@ export class AlunosComponent implements OnInit {
 
     loadAlunosSemCertificado(): void {
         this.userService.getAlunosSemCertificado().subscribe(
-            (data) => {
-                console.log("data", data);
+            (data: any) => {
                 const updatedLabels = data.map((item: any) => item[1]);
                 const updatedData = data.map((item: any) => item[0]);
 
-                this.chartAlunosSemCertificadoLabels = [...updatedLabels];
-                this.chartAlunosSemCertificadoData = {
-                    ...this.chartAlunosSemCertificadoData,
-                    datasets: [
-                        {
-                            ...this.chartAlunosSemCertificadoData.datasets[1],
-                            data: [...updatedData],
-                        },
-                    ],
-                };
+                const canvas = <HTMLCanvasElement>document.getElementById('chartAlunosSemCertificadoCanvas');
+                const ctx = canvas.getContext('2d');
 
-                if (this.chartAlunosSemCertificado) {
-                    this.chartAlunosSemCertificado.chart?.update();
-                }
+                this.chartAlunosSemCertificado = new Chart(ctx!, {
+                    type: 'bar',
+                    data: {
+                        labels: [...updatedLabels],
+                        datasets: [
+                            {
+                                label: 'Total de Atividades sem Certificado',
+                                data: [...updatedData],
+                                backgroundColor: updatedLabels.map((_: any, index: number) => this.getPredefinedColor(index)),
+                                borderColor: updatedLabels.map((_: any, index: number) => this.getPredefinedColor(index)),
+                                borderWidth: 1
+                            },
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                ticks: {
+                                    font: {
+                                        size: 11,
+                                    },
+                                    autoSkip: false,
+                                    maxRotation: 45,
+                                    minRotation: 15,
+                                },
+                            },
+                            y: {
+                                ticks: {
+                                    font: {
+                                        size: 11,
+                                    },
+                                    stepSize: 3,
+                                },
+                            },
+                        },
+                        plugins: {
+                            datalabels: {
+                                display: true,
+                                align: 'end',
+                                color: '#000',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        return `Atividades sem Certificado: ${tooltipItem.raw}`;
+                                    },
+                                },
+                            },
+                        },
+                    },
+                });
+            },
+            (error) => {
+                console.error('Erro ao carregar os alunos sem certificado:', error);
             }
         );
+    }
+
+
+    loadAlunosComMaisAtividades(): void {
+        this.userService.getAlunosComMaisAtividades().subscribe((data) => {
+
+            const chartData = data.map((item: any) => ({
+                video_title: item[2],
+                completion_rate: parseFloat(parseFloat(item[3]).toFixed(2))
+            }));
+
+            const canvas = <HTMLCanvasElement>document.getElementById('barChartCanvas');
+            const ctx = canvas.getContext('2d');
+
+            this.barChart = new Chart(ctx!, {
+                type: 'bar',
+                data: {
+                    labels: chartData.map((item: any) => item.video_title),
+                    datasets: [{
+                        label: 'Taxa de Conclusão (%)',
+                        data: chartData.map((item: any) => item.completion_rate),
+                        backgroundColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
+                        borderColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Taxa de Conclusão (%)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        datalabels: {
+                            display: true,
+                            align: 'end',
+                            color: '#000'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `Taxa de Conclusão: ${tooltipItem.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    }
+
+    getPredefinedColor(index: number): string {
+        const predefinedColors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'];
+        return predefinedColors[index % predefinedColors.length];
     }
 
     onChangeDate() {

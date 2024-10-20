@@ -12,4 +12,13 @@ class VimeoService:
                 return jsonify(result), 200
             else:
                 return jsonify({"error": "Nenhum dado encontrado."}), 404
+
+        @app.route('/api/vimeo/melhor-conclusao', methods=['GET'])
+        def getVideosMelhorConclusao():
+            result = self.db_operations.get_videos_melhor_conclusao()
+
+            if result:
+                return jsonify(result), 200
+            else:
+                return jsonify({"error": "Nenhum dado encontrado."}), 404
         

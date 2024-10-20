@@ -15,7 +15,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Nº Usuários Logados nos Últimos 7 dias</h5>
+                <h5>Nº Usuários Logados nos Últimos Dias</h5>
                 <canvas baseChart
                     [datasets]="chartUltimosUsuariosLogadosData.datasets"
                     [labels]="chartUltimosUsuariosLogadosLabels"
@@ -27,7 +27,25 @@
         </div>
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Nº Matrículas por Gategoria</h5>
+                <h5>Engajamento por Vídeo</h5>
+                <div style="display: block;">
+                    <canvas id="scatterChartCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Taxa de Conclusão das Vídeo Aulas</h5>
+                <div style="display: block;">
+                    <canvas id="barChartCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Nº Matrículas por Categoria</h5>
                 <div style="display: block;">
                     <canvas
                         #chartCurso
@@ -38,45 +56,6 @@
                         [legend]="chartCursosByCategoriaLegend"
                         [options]="chartCursosByCategoriaOptions">
                     </canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-md-6 mb-3">
-            <div class="card text-center p-3">
-                <h5>Gráfico 3</h5>
-                <div style="display: block;">
-                    <!-- <canvas #scatterChartCanvas baseChart
-                        [datasets]="scatterChartData"
-                        [options]="scatterChartOptions"
-                        [type]="scatterChartType">
-                    </canvas> -->
-
-                    <canvas id="scatterChartCanvas"></canvas>
-
-                    <!-- <canvas baseChart
-                    [datasets]="chartVideosMaisEngajadosData.datasets"
-                    [labels]="chartVideosMaisEngajadosLabels"
-                    [type]="chartVideosMaisEngajadosType"
-                    [legend]="chartVideosMaisEngajadosLegend"
-                    [options]="chartVideosMaisEngajadosOptions">
-                </canvas> -->
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card text-center p-3">
-                <h5>Gráfico 4</h5>
-                <div style="display: block;">
-                    <!-- <canvas baseChart
-                  [datasets]="barChartData.datasets"
-                  [labels]="barChartData.labels"
-                  [type]="barChartType"
-                  [legend]="barChartLegend"
-                  [options]="barChartOptions">
-          </canvas> -->
                 </div>
             </div>
         </div>
