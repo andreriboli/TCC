@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
-import { ChartConfiguration, ChartOptions, ChartType, Chart, ChartDataset } from 'chart.js';
-import DataLabelsPlugin from 'chartjs-plugin-datalabels';  // Importa o plugin de datalabels
+import { ChartConfiguration, ChartOptions, Chart, ChartDataset } from 'chart.js';
+import DataLabelsPlugin from 'chartjs-plugin-datalabels';
 import { UserService } from '../../services/user.service';
 import { CategoryService } from '../../services/category.service';
 import { VimeoService } from '../../services/vimeo.service';
