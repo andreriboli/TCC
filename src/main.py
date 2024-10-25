@@ -148,10 +148,10 @@ if __name__ == "__main__":
     api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
     api_thread.start()  # Inicia a thread da API Flask
 
-    database_operations_coleta = DatabaseOperations(db_util_coleta, config)
-    coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
-    coleta_thread.start()  # Inicia a thread da coleta de dados
-    coleta_thread.join()
+    # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
+    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    # coleta_thread.start()  # Inicia a thread da coleta de dados
+    # coleta_thread.join()
 
     api_thread.join()
 

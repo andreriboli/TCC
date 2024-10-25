@@ -222,7 +222,16 @@ export class HomeComponent implements OnInit {
         this.categoryService.getDistribuicaoCursosAtivos(this.startDate, this.endDate).subscribe((data: any) => {
 
             this.chartCursosByCategoriaLabels = data.map((item: any) => item[1]);
-            this.chartCursosByCategoriaData.datasets[0].data = data.map((item: any) => item[2]);
+            this.chartCursosByCategoriaData.datasets[0].data = data.map((item: any) => item[3]);
+
+            this.chartCursosByCategoriaOptions!.plugins!.tooltip!.callbacks = {
+                label: function (context) {
+                    const label = context.label || '';
+                    const value = context.raw || 0;
+                    const numero = data[context.dataIndex][2];
+                    return `${label}: ${numero} (${value}%)`;
+                }
+            };
 
             if (this.scatterChartCanvas) {
                 this.scatterChartCanvas.update();

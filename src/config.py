@@ -12,9 +12,6 @@ class Config:
         self.VIMEO_API_URL = "https://api.vimeo.com"
         self.VIMEO_TOKEN = "a9a4ca8237856e61e2425e5846cad690"
 
-        self.VIMEO_EMAIL = "vimeo.cco@unoesc.edu.br"
-        self.VIMEO_PASSWORD = "h1u2b2b5."
-
         self.DOWNLOAD_DIR = "C:\Desenvolvimento"
 
         self._validate_config()

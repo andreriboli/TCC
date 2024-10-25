@@ -230,19 +230,24 @@ class DatabaseOperations:
     
     def distribuicao_cursos_ativos(self):
         query = """
-        SELECT 
-            c.id_curso,
-            LEFT(UPPER(c.nome_curso), 18) AS nome_curso,
-            COUNT(i.id_usuario) AS total_alunos
-        FROM 
-            cursos c
-        INNER JOIN 
-            inscricoes i ON c.id_curso = i.id_curso
-        GROUP BY 
-            c.id_curso, c.nome_curso
-        ORDER BY 
-            total_alunos DESC
-        LIMIT 10;
+            WITH total_geral AS (
+                SELECT COUNT(i.id_usuario) AS total_usuarios
+                FROM inscricoes i
+            )
+            SELECT 
+                c.id_curso,
+                LEFT(UPPER(c.nome_curso), 18) AS nome_curso,
+                COUNT(i.id_usuario) AS total_alunos,
+                ROUND((COUNT(i.id_usuario)::decimal / (SELECT total_usuarios FROM total_geral)) * 100, 2) AS percentual
+            FROM 
+                cursos c
+            INNER JOIN 
+                inscricoes i ON c.id_curso = i.id_curso
+            GROUP BY 
+                c.id_curso, c.nome_curso
+            ORDER BY 
+                total_alunos DESC
+            LIMIT 10;
         """
         
         try:
@@ -255,7 +260,8 @@ class DatabaseOperations:
                     curso = {
                         "id_curso": row[0],
                         "nome_curso": row[1],
-                        "total_alunos": row[2]
+                        "total_alunos": row[2],
+                        "percentual": row[3]
                     }
                     cursos_ativos.append(curso)
 
@@ -333,10 +339,20 @@ class DatabaseOperations:
         
     def distribuicao_cursos_ativos_by_category(self, end_date):
         query = """
+        WITH total_users AS (
+            SELECT 
+                COUNT(i.id_usuario) AS total_geral
+            FROM 
+                cursos c
+            INNER JOIN inscricoes i ON c.id_curso = i.id_curso
+            WHERE 
+                i.data_primeiro_acesso < %s
+        )
         SELECT 
             c2.id_categoria,
             c2.nome_categoria,
-            COUNT(i.id_usuario) AS total_usuarios
+            COUNT(i.id_usuario) AS total_usuarios,
+            ROUND((COUNT(i.id_usuario)::decimal / (SELECT total_geral FROM total_users)) * 100, 2) AS percentual
         FROM 
             cursos c
         INNER JOIN inscricoes i ON c.id_curso = i.id_curso
@@ -352,7 +368,7 @@ class DatabaseOperations:
         
         try:
             with self.db_util.conn.cursor() as cursor:
-                cursor.execute(query, (end_date,))
+                cursor.execute(query, (end_date, end_date))  # Aqui usamos o end_date duas vezes para a subquery e a query principal
                 result = cursor.fetchall()
                 return result
         except Exception as e:

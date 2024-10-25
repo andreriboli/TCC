@@ -257,7 +257,7 @@ export class CursosComponent implements OnInit, AfterViewInit {
                         {
                             ...this.chartCursosMenosInscricoesData.datasets[0],
                             data: [...updatedData],
-                            label: 'Acessos',
+                            label: 'Nº Matrículas',
                         },
                     ],
                 };
@@ -278,12 +278,9 @@ export class CursosComponent implements OnInit, AfterViewInit {
     loadDistribuicaoCursosAtivosData(): void {
         this.cursosService.getDistribuicaoAlunosPorCurso().subscribe(
             (data: any) => {
-                this.chartDistribuicaoCursosAtivosLabels = data.map(
-                    (curso: any) => curso.nome_curso
-                );
-                this.chartDistribuicaoCursosAtivosData = data.map(
-                    (curso: any) => curso.total_alunos
-                );
+                console.log('Distribuição de alunos por curso:', data);
+                this.chartDistribuicaoCursosAtivosLabels = data.map((curso: any) => curso.nome_curso);
+                this.chartDistribuicaoCursosAtivosData = data.map((curso: any) => curso.percentual);
 
                 this.chartDistribuicaoCursosAtivosDataConfig = {
                     labels: [...this.chartDistribuicaoCursosAtivosLabels],
@@ -301,6 +298,15 @@ export class CursosComponent implements OnInit, AfterViewInit {
                             ],
                         },
                     ],
+                };
+
+                this.chartDistribuicaoCursosAtivosOptions!.plugins!.tooltip!.callbacks = {
+                    label: (context) => {
+                        const curso = data[context.dataIndex];
+                        const label = context.label || '';
+                        const value = context.raw || 0;
+                        return `${label}: ${curso.total_alunos} alunos (${value}%)`;
+                    },
                 };
 
                 if (this.chartDistribuicao) {

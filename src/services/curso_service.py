@@ -8,6 +8,7 @@ class CursoService:
         def distribuicao_alunos_por_curso():
             try:
                 resultado = db_operations.distribuicao_cursos_ativos()
+                print (resultado)
                 return jsonify(resultado), 200
             except Exception as e:
                 return jsonify({"error": str(e)}), 500

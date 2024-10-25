@@ -1,6 +1,9 @@
 <div class="container mt-4">
     <div class="card p-4 mb-4">
         <div class="row justify-content-center">
+            <div class="row justify-content-center">
+                <h2 class="text-center">Métricas Gerais</h2>
+            </div>
             <div class="col-md-3">
                 <label for="startDate">Data Inicial:</label>
                 <input type="date" class="form-control" id="startDate" [(ngModel)]="startDate" (ngModelChange)="onChangeDate()">
@@ -27,24 +30,6 @@
         </div>
         <div class="col-md-6 mb-3">
             <div class="card text-center p-3">
-                <h5>Engajamento por Vídeo</h5>
-                <div style="display: block;">
-                    <canvas id="scatterChartCanvas"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-6 mb-3">
-            <div class="card text-center p-3">
-                <h5>Taxa de Conclusão das Vídeo Aulas</h5>
-                <div style="display: block;">
-                    <canvas id="barChartCanvas"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3">
-            <div class="card text-center p-3">
                 <h5>Nº Matrículas por Categoria</h5>
                 <div style="display: block;">
                     <canvas
@@ -56,6 +41,31 @@
                         [legend]="chartCursosByCategoriaLegend"
                         [options]="chartCursosByCategoriaOptions">
                     </canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card p-4 mb-4 text-center">
+        <div class="row justify-content-center">
+            <h2>Métricas de Vídeo Aulas</h2>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Taxa de Conclusão das Vídeo Aulas</h5>
+                <div style="display: block;">
+                    <canvas id="barChartCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card text-center p-3">
+                <h5>Engajamento por Vídeo</h5>
+                <div style="display: block;">
+                    <canvas id="scatterChartCanvas"></canvas>
                 </div>
             </div>
         </div>

@@ -4,15 +4,14 @@ from config import Config
 def coletar_todos_os_cursos(config):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_course_get_courses&moodlewsrestformat=json"
     
-    print(f"URL para coletar todos os cursos: {url}")  # Log da URL
+    print(f"URL para coletar todos os cursos: {url}")
     
     try:
         response = requests.get(url, verify=False)
-        response.raise_for_status()  # Levanta um erro se o status não for 200 OK
-        print(f"Status Code: {response.status_code}")  # Log do status da resposta
+        response.raise_for_status()
+        print(f"Status Code: {response.status_code}")
         
         cursos = response.json()
-        # print(f"Resposta da API: {cursos}")  # Log do conteúdo da resposta
         
         return cursos
 
@@ -66,7 +65,7 @@ def coletar_atividades_concluidas_do_usuario(config, course_id, user_id):
 def coletar_usuarios_do_curso(config, curso_id):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_enrol_get_enrolled_users&moodlewsrestformat=json&courseid={curso_id}"
     
-    print(f"URL para coletar usuários do curso {curso_id}: {url}")  # Log da URL
+    print(f"URL para coletar usuários do curso {curso_id}: {url}")
     response = requests.get(url, verify=False)
     
     if response.status_code == 200:
@@ -84,14 +83,14 @@ def coletar_usuarios_do_curso(config, curso_id):
 def buscar_curso_por_id(config, id_curso):
     url = f"{config.MOODLE_URL}wstoken={config.MOODLE_TOKEN}&wsfunction=core_course_get_courses&moodlewsrestformat=json&options[ids][0]={id_curso}"
     
-    print(f"URL para buscar curso por ID {id_curso}: {url}")  # Log da URL
+    print(f"URL para buscar curso por ID {id_curso}: {url}")
     response = requests.get(url, verify=False)
     
     if response.status_code == 200:
         try:
             cursos = response.json()
             if cursos:
-                return cursos[0]  # Retorna o primeiro curso encontrado
+                return cursos[0]
             else:
                 print(f"Curso com ID {id_curso} não encontrado.")
                 return None
@@ -103,7 +102,6 @@ def buscar_curso_por_id(config, id_curso):
     return None
 
 def processar_dados_usuario(dados_usuario):
-    # Processar e extrair as informações necessárias do JSON de resposta
     cursos_detalhes = []
     for curso in dados_usuario.get('cursos', []):
         curso_detalhe = {
@@ -118,7 +116,6 @@ def processar_dados_usuario(dados_usuario):
         }
         cursos_detalhes.append(curso_detalhe)
 
-    # Exibindo dados do usuário para debug
     print(f"Processando dados do usuário: {dados_usuario}")
     
     return {
