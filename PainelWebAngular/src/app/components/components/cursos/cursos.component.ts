@@ -9,7 +9,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
     templateUrl: './cursos.component.html',
     styleUrls: ['./cursos.component.scss'],
 })
-export class CursosComponent implements OnInit, AfterViewInit {
+export class CursosComponent implements OnInit {
 
     @ViewChild(BaseChartDirective) chartDistribuicao: | BaseChartDirective | undefined;
     @ViewChild(BaseChartDirective) chartTopCursoSemana: | BaseChartDirective | undefined;
@@ -319,56 +319,4 @@ export class CursosComponent implements OnInit, AfterViewInit {
         );
     }
 
-    ngAfterViewInit(): void {
-        // this.ajustaGraficoCursosAtivos();
-    }
-
-    // ajustaGraficoCursosAtivos(): void {
-        // setTimeout(() => {
-        //   if (this.chartDistribuicao && this.chartDistribuicao.chart) {
-        //     const legendBox = this.chartDistribuicao.chart.boxes[0] as any;
-        //     console.log('Legend Items after render: ', legendBox?.legendItems);
-        //     this.originalData = [
-        //       ...(this.chartDistribuicao.chart.data.datasets[0].data as number[]),
-        //     ];
-        //     if (legendBox?.legendItems && legendBox.legendItems.length > 5) {
-        //       const datasets = this.chartDistribuicao.chart.data.datasets[0];
-        //       if (datasets && datasets.data) {
-        //         for (let i = 5; i < datasets.data.length; i++) {
-        //           datasets.data[i] = 0;
-        //           const metaElement = this.chartDistribuicao!.chart!.getDatasetMeta(
-        //             0
-        //           ).data[i] as any;
-        //           metaElement.hidden = true;
-        //         }
-        //       }
-        //       this.chartDistribuicao.chart.update();
-        //     }
-        //     if (
-        //       this.chartDistribuicao.chart.config.options &&
-        //       this.chartDistribuicao.chart.config.options.plugins
-        //     ) {
-        //       this.chartDistribuicao.chart.config.options.plugins.legend!.onClick =
-        //         (e: ChartEvent, legendItem: any) => {
-        //           const index = legendItem.index;
-        //           const datasets = this.chartDistribuicao!.chart?.data.datasets[0];
-        //           const meta = this.chartDistribuicao!.chart?.getDatasetMeta(0);
-        //           if (datasets?.data) {
-        //             if (datasets.data[index] === 0) {
-        //               const metaElement = meta!.data[index] as any;
-        //               metaElement.hidden = false;
-        //               (meta!.data[index] as any).hidden = false;
-        //             } else {
-        //               const metaElement = meta!.data[index] as any;
-        //               metaElement.hidden = true;
-        //               datasets.data[index] = 0;
-        //               (meta!.data[index] as any).hidden = true;
-        //             }
-        //             this.chartDistribuicao!.chart?.update();
-        //           }
-        //         };
-        //     }
-        //   }
-        // }, 400);
-    // }
 }
