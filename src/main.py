@@ -146,7 +146,7 @@ if __name__ == "__main__":
     
     database_operations_api = DatabaseOperations(db_util_api, config)
     api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
-    api_thread.start()  # Inicia a thread da API Flask
+    api_thread.start()
 
     # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
     # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))

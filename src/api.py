@@ -18,4 +18,7 @@ def register_services(app, database_operations):
 
 def start_api(database_operations):
     register_services(app, database_operations)
-    app.run(debug=False, port=5000)
+    app.run(host="0.0.0.0", debug=False, port=5000)
+    
+def start_api_in_thread(database_operations):
+    start_api(database_operations)
