@@ -245,6 +245,7 @@ export class HomeComponent implements OnInit {
     loadVideosMaisEngajados(): void {
         setTimeout(() => {
             this.vimeoService.getVideosMaisEngajados().subscribe((data: any) => {
+              console.log(data);
                 const chartData = data.map((item: any) => ({
                     x: item[1],
                     y: parseFloat(parseFloat(item[3]).toFixed(2))
