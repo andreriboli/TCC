@@ -314,7 +314,7 @@ export class AlunosComponent implements OnInit {
                 data: {
                     labels: chartData.map((item: any) => item.video_title),
                     datasets: [{
-                        label: 'Taxa de Conclusão (%)',
+                        label: 'Número de Atividades',
                         data: chartData.map((item: any) => item.completion_rate),
                         backgroundColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
                         borderColor: chartData.map((_: any, index: number) => this.getPredefinedColor(index)),
@@ -329,7 +329,7 @@ export class AlunosComponent implements OnInit {
                             beginAtZero: true,
                             title: {
                                 display: true,
-                                text: 'Taxa de Conclusão (%)'
+                                text: 'Número de Atividades',
                             }
                         }
                     },
@@ -342,7 +342,7 @@ export class AlunosComponent implements OnInit {
                         tooltip: {
                             callbacks: {
                                 label: function (tooltipItem) {
-                                    return `Taxa de Conclusão: ${tooltipItem.raw}%`;
+                                    return `Número de Atividades: ${tooltipItem.raw}`;
                                 }
                             }
                         }

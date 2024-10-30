@@ -148,84 +148,63 @@ if __name__ == "__main__":
     api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
     api_thread.start()
 
-    # database_operations_coleta = DatabaseOperations(db_util_coleta, config)
-    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
-    # coleta_thread.start()  # Inicia a thread da coleta de dados
-    # coleta_thread.join()
+    database_operations_coleta = DatabaseOperations(db_util_coleta, config)
+    coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    coleta_thread.start()  # Inicia a thread da coleta de dados
+    coleta_thread.join()
 
     api_thread.join()
 
-
-
-
-    # database_operations = DatabaseOperations(db_util_coleta, config)
-    # coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
-    # coleta_thread.start()
+    database_operations = DatabaseOperations(db_util_coleta, config)
+    coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
+    coleta_thread.start()
 
     # vimeo_scraper = VimeoScraper(email=config.VIMEO_EMAIL, password=config.VIMEO_PASSWORD, download_dir=config.DOWNLOAD_DIR)
 
-    # vimeo_scraper.login()
     # csv_url = vimeo_scraper.obter_link_csv()
 
-    # if csv_url:
-            # csv_file_path = vimeo_scraper.download_csv_directly(csv_url, config.DOWNLOAD_DIR)
+    # file_path = r"C:\Desenvolvimento\stats_export (2).csv"
+    # df = pd.read_csv(file_path, skip_blank_lines=True)
 
-    #         if csv_file_path:
+    # # Verifica se a última linha é nula ou contém aspas
+    # if df.iloc[-1].isnull().all() or df.iloc[-1].str.contains(r'["]').any():
+    #     df = df[:-1]
+
+    # # Renomeia as colunas para corresponder à tabela no banco de dados
+    # df.rename(columns={
+    #     'views': 'views',
+    #     'impressions': 'impressions',
+    #     'finishes': 'finishes',
+    #     'downloads': 'downloads',
+    #     'unique_impressions': 'unique_impressions',
+    #     'unique_viewers': 'unique_viewers',
+    #     'mean_percent_watched': 'mean_percent_watched',
+    #     'mean_seconds_watched': 'mean_seconds_watched',
+    #     'total_seconds_watched': 'total_seconds_watched',
+    #     'metadata.connections.video.uri': 'id_vimeo_video',
+    #     'metadata.connections.video.title': 'title',
+    #     'metadata.connections.video.created_time': 'created_time',
+    #     'metadata.connections.video.likes': 'likes',
+    #     'metadata.connections.video.comments': 'comments'
+    # }, inplace=True)
+
+    # # Itera sobre cada linha do DataFrame e insere no banco de dados
+    # for index, row in df.iterrows():
+    #     database_operations.inserir_dados_vimeo(row)  # Chama a função passando cada linha (row) como parâmetro
+
+    # # Conexão e inserção dos dados no banco de dados
     # try:
-    #     file_path = r"C:\Desenvolvimento\stats_export (2).csv"
-    #     df = pd.read_csv(file_path, skip_blank_lines=True)
- 
-    #     if df.iloc[-1].isnull().all() or df.iloc[-1].str.contains(r'["]').any():
-    #         df = df[:-1]
-        
-    #     # Renomear as colunas para corresponder à tabela no banco de dados
-    #     df.rename(columns={
-    #         'views': 'views',
-    #         'impressions': 'impressions',
-    #         'finishes': 'finishes',
-    #         'downloads': 'downloads',
-    #         'unique_impressions': 'unique_impressions',
-    #         'unique_viewers': 'unique_viewers',
-    #         'mean_percent_watched': 'mean_percent_watched',
-    #         'mean_seconds_watched': 'mean_seconds_watched',
-    #         'total_seconds_watched': 'total_seconds_watched',
-    #         'metadata.connections.video.uri': 'id_vimeo_video',
-    #         'metadata.connections.video.title': 'title',
-    #         'metadata.connections.video.created_time': 'created_time',
-    #         'metadata.connections.video.likes': 'likes',
-    #         'metadata.connections.video.comments': 'comments'
-    #     }, inplace=True)
-        
-    #     # Exibir as primeiras linhas para verificar os dados
-    #     # print("Dados com colunas renomeadas:")
-    #     # print(df.head())
+    #     db_util_coleta.connect()
+    #     print("Conectado ao banco de dados com sucesso.")
+    #     database_operations.salvar_dados_vimeo(df)
 
-    #     # Iterar sobre cada linha do DataFrame e inserir no banco de dados
-    #     for index, row in df.iterrows():
-    #         database_operations.inserir_dados_vimeo(row)  # Chama a função passando cada linha (row) como parâmetro
-
-    # except FileNotFoundError:
-    #     print(f"Erro: O arquivo {file_path} não foi encontrado.")
     # except Exception as e:
-    #     print(f"Ocorreu um erro ao tentar ler o arquivo: {e}")
+    #     print("Erro durante a inserção dos dados no banco: {e}")
 
-                
-    #             database_operations = DatabaseOperations(db_util, config)
+    # finally:
+    #     db_util_coleta.disconnect()
+    #     print("Desconectado do banco de dados.")
 
-    #             try:
-    #                 db_util.connect()
-    #                 print("Conectado ao banco de dados com sucesso.")
 
-    #                 database_operations.salvar_dados_vimeo(df)
-
-    #             except Exception as e:
-    #                 logging.error(f"Erro durante a inserção dos dados no banco: {e}")
-                
-    #             finally:
-    #                 db_util.disconnect()
-    #                 print("Desconectado do banco de dados.")
-
-    #         else:
-    #             logging.error("O link do CSV não foi capturado com sucesso.")
-            
-    #         vimeo_scraper.fechar()
+    #     # Fecha o scraper após concluir
+    #     vimeo_scraper.fechar()

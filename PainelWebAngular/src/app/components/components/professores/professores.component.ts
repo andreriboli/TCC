@@ -46,8 +46,8 @@ export class ProfessoresComponent implements OnInit {
             backgroundColor: [
                 '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
             ],
-            borderColor: '#333', // Opcional: cor da borda das barras
-            borderWidth: 0.5 // Opcional: espessura da borda das barras
+            borderColor: '#333',
+            borderWidth: 0.5
         }],
     };
 
@@ -83,8 +83,8 @@ export class ProfessoresComponent implements OnInit {
             backgroundColor: [
                 '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF'
             ],
-            borderColor: '#333', // Opcional: cor da borda das barras
-            borderWidth: 0.5 // Opcional: espessura da borda das barras
+            borderColor: '#333',
+            borderWidth: 0.5
         }],
     };
 
@@ -94,7 +94,7 @@ export class ProfessoresComponent implements OnInit {
     ngOnInit(): void {
         Chart.register(ChartDataLabels);
         Chart.defaults.set('plugins.datalabels', {
-            display: (context: any) => context.dataset.data[context.dataIndex] !== 0,  // Oculta rótulos de valor zero
+            display: (context: any) => context.dataset.data[context.dataIndex] !== 0,
             color: '#fff',
             anchor: 'end',
             align: 'top'
@@ -102,7 +102,6 @@ export class ProfessoresComponent implements OnInit {
 
         this.loadTopProfessores();
         this.loadProfessorMaisEngajado();
-
     }
 
     gerarCorAleatoria(): string {
@@ -144,7 +143,7 @@ export class ProfessoresComponent implements OnInit {
     loadProfessorMaisEngajado(): void {
         this.professorService.getProfessorMaisEngajados().subscribe((data) => {
                 const updatedLabels = data.map((item: any) => (item[0]));
-                const updatedData = data.map((item: any) => item[3]);
+                const updatedData = data.map((item: any) => item[2]);
 
                 this.chartProfessorMaisEngajadoLabels = [...updatedLabels];
                 this.chartProfessorMaisEngajadoData = {

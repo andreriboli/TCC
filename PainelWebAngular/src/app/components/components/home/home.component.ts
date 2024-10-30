@@ -241,14 +241,14 @@ export class HomeComponent implements OnInit {
         });
     }
 
-
     loadVideosMaisEngajados(): void {
         setTimeout(() => {
             this.vimeoService.getVideosMaisEngajados().subscribe((data: any) => {
-              console.log(data);
+                console.log(data);
                 const chartData = data.map((item: any) => ({
                     x: item[1],
-                    y: parseFloat(parseFloat(item[3]).toFixed(2))
+                    y: parseFloat(parseFloat(item[3]).toFixed(2)),
+                    z: item[0]
                 }));
 
                 this.createScatterChart(chartData);
@@ -302,8 +302,9 @@ export class HomeComponent implements OnInit {
                     tooltip: {
                         callbacks: {
                             label: function (tooltipItem) {
-                                const raw = tooltipItem.raw as { x: number, y: number };
-                                return `Views: ${raw.x}, Visualizador Único %: ${raw.y}`;
+                                const raw = tooltipItem.raw as { x: number, y: number, z: string };
+                                console.log("raw", tooltipItem);
+                                return `Video: ${raw.z}, Views: ${raw.x}, Visualizador Único %: ${raw.y}`;
                             }
                         }
                     }

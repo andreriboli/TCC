@@ -703,7 +703,7 @@ class DatabaseOperations:
             GROUP BY 
                 u.nome
             ORDER BY 
-                engajamento_por_curso DESC;
+                total_atividades DESC;
         """
 
         try:

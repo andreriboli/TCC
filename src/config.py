@@ -1,11 +1,11 @@
 class Config:
     def __init__(self):
-        self.DB_NAME = "postgre_95iz"
-        self.DB_USER = "postgre"
-        self.DB_PASSWORD = "QsgakfnZsncewEA5g2PpgSTryugFSWxi"
-        self.DB_HOST = "dpg-csdttm3v2p9s73b1fud0-a"
-        self.DB_PORT = "5432"
 
+        self.DB_NAME = "postgres"
+        self.DB_USER = "postgres"
+        self.DB_PASSWORD = "root"
+        self.DB_HOST = "localhost"
+        self.DB_PORT = "5432"
 
         self.MOODLE_URL = "https://e-learning-cco.unoesc.edu.br/moodle/webservice/rest/server.php?"
         self.MOODLE_TOKEN = "3a8281cc9763e6c73e3082d817d2218c"
