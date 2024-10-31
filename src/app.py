@@ -4,7 +4,7 @@ from db_util import DBUtil
 from config import Config
 
 app = Flask(__name__)
-CORS(app)  # Permitir CORS para comunicação com o frontend
+CORS(app)
 
 config = Config()
 
@@ -27,10 +27,8 @@ def get_example_data():
             data = cursor.fetchall()
             results = [{"id": row[0], "nome": row[1], "descricao": row[2]} for row in data]
             a = jsonify(results)
-            print(a)
             return a 
     except Exception as e:
-        print(f"Erro ao executar consulta: {e}")
         return jsonify({"error": "Erro ao buscar dados"}), 500
 
 if __name__ == '__main__':

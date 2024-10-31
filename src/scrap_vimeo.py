@@ -69,7 +69,7 @@ class VimeoScraper:
             WebDriverWait(self.driver, 30).until(
                 EC.url_changes("https://vimeo.com/log_in")
             )
-            print("Login bem-sucedido")
+            # print("Login bem-sucedido")
             
         except Exception as e:
             print(f"Erro ao fazer login: {e}")
@@ -88,13 +88,13 @@ class VimeoScraper:
             
             if csv_link:
                 csv_url = csv_link.get_attribute("href")
-                print(f"Link de download do CSV encontrado: {csv_url}")
+                # print(f"Link de download do CSV encontrado: {csv_url}")
                 return csv_url
             else:
-                print("Link de download do CSV não encontrado.")
+                # print("Link de download do CSV não encontrado.")
                 return None
         except Exception as e:
-            print(f"Erro ao tentar obter o link de download do CSV: {e}")
+            # print(f"Erro ao tentar obter o link de download do CSV: {e}")
             return None
 
     def download_csv_directly(self, csv_url, download_dir):
@@ -105,10 +105,10 @@ class VimeoScraper:
                 file_path = f"{download_dir}/vimeo_analytics.csv"
                 with open(file_path, 'wb') as file:
                     file.write(response.content)
-                print(f"Download completo. Arquivo salvo em: {file_path}")
+                # print(f"Download completo. Arquivo salvo em: {file_path}")
                 return file_path
             else:
-                print(f"Erro ao baixar o CSV. Código de status: {response.status_code}")
+                # print(f"Erro ao baixar o CSV. Código de status: {response.status_code}")
                 return None
         except Exception as e:
             print(f"Erro ao tentar baixar o CSV: {e}")

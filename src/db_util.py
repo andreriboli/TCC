@@ -20,5 +20,5 @@ class DBUtil:
                 return cursor 
         except Exception as e:
             self.conn.rollback()
-            print(f"Erro ao executar a consulta: {e}")
+            # print(f"Erro ao executar a consulta: {e}")
             return None
