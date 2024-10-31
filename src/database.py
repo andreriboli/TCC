@@ -47,7 +47,6 @@ class DatabaseOperations:
             lastaccess
         )
         
-        # print(f"Parâmetros fornecidos para inserção de usuário: {params}")
         self.db_util.execute_query(query, params)
 
 
@@ -84,7 +83,6 @@ class DatabaseOperations:
                 self.db_util.conn.commit()
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao inserir curso com ID {curso['id']}: {e}")
 
     def top_cursos_mais_acessados_semana(self):
         query = """
@@ -111,7 +109,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao obter os cursos mais acessados da semana: {e}")
             return None
 
     def inserir_inscricao(self, moodle_id, curso_id, progresso, detalhes_usuario, usuario):
@@ -168,7 +165,6 @@ class DatabaseOperations:
 
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao inserir inscrição: {e}")
 
     def inserir_dados_usuario(self, dados_usuarios):
         for dados_usuario in dados_usuarios:
@@ -223,7 +219,6 @@ class DatabaseOperations:
             return None
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro inesperado ao buscar ou inserir a categoria {id_categoria}: {e}")
         return None
     
     def distribuicao_cursos_ativos(self):
@@ -266,7 +261,6 @@ class DatabaseOperations:
                 return cursos_ativos
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao obter a distribuição de alunos por curso: {e}")
             return None
 
     
@@ -332,7 +326,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao obter os últimos usuários logados: {e}")
             return None
         
     def distribuicao_cursos_ativos_by_category(self, end_date):
@@ -371,7 +364,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao obter as categorias: {e}")
             return None
 
     def inserir_dados_vimeo(self, data_row):
@@ -420,17 +412,12 @@ class DatabaseOperations:
 
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao inserir dados do Vimeo: {e}")
 
 
     def salvar_dados_vimeo(self, df): 
-        db_util = DBUtil(
-            dbname=self.config.DB_NAME,
-            user=self.config.DB_USER,
-            password=self.config.DB_PASSWORD,
-            host=self.config.DB_HOST,
-            port=self.config.DB_PORT
-        )
+        config = Config()
+
+        db_util = DBUtil(config.get_db_config())
     
         try:
             db_util.connect()
@@ -442,7 +429,6 @@ class DatabaseOperations:
                 self.inserir_dados_vimeo(row)
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao salvar os dados do Vimeo: {e}")
         finally:
             db_util.disconnect()
 
@@ -463,12 +449,10 @@ class DatabaseOperations:
                 atividade.get('timecompleted', 0) if atividade.get('timecompleted') else None
             )
 
-            # print(f"Parâmetros fornecidos para inserção de atividade concluída: {params}")
             self.db_util.execute_query(query, params)
 
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao inserir atividade concluída: {e}")
 
     def inserir_professor(self, id_usuario, id_curso):
         query = """
@@ -485,7 +469,6 @@ class DatabaseOperations:
                 self.db_util.conn.commit()
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao inserir professor: {e}")
 
     def top_professores(self):
         query = """
@@ -508,7 +491,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao obter os professores com mais cursos: {e}")
             return None
         
     def cursos_com_menos_inscricoes(database_operations):
@@ -535,7 +517,6 @@ class DatabaseOperations:
                 result = cursor.fetchall()
                 return result
         except Exception as e:
-            # print(f"Erro ao obter cursos com menos inscrições: {e}")
             return None
         
     def get_alunos_menos_engajados(self, start_date: str, end_date: str):
@@ -562,7 +543,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar alunos que menos logaram: {e}")
             return None
 
     def get_alunos_mais_engajados(self, start_date: str, end_date: str):
@@ -589,7 +569,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar alunos que menos logaram: {e}")
             return None
         
     def get_cursos_por_semestre(self):
@@ -621,7 +600,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os cursos e mês de criação: {e}")
             return None
 
     def get_inscricoes_sem_certificado(self):
@@ -650,7 +628,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os usuarios sem certificado: {e}")
             return None
     
     def inserir_atividade(self, professor_id, curso_id, atividade):
@@ -704,7 +681,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os professores mais engajados: {e}")
             return None
         
     def get_videos_mais_engajado(self):
@@ -729,7 +705,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os videos mais engajados: {e}")
             return None
         
 
@@ -756,7 +731,6 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os videos mais engajados: {e}")
             return None
         
     def get_alunos_com_mais_atividades(self):
@@ -784,6 +758,5 @@ class DatabaseOperations:
                 return result
         except Exception as e:
             self.db_util.conn.rollback()
-            # print(f"Erro ao buscar os videos mais engajados: {e}")
             return None
 

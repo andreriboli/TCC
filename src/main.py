@@ -18,25 +18,11 @@ def executar_coleta_diaria(config, db_util):
         database_operations = DatabaseOperations(db_util, config)
 
         now = datetime.now()
-        # print(f"Iniciando coleta de dados às {now}")
 
         cursos = coletar_todos_os_cursos(config)
         if cursos:
-        #     print("Cursos coletados com sucesso.")
-            
-        #     print("Iniciando inserção de categorias.")
             inserir_categorias(cursos, database_operations)
-        #     print("Inserção de categorias concluída.")
-
-        #     print("Iniciando inserção de cursos.")
-        #     inserir_cursos(cursos, database_operations)
-        #     print("Inserção de cursos concluída.")
-
-        #     print("Iniciando inserção de usuários e inscrições.")
             inserir_usuarios_e_inscricoes(cursos, database_operations, config)
-        #     print("Inserção de usuários e inscrições concluída.")
-
-        # print(f"Coleta e armazenamento concluídos às {datetime.now()}")
 
     except Exception as e:
         print(f"Erro durante a coleta de dados: {e}")
@@ -47,12 +33,10 @@ def inserir_categorias(cursos, database_operations):
     for curso in cursos:
         id_categoria = curso['categoryid']
         database_operations.inserir_categoria_por_id(id_categoria)
-        # print(f"Categoria {id_categoria} inserida para o curso {curso['fullname']}")
 
 def inserir_cursos(cursos, database_operations):
     for curso in cursos:
         database_operations.inserir_curso(curso)
-        # print(f"Curso {curso['fullname']} inserido.")
 
 def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
     for curso in cursos:
@@ -74,13 +58,11 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                         break
 
                 if is_teacher:
-                    # print(f"Professor encontrado: {usuario['fullname']}")
                     database_operations.inserir_professor(moodle_id, curso['id'])
 
                     atividades = coletar_atividades_do_curso(config, curso['id'])
                     if atividades:
                         for atividade in atividades:
-                            # print(f"Inserindo atividade {atividade['name']} criada pelo professor {usuario['fullname']}")
                             database_operations.inserir_atividade(moodle_id, curso['id'], atividade)
 
                 detalhes_usuario = coletar_detalhes_usuario_do_curso(config, curso['id'], moodle_id)
@@ -99,14 +81,9 @@ def inserir_usuarios_e_inscricoes(cursos, database_operations, config):
                 else:
                     tempo_medio_conclusao = timedelta(0)
 
-                # print(f"Inserindo usuário {usuario['fullname']} com progresso {progresso}, "
-                #     f"primeiro acesso {data_primeiro_acesso}, último acesso {data_ultimo_acesso}, "
-                #     f"tempo médio de conclusão: {tempo_medio_conclusao}")
-
                 database_operations.inserir_usuario(usuario)
 
                 if detalhes_usuario is None:
-                    # print(f"Detalhes do usuário {usuario['fullname']} não encontrados.")
                     continue
 
                 database_operations.inserir_inscricao(
@@ -152,74 +129,68 @@ def coleta_vimeo(config, db_util):
         database_operations.inserir_dados_vimeo(row)
 
     try:
-        db_util_coleta.connect()
-        # print("Conectado ao banco de dados com sucesso.")
+        db_util.connect()
         database_operations.salvar_dados_vimeo(df)
 
     except Exception as e:
         print("Erro durante a inserção dos dados no banco: {e}")
 
     finally:
-        db_util_coleta.disconnect()
-        # print("Desconectado do banco de dados.")
+        db_util.disconnect()
 
 
 def start_api_in_thread(database_operations):
     start_api(database_operations)
 
-if __name__ == "__main__":
+def start_all_threads(config):
     config = Config()
 
-    db_util_api = DBUtil(
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=config.DB_PASSWORD,
-        host=config.DB_HOST,
-        port=config.DB_PORT
-    )
+    db_util_coleta = DBUtil(config.get_db_config())
+    db_util_api = DBUtil(config.get_db_config())
+    db_util_vimeo = DBUtil(config.get_db_config())
 
-    db_util_coleta = DBUtil(
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=config.DB_PASSWORD,
-        host=config.DB_HOST,
-        port=config.DB_PORT
-    )
+    def start_api():
+        database_operations_api = DatabaseOperations(db_util_api, config)
+        api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
+        api_thread.start()
+        return api_thread
 
-    db_util_vimeo = DBUtil(
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=config.DB_PASSWORD,
-        host=config.DB_HOST,
-        port=config.DB_PORT
-    )
-
-    database_operations_api = DatabaseOperations(db_util_api, config)
-    api_thread = threading.Thread(target=start_api_in_thread, args=(database_operations_api,))
-    api_thread.start()
-
-    while True:
-        # Imprimir a data e hora de início
-        start_time = datetime.now()
-        print(f"Início do processo de coleta: {start_time}")
-
-        # Iniciar coleta diária
+    def start_coleta_moodle():
         database_operations_coleta = DatabaseOperations(db_util_coleta, config)
         coleta_thread = threading.Thread(target=executar_coleta_diaria, args=(config, db_util_coleta))
         coleta_thread.start()
+        return coleta_thread
 
-        # Iniciar coleta do Vimeo
+    def start_coleta_vimeo():
         database_operations_vimeo = DatabaseOperations(db_util_vimeo, config)
         vimeo_thread = threading.Thread(target=coleta_vimeo, args=(config, db_util_vimeo))
         vimeo_thread.start()
+        return vimeo_thread
 
-        # Esperar que as threads de coleta terminem
+    start_api()
+
+    while True:
+        target_time = datetime.now().replace(hour=00, minute=00, second=1, microsecond=0)
+        
+        if datetime.now() > target_time:
+            target_time += timedelta(days=1)
+
+        sleep_duration = (target_time - datetime.now()).total_seconds()
+        print(f"Aguardando até o próximo horário de coleta às 19:35. Tempo restante: {sleep_duration/60:.2f} minutos.")
+        time.sleep(sleep_duration)
+
+        start_time = datetime.now()
+        print(f"Início da coleta: {start_time}")
+
+        coleta_thread = start_coleta_moodle()
+        vimeo_thread = start_coleta_vimeo()
+
         coleta_thread.join()
         vimeo_thread.join()
 
-        # Imprimir a data e hora de término
         end_time = datetime.now()
-        print(f"Término do processo de coleta: {end_time}")
+        print(f"Término da coleta: {end_time}")
 
-        # Aguarda 24 horas (86400 segundos) antes de iniciar o próximo ciclo
-        time.sleep(86400)
+if __name__ == "__main__":
+    config = Config()
+    start_all_threads(config)

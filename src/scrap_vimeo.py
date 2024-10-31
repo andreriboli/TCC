@@ -16,10 +16,8 @@ class VimeoScraper:
 
     def inicializar_driver(self):
         chrome_options = Options()
-        # Use um perfil temporário do Chrome
-        chrome_options.add_argument("--incognito")  # Modo anônimo
+        chrome_options.add_argument("--incognito") 
 
-        # Configurações de download
         chrome_options.add_experimental_option("prefs", {
             "download.default_directory": self.download_dir,
             "download.prompt_for_download": False,
@@ -27,15 +25,12 @@ class VimeoScraper:
             "safebrowsing.enabled": True
         })
 
-        # Configurações para remover detecção de automação
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
 
-        # Inicializa o Chrome com as opções
         driver = webdriver.Chrome(options=chrome_options)
 
-        # Remove a propriedade 'webdriver'
         driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": """
             Object.defineProperty(navigator, 'webdriver', {
@@ -69,7 +64,6 @@ class VimeoScraper:
             WebDriverWait(self.driver, 30).until(
                 EC.url_changes("https://vimeo.com/log_in")
             )
-            # print("Login bem-sucedido")
             
         except Exception as e:
             print(f"Erro ao fazer login: {e}")
@@ -88,13 +82,10 @@ class VimeoScraper:
             
             if csv_link:
                 csv_url = csv_link.get_attribute("href")
-                # print(f"Link de download do CSV encontrado: {csv_url}")
                 return csv_url
             else:
-                # print("Link de download do CSV não encontrado.")
                 return None
         except Exception as e:
-            # print(f"Erro ao tentar obter o link de download do CSV: {e}")
             return None
 
     def download_csv_directly(self, csv_url, download_dir):
@@ -105,10 +96,8 @@ class VimeoScraper:
                 file_path = f"{download_dir}/vimeo_analytics.csv"
                 with open(file_path, 'wb') as file:
                     file.write(response.content)
-                # print(f"Download completo. Arquivo salvo em: {file_path}")
                 return file_path
             else:
-                # print(f"Erro ao baixar o CSV. Código de status: {response.status_code}")
                 return None
         except Exception as e:
             print(f"Erro ao tentar baixar o CSV: {e}")
